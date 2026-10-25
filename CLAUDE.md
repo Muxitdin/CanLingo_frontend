@@ -13,6 +13,7 @@ Android app (iOS later) for learning English vocabulary with spaced repetition (
 - Screens call hooks in `src/hooks`; a hook reads from `src/db`, computes with `src/domain`, writes back to `src/db`. A rating writes `review_log` and `card_state` in one transaction.
 - Tunable numbers live in `src/domain/config.ts`. Don't invent thresholds inside functions.
 - UI state: Redux Toolkit. Persistent data is in SQLite, not in the store.
+- **The app must keep running in Expo Go.** The developer follows progress on an iPhone through Expo Go (`npm run go`). Prefer Expo SDK modules that ship in Expo Go. A native module that Expo Go lacks (e.g. Firebase) goes behind its `src/services` wrapper, is loaded lazily, and falls back to a no-op when `Constants.executionEnvironment === ExecutionEnvironment.StoreClient`.
 
 ## Layout
 
@@ -42,9 +43,10 @@ src/ui/         shared components
 ## Commands
 
 ```bash
+npm run go          # dev server for Expo Go (iPhone)
 npm test            # Jest
 npm run typecheck   # tsc --noEmit
 npm run lint        # expo lint
 ```
 
-Run all three before calling a change done.
+Run test, typecheck and lint before calling a change done.
