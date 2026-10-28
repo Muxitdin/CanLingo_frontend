@@ -24,7 +24,7 @@ const day = (d: string, over: Partial<DayProgress> = {}): DayProgress => ({
 
 describe("planDay", () => {
   it("plans all due reviews plus the daily new words on a normal day", () => {
-    expect(planDay(base)).toEqual({ mode: "normal", newTarget: 10, reviewTarget: 30, recovery: null });
+    expect(planDay(base)).toEqual({ mode: "normal", newTarget: 10, reviewTarget: 30, reviewCap: 30, recovery: null });
   });
 
   it("never plans more new words than are left", () => {
@@ -35,8 +35,14 @@ describe("planDay", () => {
     const plan = planDay({ ...base, dueCount: 300 });
     expect(plan.mode).toBe("recovery");
     expect(plan.newTarget).toBe(0);
-    expect(plan.reviewTarget).toBe(Math.ceil(300 / RECOVERY_SPREAD_DAYS));
+    expect(plan.reviewCap).toBe(Math.ceil(300 / RECOVERY_SPREAD_DAYS));
     expect(plan.recovery).toEqual({ startedOn: "2026-11-10", dailyReviewQuota: 100 });
+  });
+
+  it("completes a recovery day after a normal day's reviews, offering the rest as optional", () => {
+    const plan = planDay({ ...base, dueCount: 300 });
+    expect(plan.reviewTarget).toBe(30);
+    expect(plan.reviewCap).toBe(100);
   });
 
   it("keeps a moderate backlog in normal mode", () => {
@@ -54,13 +60,13 @@ describe("planDay", () => {
   it("keeps the quota fixed while recovery lasts", () => {
     const recovery = { startedOn: "2026-11-10", dailyReviewQuota: 100 };
     const plan = planDay({ ...base, today: "2026-11-11", dueCount: 210, recovery });
-    expect(plan).toEqual({ mode: "recovery", newTarget: 0, reviewTarget: 100, recovery });
+    expect(plan).toEqual({ mode: "recovery", newTarget: 0, reviewTarget: 30, reviewCap: 100, recovery });
   });
 
   it("ends recovery once the backlog fits in one day's quota", () => {
     const recovery = { startedOn: "2026-11-10", dailyReviewQuota: 100 };
     const plan = planDay({ ...base, today: "2026-11-12", dueCount: 95, recovery });
-    expect(plan).toEqual({ mode: "normal", newTarget: 10, reviewTarget: 95, recovery: null });
+    expect(plan).toEqual({ mode: "normal", newTarget: 10, reviewTarget: 95, reviewCap: 95, recovery: null });
   });
 });
 
@@ -74,16 +80,17 @@ describe("isNormComplete", () => {
 });
 
 describe("typicalDailyReviews", () => {
-  it("averages completed normal days in the last week, excluding today", () => {
+  it("averages the last 7 completed normal days before today", () => {
     const history = [
-      day("2026-11-01", { reviewTarget: 999, reviewDone: 999 }), // older than the window
-      day("2026-11-04", { reviewTarget: 20, reviewDone: 20 }),
-      day("2026-11-07", { reviewTarget: 40, reviewDone: 40 }),
-      day("2026-11-08", { mode: "recovery", reviewTarget: 100, reviewDone: 100 }),
-      day("2026-11-09", { reviewDone: 5 }), // not completed
-      day("2026-11-10", { reviewTarget: 999, reviewDone: 999 }), // today
+      day("2026-10-20", { reviewTarget: 999, reviewDone: 999 }), // 8th most recent: outside the window
+      ...[21, 22, 23, 24, 25, 26].map((d) => day(`2026-10-${d}`, { reviewTarget: 20, reviewDone: 20 })),
+      day("2026-11-07", { reviewTarget: 80, reviewDone: 80 }),
+      day("2026-11-08", { mode: "recovery", reviewTarget: 100, reviewDone: 100 }), // recovery: ignored
+      day("2026-11-09", { reviewDone: 5 }), // not completed: ignored
+      day("2026-11-10", { reviewTarget: 999, reviewDone: 999 }), // today: ignored
     ];
-    expect(typicalDailyReviews(history, "2026-11-10")).toBe(30);
+    // (6 x 20 + 80) / 7, rounded; the 12-day gap before 7 Nov doesn't matter.
+    expect(typicalDailyReviews(history, "2026-11-10")).toBe(29);
   });
 
   it("is 0 without history", () => {

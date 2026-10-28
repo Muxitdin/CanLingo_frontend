@@ -31,9 +31,11 @@ interface SimOptions {
   /** Share of answers that are Good; the rest are Again. */
   recallRate: number;
   seed: number;
+  /** On recovery days, stop once the norm is done instead of working through the whole quota. */
+  minimalRecovery?: boolean;
 }
 
-function simulate({ days, skipped, deckSize, recallRate, seed }: SimOptions) {
+function simulate({ days, skipped, deckSize, recallRate, seed, minimalRecovery = false }: SimOptions) {
   const deck = Array.from({ length: deckSize }, (_, i) => `en-a1-${String(i + 1).padStart(4, "0")}`);
   const states = new Map<string, CardState>();
   const history: DayProgress[] = [];
@@ -81,7 +83,8 @@ function simulate({ days, skipped, deckSize, recallRate, seed }: SimOptions) {
       if (next.state !== State.Review && repeatsInSession(next.due, now)) learning.push(id);
     };
 
-    for (const item of buildQueue({ dueIds, newIds, reviewLimit: plan.reviewTarget, newLimit: plan.newTarget })) {
+    for (const item of buildQueue({ dueIds, newIds, reviewLimit: plan.reviewCap, newLimit: plan.newTarget })) {
+      if (minimalRecovery && plan.mode === "recovery" && isNormComplete(progress)) break;
       answer(item.cardId);
       if (item.kind === "new") progress.newDone++;
       else progress.reviewDone++;
@@ -136,9 +139,8 @@ describe("60-day simulation", () => {
     expect(recoveryDays.length).toBeGreaterThan(0);
     expect(recoveryDays.length).toBeLessThanOrEqual(RECOVERY_SPREAD_DAYS + 1);
     expect(recoveryDays.every((p) => p.newTarget === 0 && p.newDone === 0)).toBe(true);
-    // Every recovery day carries the same quota, and it is smaller than the backlog the user came back to.
-    const quota = recoveryDays[0].reviewTarget;
-    expect(recoveryDays.every((p) => p.reviewTarget === quota && p.reviewDone === quota)).toBe(true);
+    // The norm is a normal day's reviews; this user also works through the optional rest of the quota.
+    expect(recoveryDays.every((p) => p.reviewDone > p.reviewTarget)).toBe(true);
 
     const back = history[afterBreak + recoveryDays.length];
     expect(back.mode).toBe("normal");
@@ -158,5 +160,22 @@ describe("60-day simulation", () => {
     const xp = history.reduce((sum, p) => sum + xpForDay(p), 0);
     expect(xp).toBe(studyDays * XP_PER_NORM);
     expect(levelForXp(xp).level).toBe(8);
+  });
+});
+
+describe("60-day simulation, user doing only the norm in recovery", () => {
+  const minimal = simulate({ ...options, minimalRecovery: true });
+  const recoveryDays = minimal.history.filter((p) => p.mode === "recovery");
+  const fullRecoveryDays = history.filter((p) => p.mode === "recovery");
+
+  it("takes longer to clear the backlog, but still returns to normal", () => {
+    expect(recoveryDays.length).toBeGreaterThan(fullRecoveryDays.length);
+    expect(minimal.history[minimal.history.length - 1].mode).toBe("normal");
+  });
+
+  it("still counts every recovery day as done, so XP and the streak are the same as for the full effort", () => {
+    expect(recoveryDays.every((p) => isNormComplete(p) && p.reviewDone === p.reviewTarget)).toBe(true);
+    expect(minimal.history.every(isNormComplete)).toBe(true);
+    expect(computeStreak(minimal.history, minimal.history[minimal.history.length - 1].day).current).toBe(29);
   });
 });

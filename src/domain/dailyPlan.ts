@@ -32,7 +32,10 @@ export interface DayPlanInput {
 export interface DayPlan {
   mode: DayMode;
   newTarget: number;
+  /** Reviews that complete the day's norm. */
   reviewTarget: number;
+  /** Reviews the session offers. Equal to the target on a normal day; above it in recovery. */
+  reviewCap: number;
   /** Store this and pass it back tomorrow. Null when not in recovery. */
   recovery: RecoveryState | null;
 }
@@ -53,7 +56,8 @@ export interface DayProgress {
  *
  * Normal day: every due review plus `newPerDay` new words.
  * Recovery: new words pause, and the backlog is spread over about RECOVERY_SPREAD_DAYS days,
- * so a week away never greets the user with hundreds of cards at once.
+ * so a week away never greets the user with hundreds of cards at once. The day counts as done
+ * after a normal day's worth of reviews; doing the rest of the quota only ends recovery sooner.
  */
 export function planDay(input: DayPlanInput): DayPlan {
   const normalDay = Math.max(input.typicalDailyReviews, RECOVERY_MIN_DAILY_REVIEWS);
@@ -72,12 +76,19 @@ export function planDay(input: DayPlanInput): DayPlan {
   }
 
   if (recovery) {
-    return { mode: "recovery", newTarget: 0, reviewTarget: recovery.dailyReviewQuota, recovery };
+    return {
+      mode: "recovery",
+      newTarget: 0,
+      reviewTarget: Math.min(normalDay, recovery.dailyReviewQuota),
+      reviewCap: recovery.dailyReviewQuota,
+      recovery,
+    };
   }
   return {
     mode: "normal",
     newTarget: Math.min(input.newPerDay, input.newAvailable),
     reviewTarget: input.dueCount,
+    reviewCap: input.dueCount,
     recovery: null,
   };
 }
@@ -88,14 +99,15 @@ export function isNormComplete(p: Pick<DayProgress, "newDone" | "newTarget" | "r
 }
 
 /**
- * Average reviews on completed normal days within the last TYPICAL_DAY_WINDOW days before `today`.
- * Recovery days are left out so a backlog doesn't inflate what counts as normal.
+ * Average reviews over the last TYPICAL_DAY_WINDOW completed normal days before `today`.
+ * Counted in days studied, not calendar days, so a long break doesn't erase what "normal" means.
+ * Recovery days are left out so a backlog doesn't inflate it.
  */
 export function typicalDailyReviews(history: readonly DayProgress[], today: StudyDay): number {
-  const recent = history.filter((p) => {
-    const age = daysBetween(p.day, today);
-    return age >= 1 && age <= TYPICAL_DAY_WINDOW && p.mode === "normal" && isNormComplete(p);
-  });
+  const recent = history
+    .filter((p) => daysBetween(p.day, today) >= 1 && p.mode === "normal" && isNormComplete(p))
+    .sort((a, b) => (a.day < b.day ? 1 : -1))
+    .slice(0, TYPICAL_DAY_WINDOW);
   if (recent.length === 0) return 0;
   return Math.round(recent.reduce((sum, p) => sum + p.reviewDone, 0) / recent.length);
 }

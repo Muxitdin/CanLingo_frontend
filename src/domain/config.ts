@@ -30,7 +30,7 @@ export const RECOVERY_MIN_DAILY_REVIEWS = 20;
 /** Recovery spreads the backlog over roughly this many days. */
 export const RECOVERY_SPREAD_DAYS = 3;
 
-/** How many recent study days the "normal day" average looks at. */
+/** How many recent completed normal days the "normal day" average looks at. */
 export const TYPICAL_DAY_WINDOW = 7;
 
 /** XP for a completed daily norm, in normal and in recovery mode alike. Ratings never change XP. */
