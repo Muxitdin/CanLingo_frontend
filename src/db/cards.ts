@@ -120,7 +120,7 @@ export function countNewAvailable(db: Db): number {
   return row?.n ?? 0;
 }
 
-/** The next unseen words along the path: by level, then position. */
+/** The next unseen words along the path. Positions run across levels, so a useful A2 word can come early. */
 export function newCardIds(db: Db, limit: number): string[] {
   if (limit <= 0) return [];
   return db
@@ -128,7 +128,7 @@ export function newCardIds(db: Db, limit: number): string[] {
     .from(cards)
     .leftJoin(cardState, eq(cardState.cardId, cards.id))
     .where(newFilter())
-    .orderBy(asc(cards.level), asc(cards.position))
+    .orderBy(asc(cards.position))
     .limit(limit)
     .all()
     .map((r) => r.id);

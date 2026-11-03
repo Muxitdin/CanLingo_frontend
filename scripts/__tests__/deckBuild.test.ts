@@ -1,11 +1,12 @@
 import { describe, expect, it } from "@jest/globals";
 
-import { buildDeck, checkIdsStable, contentWarnings, rowToCard, type WordRow } from "../lib/deckBuild";
+import { buildDeck, checkIdsStable, checkPlan, contentWarnings, isPlanned, rowToCard, type WordRow } from "../lib/deckBuild";
 
 const row = (n: number, over: Partial<WordRow> = {}): WordRow => ({
   id: `en-a1-${String(n).padStart(4, "0")}`,
   level: "A1",
   unit: "1",
+  topic: "test",
   position: String(n),
   word: `word${n}`,
   pos: "noun",
@@ -64,6 +65,35 @@ describe("buildDeck", () => {
     expect(() => buildDeck([row(1, { word: "orange" })], v1)).toThrow(/en-a1-0001: word changed/);
     // Removing a card is allowed: the app retires it.
     expect(buildDeck([row(2)], v1).cards).toHaveLength(1);
+  });
+});
+
+const planned = (n: number, over: Partial<WordRow> = {}): WordRow =>
+  row(n, { ru: "", uz_latn: "", example_en: "", example_ru: "", example_uz_latn: "", ...over });
+
+describe("planned rows", () => {
+  it("stay in the table but are not shipped", () => {
+    expect(isPlanned(planned(2))).toBe(true);
+    expect(isPlanned(row(1))).toBe(false);
+    expect(buildDeck([row(1), planned(2)], null).cards.map((c) => c.id)).toEqual(["en-a1-0001"]);
+  });
+
+  it("are validated once partly filled", () => {
+    expect(() => buildDeck([planned(1, { ru: "яблоко" })], null)).toThrow(/empty translation.uz-Latn/);
+  });
+
+  it("share one id and position space with shipped rows", () => {
+    expect(checkPlan([row(1), planned(1)])).toEqual(["en-a1-0001: duplicate id", "en-a1-0001: duplicate position 1"]);
+    expect(checkPlan([row(1, { level: "A2" })])).toEqual(["en-a1-0001: id does not match level A2"]);
+    expect(() => buildDeck([row(1), planned(1)], null)).toThrow(/duplicate id/);
+  });
+});
+
+describe("path order", () => {
+  it("runs across levels by position", () => {
+    const a2 = row(1, { id: "en-a2-0001", level: "A2", position: "1" });
+    const a1 = row(2, { position: "2" });
+    expect(buildDeck([a1, a2], null).cards.map((c) => c.id)).toEqual(["en-a2-0001", "en-a1-0002"]);
   });
 });
 

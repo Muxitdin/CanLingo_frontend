@@ -8,6 +8,7 @@ export const COLUMNS = [
   "id",
   "level",
   "unit",
+  "topic",
   "position",
   "word",
   "pos",
@@ -29,7 +30,33 @@ function int(value: string, field: string, id: string): number {
   return n;
 }
 
-/** One master-table row as a deck card. `ru_checked` and `note` are for editors and stay out of the app. */
+const CONTENT = ["ru", "uz_latn", "example_en", "example_ru", "example_uz_latn"] as const;
+
+/** A row on the path whose translations aren't written yet. It is kept in the table but not shipped. */
+export function isPlanned(r: WordRow): boolean {
+  return CONTENT.every((c) => r[c].trim() === "");
+}
+
+/**
+ * Checks every row, shipped or planned: ids are unique and match their level, and positions are unique,
+ * so ids can be handed out for the whole path before its translations exist.
+ */
+export function checkPlan(rows: readonly WordRow[]): string[] {
+  const problems: string[] = [];
+  const ids = new Set<string>();
+  const positions = new Set<string>();
+  for (const r of rows) {
+    const id = r.id.trim();
+    if (ids.has(id)) problems.push(`${id}: duplicate id`);
+    ids.add(id);
+    if (!id.startsWith(`en-${r.level.trim().toLowerCase()}-`)) problems.push(`${id}: id does not match level ${r.level}`);
+    if (positions.has(r.position.trim())) problems.push(`${id}: duplicate position ${r.position}`);
+    positions.add(r.position.trim());
+  }
+  return problems;
+}
+
+/** One master-table row as a deck card. `topic`, `ru_checked` and `note` are for editors and stay out of the app. */
 export function rowToCard(r: WordRow): DeckCard {
   const ipa = r.ipa.trim();
   return {
@@ -94,15 +121,21 @@ export interface BuiltDeck extends DeckFile {
 }
 
 /**
- * Builds the bundled deck from master-table rows. The version goes up by one whenever the content
- * changes, which is what makes the app re-import it.
+ * Builds the bundled deck from master-table rows, leaving out planned rows. The version goes up by one
+ * whenever the shipped content changes, which is what makes the app re-import it.
  */
 export function buildDeck(
   rows: readonly WordRow[],
   previous: BuiltDeck | null,
   meta: { id: string; source: string } = DECK_META,
 ): BuiltDeck {
-  const cards = rows.map(rowToCard).sort((a, b) => (a.level === b.level ? a.position - b.position : a.level < b.level ? -1 : 1));
+  const planProblems = checkPlan(rows);
+  if (planProblems.length > 0) throw new Error(`words.csv has problems:\n${planProblems.join("\n")}`);
+  // One path across levels: useful A2 words can come before rarer A1 words.
+  const cards = rows
+    .filter((r) => !isPlanned(r))
+    .map(rowToCard)
+    .sort((a, b) => a.position - b.position);
   const unstable = checkIdsStable(previous, cards);
   if (unstable.length > 0) throw new Error(`Card ids changed meaning:\n${unstable.join("\n")}`);
   const hash = contentHash(cards);
