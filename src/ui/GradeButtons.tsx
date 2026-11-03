@@ -1,16 +1,16 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { Rating, type Grade } from "../domain/fsrs";
-import { t } from "../i18n";
+import { useStrings } from "../i18n";
 import { formatInterval } from "./formatInterval";
 import { gradeColors } from "./theme";
 
-const BUTTONS: readonly { grade: Grade; label: string; color: string }[] = [
-  { grade: Rating.Again, label: t.grades.again, color: gradeColors.again },
-  { grade: Rating.Hard, label: t.grades.hard, color: gradeColors.hard },
-  { grade: Rating.Good, label: t.grades.good, color: gradeColors.good },
-  { grade: Rating.Easy, label: t.grades.easy, color: gradeColors.easy },
-];
+const BUTTONS = [
+  { grade: Rating.Again, key: "again", color: gradeColors.again },
+  { grade: Rating.Hard, key: "hard", color: gradeColors.hard },
+  { grade: Rating.Good, key: "good", color: gradeColors.good },
+  { grade: Rating.Easy, key: "easy", color: gradeColors.easy },
+] as const satisfies readonly { grade: Grade; key: string; color: string }[];
 
 interface Props {
   /** Time until the card comes back for each button, in ms. */
@@ -20,9 +20,11 @@ interface Props {
 
 /** Four equal buttons like Anki; only the colour tells them apart. */
 export function GradeButtons({ intervals, onGrade }: Props) {
+  const t = useStrings();
   return (
     <View style={styles.row}>
-      {BUTTONS.map(({ grade, label, color }) => {
+      {BUTTONS.map(({ grade, key, color }) => {
+        const label = t.grades[key];
         const interval = formatInterval(intervals[grade], t.interval);
         return (
           <Pressable

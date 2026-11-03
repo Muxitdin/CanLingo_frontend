@@ -22,6 +22,7 @@ export function ensureProfile(db: Db, now: Date): ProfileRow {
     gameEnabled: true,
     recoveryStartedOn: null,
     recoveryQuota: null,
+    onboardedAt: null,
     createdAt: now.getTime(),
     updatedAt: now.getTime(),
   };
@@ -33,6 +34,18 @@ export function getProfile(db: Db): ProfileRow {
   const row = db.select().from(profile).where(eq(profile.id, PROFILE_ID)).get();
   if (!row) throw new Error("Profile missing: call ensureProfile on startup");
   return row;
+}
+
+/** What the user can change in onboarding and settings. */
+export type ProfileSettings = Partial<Pick<ProfileRow, "uiLang" | "newPerDay" | "gameEnabled" | "onboardedAt">>;
+
+/** Saves settings and returns the updated profile. */
+export function updateProfile(db: Db, settings: ProfileSettings, now: Date): ProfileRow {
+  db.update(profile)
+    .set({ ...settings, updatedAt: now.getTime() })
+    .where(eq(profile.id, PROFILE_ID))
+    .run();
+  return getProfile(db);
 }
 
 export function recoveryOf(p: ProfileRow): RecoveryState | null {

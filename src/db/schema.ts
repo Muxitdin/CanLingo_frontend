@@ -94,6 +94,8 @@ export const profile = sqliteTable("profile", {
   gameEnabled: integer("game_enabled", { mode: "boolean" }).notNull().default(true),
   recoveryStartedOn: text("recovery_started_on"),
   recoveryQuota: integer("recovery_quota"),
+  /** Set when onboarding finishes; null shows onboarding on the next launch. */
+  onboardedAt: integer("onboarded_at"),
   createdAt: integer("created_at").notNull(),
   updatedAt: integer("updated_at").notNull(),
 });

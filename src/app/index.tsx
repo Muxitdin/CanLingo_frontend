@@ -2,8 +2,9 @@ import { useRouter } from "expo-router";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { useProfile } from "../hooks/useProfile";
 import { useToday } from "../hooks/useToday";
-import { t } from "../i18n";
+import { useStrings } from "../i18n";
 import { PrimaryButton } from "../ui/PrimaryButton";
 import { ProgressBar } from "../ui/ProgressBar";
 import { useColors, type Colors } from "../ui/theme";
@@ -25,7 +26,12 @@ function Goal({ label, done, target, c }: { label: string; done: number; target:
 export default function Home() {
   const router = useRouter();
   const c = useColors();
-  const { progress: p, normComplete, available, gameEnabled, streak, level } = useToday();
+  const t = useStrings();
+  const { gameEnabled } = useProfile().profile;
+  const { progress: p, normComplete, available, goal, streak, level } = useToday();
+  const goalText = goal.finishOn
+    ? t.home.goal(goal.remaining, t.date(goal.finishOn, Number(p.day.slice(0, 4))))
+    : t.home.goalDone;
 
   const started = p.newDone + p.reviewDone > 0;
   const action = available === 0 ? null : normComplete ? t.home.extra(available) : started ? t.home.continue : t.home.start;
@@ -56,6 +62,7 @@ export default function Home() {
           {p.newTarget > 0 && <Goal label={t.home.newWords} done={p.newDone} target={p.newTarget} c={c} />}
           <Goal label={t.home.reviews} done={p.reviewDone} target={p.reviewTarget} c={c} />
           {normComplete && <Text style={[styles.body, { color: c.text }]}>{t.home.normDone}</Text>}
+          <Text style={[styles.small, { color: c.muted }]}>{goalText}</Text>
         </View>
 
         {action ? (

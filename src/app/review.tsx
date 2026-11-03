@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { useReviewSession } from "../hooks/useReviewSession";
-import { t } from "../i18n";
+import { useStrings } from "../i18n";
 import { speakEnglish } from "../services/tts";
 import { GradeButtons } from "../ui/GradeButtons";
 import { PrimaryButton } from "../ui/PrimaryButton";
@@ -12,6 +12,7 @@ import { useColors } from "../ui/theme";
 export default function Review() {
   const router = useRouter();
   const c = useColors();
+  const t = useStrings();
   const { card, revealed, left, normComplete, reveal, answer } = useReviewSession();
 
   if (!card) {
