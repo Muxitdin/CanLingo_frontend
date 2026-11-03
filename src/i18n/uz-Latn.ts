@@ -81,6 +81,8 @@ export const uzLatn: Strings = {
       title: "Ishlab chiquvchi uchun",
       clock: (date, days) => (days > 0 ? `Ilovadagi sana: ${date} (+${days} kun)` : `Ilovadagi sana: ${date}`),
       nextDay: "Keyingi kun",
+      reminderTest: "Bir daqiqadan keyin eslatma",
+      reminderSent: "Ilovadan chiqing: bildirishnoma bir daqiqadan keyin keladi.",
       reset: "Natijalarni oʻchirish",
       resetTitle: "Natijalar oʻchirilsinmi?",
       resetText: "Barcha javoblar, kunlar va sozlamalar oʻchiriladi, ilova birinchi marta ishga tushirilgandek boshlanadi. Soʻzlar toʻplami qoladi.",

@@ -10,4 +10,5 @@ jest.mock("./src/services/notifications", () => ({
   notificationsAllowed: jest.fn(() => Promise.resolve(true)),
   askNotificationPermission: jest.fn(() => Promise.resolve(true)),
   replaceReminders: jest.fn(() => Promise.resolve()),
+  scheduleTestReminder: jest.fn(() => Promise.resolve(true)),
 }));

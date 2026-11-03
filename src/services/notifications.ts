@@ -4,7 +4,8 @@
  */
 import {
   AndroidImportance,
-  cancelAllScheduledNotificationsAsync,
+  cancelScheduledNotificationAsync,
+  getAllScheduledNotificationsAsync,
   getPermissionsAsync,
   requestPermissionsAsync,
   SchedulableTriggerInputTypes,
@@ -15,6 +16,9 @@ import { Platform } from "react-native";
 
 /** Android 8+ groups notifications by channel; users can mute this one in the app's notification settings. */
 const CHANNEL_ID = "daily-reminder";
+
+/** Daily reminders carry ids with this prefix, so replacing them leaves other notifications alone. */
+const REMINDER_ID = "daily-reminder-";
 
 export interface ScheduledReminder {
   at: Date;
@@ -41,7 +45,7 @@ export async function askNotificationPermission(): Promise<boolean> {
 let pending: Promise<void> = Promise.resolve();
 
 /**
- * Replaces every scheduled reminder with `reminders`. Calls run one after another,
+ * Replaces every scheduled daily reminder with `reminders`. Calls run one after another,
  * so two syncs in quick succession can't leave a day with two reminders.
  */
 export function replaceReminders(reminders: readonly ScheduledReminder[], channelName: string): Promise<void> {
@@ -53,18 +57,41 @@ export function replaceReminders(reminders: readonly ScheduledReminder[], channe
 
 async function replace(reminders: readonly ScheduledReminder[], channelName: string): Promise<void> {
   if (!supported) return;
-  await cancelAllScheduledNotificationsAsync();
-  if (reminders.length === 0 || !(await notificationsAllowed())) return;
-  if (Platform.OS === "android") {
-    await setNotificationChannelAsync(CHANNEL_ID, {
-      name: channelName,
-      importance: AndroidImportance.DEFAULT,
-    });
+  const scheduled = await getAllScheduledNotificationsAsync();
+  for (const n of scheduled) {
+    if (n.identifier.startsWith(REMINDER_ID)) await cancelScheduledNotificationAsync(n.identifier);
   }
+  if (reminders.length === 0 || !(await notificationsAllowed())) return;
+  await ensureChannel(channelName);
   for (const r of reminders) {
     await scheduleNotificationAsync({
+      identifier: `${REMINDER_ID}${r.at.getTime()}`,
       content: { title: r.title, body: r.body },
       trigger: { type: SchedulableTriggerInputTypes.DATE, date: r.at, channelId: CHANNEL_ID },
     });
   }
+}
+
+/**
+ * Development only: one reminder `seconds` from now, outside the daily schedule, so it can be seen
+ * without waiting for the chosen time. iOS shows it only once the app is in the background.
+ */
+export async function scheduleTestReminder(
+  reminder: Omit<ScheduledReminder, "at">,
+  channelName: string,
+  seconds: number,
+): Promise<boolean> {
+  if (!(await askNotificationPermission())) return false;
+  await ensureChannel(channelName);
+  await scheduleNotificationAsync({
+    identifier: "test-reminder",
+    content: { title: reminder.title, body: reminder.body },
+    trigger: { type: SchedulableTriggerInputTypes.TIME_INTERVAL, seconds, channelId: CHANNEL_ID },
+  });
+  return true;
+}
+
+async function ensureChannel(name: string): Promise<void> {
+  if (Platform.OS !== "android") return;
+  await setNotificationChannelAsync(CHANNEL_ID, { name, importance: AndroidImportance.DEFAULT });
 }

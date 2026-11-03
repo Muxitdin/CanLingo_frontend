@@ -12,7 +12,7 @@ import type { Db } from "../db/types";
 import { Rating } from "../domain/fsrs";
 import { answerCard, buildSession } from "../hooks/study";
 import { now, setClockOffsetDays } from "../services/clock";
-import { askNotificationPermission, replaceReminders } from "../services/notifications";
+import { askNotificationPermission, replaceReminders, scheduleTestReminder } from "../services/notifications";
 
 // The app's expo-sqlite connection is swapped for sql.js with the same migrations, so screens run on real SQLite.
 const mockDb: { current: Db | null } = { current: null };
@@ -134,6 +134,15 @@ describe("app flow", () => {
     await testRouter.back("/");
     expect(screen.queryByText("На сегодня всё. Возвращайтесь завтра.")).toBeNull();
     expect(screen.getByText("Начать")).toBeTruthy();
+
+    // A test reminder with the real text of the new day, to check notifications without waiting.
+    const alert = jest.spyOn(Alert, "alert").mockImplementation(() => {});
+    await testRouter.push("/settings");
+    await fireEvent.press(screen.getByText("Напоминание через минуту"));
+    expect(jest.mocked(scheduleTestReminder).mock.calls[0][0].body).toMatch(/^На сегодня: .*10 новых слов$/);
+    expect(alert).toHaveBeenCalledWith("Сверните приложение: уведомление придёт через минуту.");
+    alert.mockRestore();
+    await testRouter.back("/");
 
     // Confirm the reset as if the destructive button in the alert were tapped.
     jest.spyOn(Alert, "alert").mockImplementation((_title, _text, buttons?: AlertButton[]) => {

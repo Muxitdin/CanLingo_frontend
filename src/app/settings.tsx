@@ -79,10 +79,15 @@ export default function Settings() {
 
 /** Development only, never in a release build: test reviews on later days, or start over. */
 function DevTools() {
-  const { today, offsetDays, nextDay, reset } = useDevTools();
+  const { today, offsetDays, nextDay, testReminder, reset } = useDevTools();
   const t = useStrings();
   const c = useColors();
   const dev = t.settings.dev;
+
+  async function sendTestReminder() {
+    if (await testReminder()) Alert.alert(dev.reminderSent);
+    else Alert.alert(t.settings.deniedTitle, t.settings.deniedText);
+  }
 
   function confirmReset() {
     Alert.alert(dev.resetTitle, dev.resetText, [
@@ -100,6 +105,13 @@ function DevTools() {
         </Text>
         <Pressable accessibilityRole="button" onPress={nextDay} style={[styles.row, styles.divider, { borderColor: c.border }]}>
           <Text style={[styles.label, { color: c.accent }]}>{dev.nextDay}</Text>
+        </Pressable>
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => void sendTestReminder()}
+          style={[styles.row, styles.divider, { borderColor: c.border }]}
+        >
+          <Text style={[styles.label, { color: c.accent }]}>{dev.reminderTest}</Text>
         </Pressable>
         <Pressable accessibilityRole="button" onPress={confirmReset} style={[styles.row, styles.divider, { borderColor: c.border }]}>
           <Text style={[styles.label, { color: c.danger }]}>{dev.reset}</Text>
