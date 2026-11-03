@@ -18,9 +18,9 @@ import { saveRating } from "../db/reviews";
 import type { Db } from "../db/types";
 import { isNormComplete, planDay, typicalDailyReviews } from "../domain/dailyPlan";
 import { grade, newCardState, previewDue, State, type Grade } from "../domain/fsrs";
-import { computeStreak, levelForXp, xpForDay, type LevelInfo, type StreakInfo } from "../domain/game";
+import { computeStreak, forecastGoalDate, levelForXp, xpForDay, type LevelInfo, type StreakInfo } from "../domain/game";
 import { buildQueue, repeatsInSession, type QueueItem } from "../domain/queue";
-import { studyDay } from "../domain/studyDay";
+import { studyDay, type StudyDay } from "../domain/studyDay";
 
 /**
  * Returns today's plan, building and storing it on the day's first open.
@@ -117,12 +117,32 @@ export function cardView(db: Db, cardId: string, lang: ProfileRow["uiLang"], now
   };
 }
 
+export interface GoalForecast {
+  /** Words not introduced yet. */
+  remaining: number;
+  /** The study day the last word is introduced at `pace`; null once every word is in. */
+  finishOn: StudyDay | null;
+}
+
+/**
+ * When the user finishes the deck at `pace` new words a day. Today counts with whatever it still has to
+ * introduce: its stored plan if there is one, otherwise a full day at `pace` (the first day after onboarding).
+ */
+export function goalForecast(db: Db, now: Date, pace: number): GoalForecast {
+  const today = studyDay(now);
+  const remaining = countNewAvailable(db);
+  if (remaining === 0) return { remaining, finishOn: null };
+  const plan = getDay(db, today);
+  const leftToday = plan ? Math.max(0, plan.newTarget - plan.newDone) : Math.min(pace, remaining);
+  return { remaining, finishOn: forecastGoalDate(today, Math.max(0, remaining - leftToday), pace) };
+}
+
 export interface TodaySummary {
   progress: DayRow;
   normComplete: boolean;
   /** Cards a session would offer now, including optional recovery extras and learning repeats. */
   available: number;
-  gameEnabled: boolean;
+  goal: GoalForecast;
   streak: StreakInfo;
   totalXp: number;
   level: LevelInfo;
@@ -137,7 +157,7 @@ export function todaySummary(db: Db, now: Date): TodaySummary {
     progress,
     normComplete: isNormComplete(progress),
     available: buildSession(db, now).length,
-    gameEnabled: getProfile(db).gameEnabled,
+    goal: goalForecast(db, now, getProfile(db).newPerDay),
     streak: computeStreak(history, progress.day),
     totalXp,
     level: levelForXp(totalXp),

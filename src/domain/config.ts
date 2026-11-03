@@ -18,6 +18,9 @@ export const LEARN_AHEAD_MINUTES = 20;
 /** New words per day on the free plan. */
 export const FREE_NEW_PER_DAY = 10;
 
+/** New-words-per-day choices in onboarding and settings. Faster paces come with Premium later. */
+export const PACE_OPTIONS: readonly number[] = [5, FREE_NEW_PER_DAY];
+
 /**
  * Recovery mode starts when the reviews due today exceed this many times a normal day's reviews.
  * A normal day is the recent average, but never below RECOVERY_MIN_DAILY_REVIEWS.

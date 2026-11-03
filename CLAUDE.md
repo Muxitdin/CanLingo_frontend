@@ -24,7 +24,9 @@ src/domain/     pure learning logic + tests
 src/db/         SQLite schema, migrations, repositories, deck import
 src/hooks/      glue between screens, db and domain
 src/services/   analytics (Firebase), notifications, TTS, isPremium()
-src/i18n/       ru, uz-Latn (uz-Cyrl later)
+src/i18n/       ru, uz-Latn (uz-Cyrl later); screens read strings via useStrings()
+src/store/      Redux Toolkit; mirrors SQLite rows that screens react to (profile)
+src/__tests__/  screen-flow tests: real routes via renderRouter on sql.js
 src/ui/         shared components
 ```
 
@@ -52,3 +54,5 @@ npx drizzle-kit generate --name <change>   # after editing src/db/schema.ts; com
 ```
 
 Run test, typecheck and lint before calling a change done.
+
+Testing notes: never put tests under `src/app` (every file there becomes a route). In RNTL 14 `fireEvent` is async, so always `await` it.

@@ -4,7 +4,7 @@ import { fromCardState, getCardState } from "../../db/cards";
 import { importDeck } from "../../db/deck";
 import { getDay } from "../../db/days";
 import * as ids from "../../db/ids";
-import { getProfile } from "../../db/profile";
+import { getProfile, updateProfile } from "../../db/profile";
 import { reviewsOfCard } from "../../db/reviews";
 import { cardState, reviewLog } from "../../db/schema";
 import { prepareDatabase } from "../../db/setup";
@@ -14,7 +14,15 @@ import type { Db } from "../../db/types";
 import { FREE_NEW_PER_DAY, XP_PER_NORM } from "../../domain/config";
 import { newCardState, Rating, State, type Grade } from "../../domain/fsrs";
 import { studyDay } from "../../domain/studyDay";
-import { answerCard, buildSession, cardView, ensureDayPlan, todaySummary, type SessionItem } from "../study";
+import {
+  answerCard,
+  buildSession,
+  cardView,
+  ensureDayPlan,
+  goalForecast,
+  todaySummary,
+  type SessionItem,
+} from "../study";
 
 // Day 1 is Tuesday 2026-11-10, local time.
 const at = (day: number, hour = 9, minute = 0) => new Date(2026, 10, 9 + day, hour, minute);
@@ -186,5 +194,37 @@ describe("cardView", () => {
     expect(uz.exampleTranslation).toBe("uz ex1");
     expect(ru.intervals[Rating.Again]).toBeLessThan(ru.intervals[Rating.Good]);
     expect(ru.intervals[Rating.Good]).toBeLessThan(ru.intervals[Rating.Easy]);
+  });
+});
+
+describe("goalForecast", () => {
+  it("counts a full first day at the chosen pace before any plan exists", () => {
+    // 15 words at 5 a day: 5 today, 5 on day 2, the last 5 on day 3.
+    expect(goalForecast(db, at(1), 5)).toEqual({ remaining: 15, finishOn: "2026-11-12" });
+  });
+
+  it("uses what today's plan still has to introduce", () => {
+    ensureDayPlan(db, at(1)); // 10 new today
+    runSession(db, at(1), Rating.Good, 4); // 4 introduced, 6 left today, 5 after today
+    expect(goalForecast(db, at(1, 10), 5)).toEqual({ remaining: 11, finishOn: "2026-11-11" });
+  });
+
+  it("is done once every word is introduced", () => {
+    runSession(db, at(1), Rating.Good);
+    runSession(db, at(2), Rating.Good);
+    expect(goalForecast(db, at(2, 12), 10)).toEqual({ remaining: 0, finishOn: null });
+  });
+
+  it("follows the pace saved in the profile on the home screen", () => {
+    updateProfile(db, { newPerDay: 5 }, at(1));
+    // The plan made after the change has 5 new today; the other 10 take two more days.
+    expect(todaySummary(db, at(1)).goal).toEqual({ remaining: 15, finishOn: "2026-11-12" });
+  });
+});
+
+describe("updateProfile", () => {
+  it("saves settings and returns the new row", () => {
+    const row = updateProfile(db, { uiLang: "uz-Latn", gameEnabled: false, onboardedAt: 5 }, at(1));
+    expect(row).toMatchObject({ uiLang: "uz-Latn", gameEnabled: false, onboardedAt: 5, newPerDay: FREE_NEW_PER_DAY });
   });
 });

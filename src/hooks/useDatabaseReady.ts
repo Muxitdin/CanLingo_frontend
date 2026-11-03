@@ -2,13 +2,20 @@ import { useEffect, useState } from "react";
 
 import deck from "../../assets/decks/en-a1a2.json";
 import { db, runMigrations } from "../db/client";
+import { getProfile } from "../db/profile";
 import { prepareDatabase } from "../db/setup";
+import { useAppDispatch } from "../store";
+import { profileLoaded } from "../store/profileSlice";
 
 export type DatabaseStatus = { state: "loading" } | { state: "ready" } | { state: "error"; error: unknown };
 
-/** Migrates the database, imports the bundled deck when it changed, and creates the profile on first launch. */
+/**
+ * Migrates the database, imports the bundled deck when it changed, creates the profile on first launch,
+ * and loads the profile into the store.
+ */
 export function useDatabaseReady(): DatabaseStatus {
   const [status, setStatus] = useState<DatabaseStatus>({ state: "loading" });
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     let active = true;
@@ -16,7 +23,9 @@ export function useDatabaseReady(): DatabaseStatus {
       .then(() => prepareDatabase(db, deck, new Date()))
       .then(
         () => {
-          if (active) setStatus({ state: "ready" });
+          if (!active) return;
+          dispatch(profileLoaded(getProfile(db)));
+          setStatus({ state: "ready" });
         },
         (error: unknown) => {
           console.error("Database setup failed", error);
@@ -26,7 +35,7 @@ export function useDatabaseReady(): DatabaseStatus {
     return () => {
       active = false;
     };
-  }, []);
+  }, [dispatch]);
 
   return status;
 }
