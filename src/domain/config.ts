@@ -47,3 +47,15 @@ export const LEVEL_STEP_AFTER_TABLE = 1200;
 
 /** Missed days a streak can survive per week (Monday to Sunday). */
 export const STREAK_FREEZES_PER_WEEK = 1;
+
+/** Reminder time choices in onboarding and settings, in minutes after local midnight. */
+export const REMINDER_TIME_OPTIONS: readonly number[] = [8 * 60, 12 * 60, 18 * 60, 20 * 60, 22 * 60];
+
+/** Preselected in onboarding: the user can pick another time or turn reminders off. */
+export const DEFAULT_REMINDER_MINUTES = 20 * 60;
+
+/**
+ * Study days that get a reminder, today included. They are rescheduled every time the app opens,
+ * so after this many days away the reminders stop instead of nagging.
+ */
+export const REMINDER_DAYS = 7;

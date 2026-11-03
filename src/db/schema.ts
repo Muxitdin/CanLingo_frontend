@@ -92,6 +92,8 @@ export const profile = sqliteTable("profile", {
   uiLang: text("ui_lang", { enum: ["ru", "uz-Latn"] }).notNull(),
   newPerDay: integer("new_per_day").notNull(),
   gameEnabled: integer("game_enabled", { mode: "boolean" }).notNull().default(true),
+  /** Daily reminder time in minutes after local midnight; null when reminders are off. */
+  reminderMinutes: integer("reminder_minutes"),
   recoveryStartedOn: text("recovery_started_on"),
   recoveryQuota: integer("recovery_quota"),
   /** Set when onboarding finishes; null shows onboarding on the next launch. */

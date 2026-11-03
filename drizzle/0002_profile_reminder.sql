@@ -1,0 +1,1 @@
+ALTER TABLE `profile` ADD `reminder_minutes` integer;

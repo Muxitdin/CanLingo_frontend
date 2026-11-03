@@ -44,6 +44,7 @@ src/ui/         shared components
 - XP is awarded once per completed daily norm, never per card; the rating never affects XP.
 - The game toggle only hides UI; XP keeps being computed.
 - Never show the paywall mid-session or in recovery mode.
+- At most one reminder a day, and only when that day has work. Reminders are local notifications, rescheduled from progress on every app open and close (`src/hooks/reminders.ts`).
 
 ## Commands
 

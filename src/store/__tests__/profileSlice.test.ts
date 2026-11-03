@@ -9,6 +9,7 @@ const row: ProfileRow = {
   uiLang: "uz-Latn",
   newPerDay: 5,
   gameEnabled: false,
+  reminderMinutes: 1200,
   recoveryStartedOn: null,
   recoveryQuota: null,
   onboardedAt: 1,

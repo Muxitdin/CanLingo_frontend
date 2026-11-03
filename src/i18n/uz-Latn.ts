@@ -56,6 +56,9 @@ export const uzLatn: Strings = {
     gameText: "Darajalar, XP va ketma-ket kunlar. Istalgan payt sozlamalarda oʻchirish mumkin.",
     gameOn: "Oʻyin bilan",
     gameOff: "Oʻyinsiz",
+    reminderTitle: "Qachon eslatib turaylik?",
+    reminderText: "Kuniga bitta bildirishnoma, agar bugun uchun soʻzlar boʻlsa. Vaqtni sozlamalarda oʻzgartirish mumkin.",
+    reminderOff: "Eslatma kerak emas",
     next: "Keyingi",
     back: "Orqaga",
     done: "Oʻrganishni boshlash",
@@ -67,15 +70,32 @@ export const uzLatn: Strings = {
     paceNote: "Yangi tezlik ertadan boshlab amal qiladi.",
     game: "Oʻyin rejimi",
     gameNote: "Darajalar, XP va ketma-ket kunlar. Rejim oʻchiq boʻlsa ham natijalar hisoblanadi.",
+    reminder: "Eslatma",
+    reminderOff: "Eslatma kerak emas",
+    reminderNote: "Kuniga bitta bildirishnoma, faqat bugun uchun soʻzlar boʻlsa.",
+    deniedTitle: "Bildirishnomalarga ruxsat berilmagan",
+    deniedText: "Eslatma olish uchun telefon sozlamalarida bildirishnomalarga ruxsat bering.",
+    openSettings: "Sozlamalarni ochish",
+    cancel: "Bekor qilish",
     dev: {
       title: "Ishlab chiquvchi uchun",
       clock: (date, days) => (days > 0 ? `Ilovadagi sana: ${date} (+${days} kun)` : `Ilovadagi sana: ${date}`),
       nextDay: "Keyingi kun",
+      reminderTest: "Bir daqiqadan keyin eslatma",
+      reminderSent: "Ilovadan chiqing: bildirishnoma bir daqiqadan keyin keladi.",
       reset: "Natijalarni oʻchirish",
       resetTitle: "Natijalar oʻchirilsinmi?",
       resetText: "Barcha javoblar, kunlar va sozlamalar oʻchiriladi, ilova birinchi marta ishga tushirilgandek boshlanadi. Soʻzlar toʻplami qoladi.",
       cancel: "Bekor qilish",
       note: "Faqat ishlab chiqish rejimida koʻrinadi. «Keyingi kun» ilova soatini bir kun oldinga suradi, shunda takrorlashlarni kutmasdan tekshirish mumkin.",
     },
+  },
+  reminder: {
+    title: "Mashgʻulot vaqti",
+    body: (reviews, newWords) => {
+      const parts = [reviews > 0 ? `${reviews} ta takrorlash` : null, newWords > 0 ? `${newWords} ta yangi soʻz` : null];
+      return `Bugun: ${parts.filter(Boolean).join(" va ")}`;
+    },
+    channel: "Eslatmalar",
   },
 };

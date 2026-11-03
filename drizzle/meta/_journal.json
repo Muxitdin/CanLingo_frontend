@@ -15,6 +15,13 @@
       "when": 1793711267698,
       "tag": "0001_profile_onboarded",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1793721486653,
+      "tag": "0002_profile_reminder",
+      "breakpoints": true
     }
   ]
 }
