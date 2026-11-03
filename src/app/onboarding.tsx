@@ -3,19 +3,21 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { db } from "../db/client";
-import { PACE_OPTIONS } from "../domain/config";
+import { DEFAULT_REMINDER_MINUTES, PACE_OPTIONS, REMINDER_TIME_OPTIONS } from "../domain/config";
 import { goalForecast } from "../hooks/study";
 import { useProfile } from "../hooks/useProfile";
 import { LANGUAGE_NAMES, useStrings, type UiLang } from "../i18n";
 import { now } from "../services/clock";
+import { askNotificationPermission } from "../services/notifications";
+import { clockTime } from "../ui/formatTime";
 import { OptionList } from "../ui/OptionList";
 import { PrimaryButton } from "../ui/PrimaryButton";
 import { useColors } from "../ui/theme";
 
-const STEPS = ["language", "pace", "game"] as const;
+const STEPS = ["language", "pace", "game", "reminder"] as const;
 const LANGS = Object.keys(LANGUAGE_NAMES) as UiLang[];
 
-/** First launch: interface language, pace with a finish-date forecast, and the game layer. */
+/** First launch: interface language, pace with a finish-date forecast, the game layer and the daily reminder. */
 export default function Onboarding() {
   const { profile, update } = useProfile();
   const t = useStrings();
@@ -23,6 +25,7 @@ export default function Onboarding() {
   const [step, setStep] = useState(0);
   const [pace, setPace] = useState(profile.newPerDay);
   const [game, setGame] = useState(profile.gameEnabled);
+  const [reminder, setReminder] = useState<number | "off">(DEFAULT_REMINDER_MINUTES);
   const [forecasts] = useState(() => {
     const today = now();
     return new Map(PACE_OPTIONS.map((p) => [p, goalForecast(db, today, p)]));
@@ -30,8 +33,15 @@ export default function Onboarding() {
   const year = now().getFullYear();
   const current = STEPS[step];
 
-  function finish() {
-    update({ newPerDay: pace, gameEnabled: game, onboardedAt: now().getTime() });
+  async function finish() {
+    // The system prompt comes right after the user picked a time, so they know why it asks.
+    const allowed = reminder !== "off" && (await askNotificationPermission());
+    update({
+      newPerDay: pace,
+      gameEnabled: game,
+      reminderMinutes: allowed ? reminder : null,
+      onboardedAt: now().getTime(),
+    });
   }
 
   return (
@@ -81,6 +91,21 @@ export default function Onboarding() {
               ]}
               selected={game ? "on" : "off"}
               onSelect={(k) => setGame(k === "on")}
+            />
+          </View>
+        )}
+
+        {current === "reminder" && (
+          <View style={styles.step}>
+            <Text style={[styles.title, { color: c.text }]}>{t.onboarding.reminderTitle}</Text>
+            <Text style={[styles.hint, { color: c.muted }]}>{t.onboarding.reminderText}</Text>
+            <OptionList<number | "off">
+              options={[
+                ...REMINDER_TIME_OPTIONS.map((m) => ({ key: m, label: clockTime(m) })),
+                { key: "off", label: t.onboarding.reminderOff },
+              ]}
+              selected={reminder}
+              onSelect={setReminder}
             />
           </View>
         )}

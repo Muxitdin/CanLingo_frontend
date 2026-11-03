@@ -63,6 +63,9 @@ export const ru = {
     gameText: "Уровни, XP и серия дней подряд. Выключить можно в любой момент в настройках.",
     gameOn: "С игрой",
     gameOff: "Без игры",
+    reminderTitle: "Когда напоминать?",
+    reminderText: "Одно уведомление в день, если на сегодня есть слова. Время можно поменять в настройках.",
+    reminderOff: "Не напоминать",
     next: "Дальше",
     back: "Назад",
     done: "Начать учиться",
@@ -74,6 +77,13 @@ export const ru = {
     paceNote: "Новый темп начнёт действовать завтра.",
     game: "Игровой режим",
     gameNote: "Уровни, XP и серия дней. Прогресс считается и когда режим выключен.",
+    reminder: "Напоминание",
+    reminderOff: "Не напоминать",
+    reminderNote: "Одно уведомление в день, и только если на сегодня есть слова.",
+    deniedTitle: "Уведомления запрещены",
+    deniedText: "Чтобы получать напоминание, разрешите уведомления в настройках телефона.",
+    openSettings: "Открыть настройки",
+    cancel: "Отмена",
     dev: {
       title: "Для разработки",
       clock: (date: string, days: number) =>
@@ -85,6 +95,19 @@ export const ru = {
       cancel: "Отмена",
       note: "Видно только в режиме разработки. «Следующий день» переводит часы приложения на сутки вперёд, чтобы проверить повторения без ожидания.",
     },
+  },
+  reminder: {
+    title: "Пора позаниматься",
+    /** "На сегодня: 12 повторений и 10 новых слов"; a zero count is left out. */
+    body: (reviews: number, newWords: number) => {
+      const parts = [
+        reviews > 0 ? `${reviews} ${plural(reviews, ["повторение", "повторения", "повторений"])}` : null,
+        newWords > 0 ? `${newWords} ${plural(newWords, ["новое слово", "новых слова", "новых слов"])}` : null,
+      ];
+      return `На сегодня: ${parts.filter(Boolean).join(" и ")}`;
+    },
+    /** Android shows this name in the app's notification settings. */
+    channel: "Напоминания",
   },
 };
 

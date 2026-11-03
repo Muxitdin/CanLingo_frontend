@@ -3,6 +3,7 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, View } from "react-nati
 import { Provider } from "react-redux";
 
 import { useDatabaseReady } from "../hooks/useDatabaseReady";
+import { useReminderSync } from "../hooks/useReminderSync";
 import { useStrings } from "../i18n";
 import { store, useAppSelector } from "../store";
 import { useColors } from "../ui/theme";
@@ -18,6 +19,7 @@ export default function RootLayout() {
 function RootStack() {
   const status = useDatabaseReady();
   const onboarded = useAppSelector((s) => s.profile?.onboardedAt != null);
+  useReminderSync(status.state === "ready");
   const t = useStrings();
   const c = useColors();
 

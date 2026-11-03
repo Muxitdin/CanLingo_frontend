@@ -1,9 +1,11 @@
-import { Alert, Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
+import { Alert, Linking, Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 
-import { PACE_OPTIONS } from "../domain/config";
+import { PACE_OPTIONS, REMINDER_TIME_OPTIONS } from "../domain/config";
 import { useDevTools } from "../hooks/useDevTools";
 import { useProfile } from "../hooks/useProfile";
 import { LANGUAGE_NAMES, useStrings, type UiLang } from "../i18n";
+import { askNotificationPermission } from "../services/notifications";
+import { clockTime } from "../ui/formatTime";
 import { OptionList } from "../ui/OptionList";
 import { useColors } from "../ui/theme";
 
@@ -13,6 +15,16 @@ export default function Settings() {
   const { profile, update } = useProfile();
   const t = useStrings();
   const c = useColors();
+
+  async function chooseReminder(key: number | "off") {
+    if (key === "off") return update({ reminderMinutes: null });
+    if (await askNotificationPermission()) return update({ reminderMinutes: key });
+    // Denied before: the system won't ask again, only the phone's settings can allow it.
+    Alert.alert(t.settings.deniedTitle, t.settings.deniedText, [
+      { text: t.settings.cancel, style: "cancel" },
+      { text: t.settings.openSettings, onPress: () => void Linking.openSettings() },
+    ]);
+  }
 
   return (
     <ScrollView contentContainerStyle={styles.content}>
@@ -33,6 +45,19 @@ export default function Settings() {
           onSelect={(newPerDay) => update({ newPerDay })}
         />
         <Text style={[styles.note, { color: c.muted }]}>{t.settings.paceNote}</Text>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={[styles.heading, { color: c.muted }]}>{t.settings.reminder}</Text>
+        <OptionList<number | "off">
+          options={[
+            ...REMINDER_TIME_OPTIONS.map((m) => ({ key: m, label: clockTime(m) })),
+            { key: "off", label: t.settings.reminderOff },
+          ]}
+          selected={profile.reminderMinutes ?? "off"}
+          onSelect={(key) => void chooseReminder(key)}
+        />
+        <Text style={[styles.note, { color: c.muted }]}>{t.settings.reminderNote}</Text>
       </View>
 
       <View style={styles.section}>

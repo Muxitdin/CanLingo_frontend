@@ -11,8 +11,9 @@ export type ProfileRow = typeof profile.$inferSelect;
 const PROFILE_ID = 1;
 
 /** Settings of a new install. */
-export function defaultSettings(): Pick<ProfileRow, "uiLang" | "newPerDay" | "gameEnabled"> {
-  return { uiLang: "ru", newPerDay: FREE_NEW_PER_DAY, gameEnabled: true };
+export function defaultSettings(): Pick<ProfileRow, "uiLang" | "newPerDay" | "gameEnabled" | "reminderMinutes"> {
+  // Reminders start off: onboarding turns them on once the system allows notifications.
+  return { uiLang: "ru", newPerDay: FREE_NEW_PER_DAY, gameEnabled: true, reminderMinutes: null };
 }
 
 /** Creates the single profile row on first launch and returns it. */
@@ -40,7 +41,9 @@ export function getProfile(db: Db): ProfileRow {
 }
 
 /** What the user can change in onboarding and settings. */
-export type ProfileSettings = Partial<Pick<ProfileRow, "uiLang" | "newPerDay" | "gameEnabled" | "onboardedAt">>;
+export type ProfileSettings = Partial<
+  Pick<ProfileRow, "uiLang" | "newPerDay" | "gameEnabled" | "reminderMinutes" | "onboardedAt">
+>;
 
 /** Saves settings and returns the updated profile. */
 export function updateProfile(db: Db, settings: ProfileSettings, now: Date): ProfileRow {

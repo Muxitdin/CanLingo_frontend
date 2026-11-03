@@ -12,6 +12,7 @@ import type { Db } from "../db/types";
 import { Rating } from "../domain/fsrs";
 import { answerCard, buildSession } from "../hooks/study";
 import { now, setClockOffsetDays } from "../services/clock";
+import { askNotificationPermission, replaceReminders } from "../services/notifications";
 
 // The app's expo-sqlite connection is swapped for sql.js with the same migrations, so screens run on real SQLite.
 const mockDb: { current: Db | null } = { current: null };
@@ -26,6 +27,8 @@ jest.mock("expo-speech", () => ({ speak: jest.fn(), stop: jest.fn(() => Promise.
 beforeEach(async () => {
   mockDb.current = await createTestDb();
   setClockOffsetDays(0);
+  jest.clearAllMocks();
+  jest.mocked(askNotificationPermission).mockResolvedValue(true);
 });
 
 // The first two words on the bundled path, so the test follows the deck as batches are added.
@@ -41,6 +44,9 @@ describe("app flow", () => {
     expect(screen.getByText("Kuniga nechta yangi soʻz?")).toBeTruthy();
     await fireEvent.press(screen.getByText(/Bemalol/));
     await fireEvent.press(screen.getByText("Keyingi"));
+    await fireEvent.press(screen.getByText("Keyingi"));
+    expect(screen.getByText("Qachon eslatib turaylik?")).toBeTruthy();
+    await fireEvent.press(screen.getByText("18:00"));
     await fireEvent.press(screen.getByText("Oʻrganishni boshlash"));
 
     // Home: today's plan at the chosen pace.
@@ -56,6 +62,44 @@ describe("app flow", () => {
 
     expect(mockDb.current!.select().from(reviewLog).all()).toHaveLength(1);
     expect(await screen.findByText(second.word)).toBeTruthy();
+
+    // The reminder asked for permission once and is scheduled in Uzbek at the chosen time.
+    expect(askNotificationPermission).toHaveBeenCalledTimes(1);
+    expect(getProfile(mockDb.current!).reminderMinutes).toBe(18 * 60);
+    const [reminders, channel] = jest.mocked(replaceReminders).mock.calls.at(-1)!;
+    expect(channel).toBe("Eslatmalar");
+    expect(reminders[0].body).toMatch(/^Bugun: .*ta yangi soʻz$/);
+    expect(reminders.every((r) => r.at.getHours() === 18 && r.at.getMinutes() === 0)).toBe(true);
+  });
+
+  it("keeps reminders off when notifications are not allowed", async () => {
+    jest.mocked(askNotificationPermission).mockResolvedValue(false);
+    await renderRouter("src/app", { initialUrl: "/" });
+    await fireEvent.press(await screen.findByText("Русский"));
+    for (let i = 0; i < 3; i++) await fireEvent.press(screen.getByText("Дальше"));
+    await fireEvent.press(screen.getByText("Начать учиться"));
+
+    expect(await screen.findByText("Сегодня")).toBeTruthy();
+    expect(getProfile(mockDb.current!).reminderMinutes).toBeNull();
+    expect(jest.mocked(replaceReminders).mock.calls.at(-1)![0]).toEqual([]);
+  });
+
+  it("changes the reminder time in settings, or explains how to allow notifications", async () => {
+    const db = mockDb.current!;
+    ensureProfile(db, now());
+    updateProfile(db, { onboardedAt: now().getTime() }, now());
+    await renderRouter("src/app", { initialUrl: "/settings" });
+
+    await fireEvent.press(await screen.findByText("08:00"));
+    expect(getProfile(db).reminderMinutes).toBe(8 * 60);
+    await fireEvent.press(screen.getByText("Не напоминать"));
+    expect(getProfile(db).reminderMinutes).toBeNull();
+
+    const alert = jest.spyOn(Alert, "alert").mockImplementation(() => {});
+    jest.mocked(askNotificationPermission).mockResolvedValue(false);
+    await fireEvent.press(screen.getByText("22:00"));
+    expect(alert).toHaveBeenCalledWith("Уведомления запрещены", expect.any(String), expect.any(Array));
+    expect(getProfile(db).reminderMinutes).toBeNull();
   });
 
   it("hides the game layer from settings without losing progress", async () => {
@@ -77,7 +121,7 @@ describe("app flow", () => {
   it("moves the app a day ahead and starts over from settings (development only)", async () => {
     const db = mockDb.current!;
     ensureProfile(db, now());
-    updateProfile(db, { onboardedAt: now().getTime() }, now());
+    updateProfile(db, { onboardedAt: now().getTime(), reminderMinutes: 20 * 60 }, now());
     // Today's ten new words, all answered Easy, so nothing is left for today.
     for (const item of buildSession(db, now())) answerCard(db, item, Rating.Easy, now());
     await renderRouter("src/app", { initialUrl: "/" });
@@ -100,5 +144,7 @@ describe("app flow", () => {
     expect(await screen.findByText("Oʻzbekcha")).toBeTruthy();
     expect(db.select().from(reviewLog).all()).toEqual([]);
     expect(getClockOffset(db)).toBe(0);
+    // The reset turns reminders off, so the ones already scheduled are cancelled.
+    expect(jest.mocked(replaceReminders).mock.calls.at(-1)![0]).toEqual([]);
   });
 });

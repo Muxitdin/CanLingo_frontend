@@ -6,6 +6,7 @@ import { isNormComplete } from "../domain/dailyPlan";
 import type { Grade } from "../domain/fsrs";
 import { now as clockNow } from "../services/clock";
 import { answerCard, buildSession, cardView, ensureDayPlan, type CardView, type SessionItem } from "./study";
+import { syncReminders } from "./useReminderSync";
 
 interface SessionState {
   queue: SessionItem[];
@@ -49,7 +50,10 @@ export function useReviewSession() {
     const { repeat } = answerCard(db, item, rating, now);
     const rest = state.queue.slice(1);
     if (repeat) rest.push({ cardId: item.cardId, kind: "repeat" });
-    setState(load(rest, now));
+    const next = load(rest, now);
+    // Today's reminder is dropped the moment the norm is done, even if the app is closed right after.
+    if (next.normComplete && !state.normComplete) void syncReminders();
+    setState(next);
   }
 
   return {
