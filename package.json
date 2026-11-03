@@ -40,6 +40,7 @@
     "@react-native/jest-preset": "^0.88.0",
     "@testing-library/react-native": "^14.0.1",
     "@types/jest": "^30.0.0",
+    "@types/node": "^22.20.5",
     "@types/react": "~19.3.0",
     "@types/sql.js": "^1.4.11",
     "babel-plugin-inline-import": "^3.0.0",
@@ -50,6 +51,7 @@
     "jest-expo": "~58.0.12",
     "sql.js": "^1.15.2",
     "test-renderer": "^1.2.0",
+    "tsx": "^4.23.15",
     "typescript": "~6.0.3"
   },
   "scripts": {
@@ -59,8 +61,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
-    "typecheck": "tsc --noEmit",
-    "test": "jest"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p scripts",
+    "test": "jest",
+    "deck": "tsx scripts/build-deck.ts"
   },
   "private": true,
   "jest": {

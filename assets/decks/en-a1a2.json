@@ -1,7 +1,8 @@
 {
   "id": "en-a1a2",
-  "version": 1,
-  "note": "Development sample: 50 A1 words. RU and UZ (Latin) drafted by Claude, not yet reviewed; the full deck will come from the content pipeline.",
+  "version": 2,
+  "contentHash": "35dcb738",
+  "source": "Sources and licences: scripts/content/SOURCES.md",
   "cards": [
     {
       "id": "en-a1-0001",

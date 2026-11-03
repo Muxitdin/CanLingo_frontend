@@ -1,0 +1,51 @@
+id,level,unit,position,word,pos,ipa,ru,uz_latn,example_en,example_ru,example_uz_latn,ru_checked,note
+en-a1-0001,A1,1,1,hello,interjection,/həˈləʊ/,привет,salom,"Hello, my name is Anna.","Привет, меня зовут Анна.","Salom, mening ismim Anna.",,dev sample
+en-a1-0002,A1,1,2,name,noun,/neɪm/,имя,ism,What is your name?,Как тебя зовут?,Ismingiz nima?,,dev sample
+en-a1-0003,A1,1,3,friend,noun,/frend/,друг,doʻst,He is my friend.,Он мой друг.,U mening doʻstim.,,dev sample
+en-a1-0004,A1,1,4,family,noun,/ˈfæməli/,семья,oila,I love my family.,Я люблю свою семью.,Men oilamni yaxshi koʻraman.,,dev sample
+en-a1-0005,A1,1,5,mother,noun,/ˈmʌðə/,"мама, мать",ona,My mother is a teacher.,Моя мама — учительница.,Mening onam oʻqituvchi.,,dev sample
+en-a1-0006,A1,1,6,father,noun,/ˈfɑːðə/,"папа, отец",ota,My father works in a bank.,Мой папа работает в банке.,Otam bankda ishlaydi.,,dev sample
+en-a1-0007,A1,1,7,child,noun,/tʃaɪld/,ребёнок,bola,The child is happy.,Ребёнок счастлив.,Bola xursand.,,dev sample
+en-a1-0008,A1,1,8,man,noun,/mæn/,мужчина,erkak,The man is tall.,Мужчина высокий.,Erkak baland boʻyli.,,dev sample
+en-a1-0009,A1,1,9,woman,noun,/ˈwʊmən/,женщина,ayol,The woman is a doctor.,Женщина — врач.,Ayol shifokor.,,dev sample
+en-a1-0010,A1,1,10,people,noun,/ˈpiːpl/,люди,odamlar,Many people live here.,Здесь живёт много людей.,Bu yerda koʻp odamlar yashaydi.,,dev sample
+en-a1-0011,A1,2,11,house,noun,/haʊs/,дом,uy,Our house is big.,Наш дом большой.,Bizning uyimiz katta.,,dev sample
+en-a1-0012,A1,2,12,room,noun,/ruːm/,комната,xona,This is my room.,Это моя комната.,Bu mening xonam.,,dev sample
+en-a1-0013,A1,2,13,door,noun,/dɔː/,дверь,eshik,Please close the door.,"Закрой, пожалуйста, дверь.","Iltimos, eshikni yoping.",,dev sample
+en-a1-0014,A1,2,14,window,noun,/ˈwɪndəʊ/,окно,deraza,"Open the window, please.","Открой окно, пожалуйста.","Iltimos, derazani oching.",,dev sample
+en-a1-0015,A1,2,15,table,noun,/ˈteɪbl/,стол,stol,The book is on the table.,Книга на столе.,Kitob stol ustida.,,dev sample
+en-a1-0016,A1,2,16,chair,noun,/tʃeə/,стул,stul,"Sit on the chair, please.","Садись на стул, пожалуйста.","Iltimos, stulga oʻtiring.",,dev sample
+en-a1-0017,A1,2,17,bed,noun,/bed/,кровать,karavot,I go to bed at ten.,Я ложусь спать в десять.,Men soat oʻnda uxlashga yotaman.,,dev sample
+en-a1-0018,A1,2,18,kitchen,noun,/ˈkɪtʃɪn/,кухня,oshxona,My mother is in the kitchen.,Мама на кухне.,Onam oshxonada.,,dev sample
+en-a1-0019,A1,2,19,water,noun,/ˈwɔːtə/,вода,suv,Can I have some water?,Можно мне воды?,Menga suv bera olasizmi?,,dev sample
+en-a1-0020,A1,2,20,light,noun,/laɪt/,свет,"chiroq, yorugʻlik","Turn on the light, please.","Включи свет, пожалуйста.","Iltimos, chiroqni yoqing.",,dev sample
+en-a1-0021,A1,3,21,food,noun,/fuːd/,еда,ovqat,I like this food.,Мне нравится эта еда.,Menga bu ovqat yoqadi.,,dev sample
+en-a1-0022,A1,3,22,bread,noun,/bred/,хлеб,non,We eat bread every day.,Мы едим хлеб каждый день.,Biz har kuni non yeymiz.,,dev sample
+en-a1-0023,A1,3,23,tea,noun,/tiː/,чай,choy,Would you like some tea?,Хочешь чаю?,Choy ichasizmi?,,dev sample
+en-a1-0024,A1,3,24,apple,noun,/ˈæpl/,яблоко,olma,I eat an apple every morning.,Я ем яблоко каждое утро.,Men har kuni ertalab olma yeyman.,,dev sample
+en-a1-0025,A1,3,25,milk,noun,/mɪlk/,молоко,sut,The cat drinks milk.,Кошка пьёт молоко.,Mushuk sut ichadi.,,dev sample
+en-a1-0026,A1,3,26,meat,noun,/miːt/,мясо,goʻsht,I don't eat meat.,Я не ем мясо.,Men goʻsht yemayman.,,dev sample
+en-a1-0027,A1,3,27,rice,noun,/raɪs/,рис,guruch,Plov is made with rice.,Плов готовят из риса.,Osh guruchdan tayyorlanadi.,,dev sample
+en-a1-0028,A1,3,28,eat,verb,/iːt/,"есть, кушать",yemoq,We eat at seven.,Мы едим в семь.,Biz soat yettida ovqat yeymiz.,,dev sample
+en-a1-0029,A1,3,29,drink,verb,/drɪŋk/,пить,ichmoq,I drink coffee in the morning.,Утром я пью кофе.,Men ertalab qahva ichaman.,,dev sample
+en-a1-0030,A1,3,30,hungry,adjective,/ˈhʌŋɡri/,голодный,"och, qorni och",Are you hungry?,Ты голоден?,Qorningiz ochmi?,,dev sample
+en-a1-0031,A1,4,31,go,verb,/ɡəʊ/,"идти, ехать",bormoq,I go to school by bus.,Я езжу в школу на автобусе.,Men maktabga avtobusda boraman.,,dev sample
+en-a1-0032,A1,4,32,come,verb,/kʌm/,приходить,kelmoq,"Come here, please.","Иди сюда, пожалуйста.","Iltimos, bu yerga keling.",,dev sample
+en-a1-0033,A1,4,33,see,verb,/siː/,видеть,koʻrmoq,I can see the mountains.,Я вижу горы.,Men togʻlarni koʻryapman.,,dev sample
+en-a1-0034,A1,4,34,know,verb,/nəʊ/,знать,bilmoq,I know the answer.,Я знаю ответ.,Men javobni bilaman.,,dev sample
+en-a1-0035,A1,4,35,want,verb,/wɒnt/,хотеть,xohlamoq,I want to learn English.,Я хочу выучить английский.,Men ingliz tilini oʻrganishni xohlayman.,,dev sample
+en-a1-0036,A1,4,36,like,verb,/laɪk/,"нравиться, любить",yoqtirmoq,I like music.,Я люблю музыку.,Men musiqani yoqtiraman.,,dev sample
+en-a1-0037,A1,4,37,work,verb,/wɜːk/,работать,ishlamoq,She works in a hospital.,Она работает в больнице.,U kasalxonada ishlaydi.,,dev sample
+en-a1-0038,A1,4,38,read,verb,/riːd/,читать,oʻqimoq,I read a book every week.,Я читаю книгу каждую неделю.,Men har hafta kitob oʻqiyman.,,dev sample
+en-a1-0039,A1,4,39,write,verb,/raɪt/,писать,yozmoq,Write your name here.,Напиши здесь своё имя.,Ismingizni shu yerga yozing.,,dev sample
+en-a1-0040,A1,4,40,speak,verb,/spiːk/,говорить,gapirmoq,Do you speak English?,Ты говоришь по-английски?,Siz inglizcha gapirasizmi?,,dev sample
+en-a1-0041,A1,5,41,day,noun,/deɪ/,день,kun,Have a nice day!,Хорошего дня!,Kuningiz yaxshi oʻtsin!,,dev sample
+en-a1-0042,A1,5,42,week,noun,/wiːk/,неделя,hafta,I see him every week.,Я вижу его каждую неделю.,Men uni har hafta koʻraman.,,dev sample
+en-a1-0043,A1,5,43,year,noun,/jɪə/,год,yil,This year I want to travel.,В этом году я хочу путешествовать.,Bu yil men sayohat qilmoqchiman.,,dev sample
+en-a1-0044,A1,5,44,today,adverb,/təˈdeɪ/,сегодня,bugun,Today is Monday.,Сегодня понедельник.,Bugun dushanba.,,dev sample
+en-a1-0045,A1,5,45,tomorrow,adverb,/təˈmɒrəʊ/,завтра,ertaga,See you tomorrow!,До завтра!,Ertagacha!,,dev sample
+en-a1-0046,A1,5,46,time,noun,/taɪm/,время,vaqt,I don't have time.,У меня нет времени.,Mening vaqtim yoʻq.,,dev sample
+en-a1-0047,A1,5,47,good,adjective,/ɡʊd/,хороший,yaxshi,This is a good idea.,Это хорошая идея.,Bu yaxshi gʻoya.,,dev sample
+en-a1-0048,A1,5,48,big,adjective,/bɪɡ/,большой,katta,Tashkent is a big city.,Ташкент — большой город.,Toshkent katta shahar.,,dev sample
+en-a1-0049,A1,5,49,small,adjective,/smɔːl/,маленький,kichik,I have a small car.,У меня маленькая машина.,Mening kichik mashinam bor.,,dev sample
+en-a1-0050,A1,5,50,new,adjective,/njuː/,новый,yangi,I have a new phone.,У меня новый телефон.,Mening yangi telefonim bor.,,dev sample

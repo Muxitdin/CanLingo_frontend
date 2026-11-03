@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "build-deck.ts",
+    "__tests__/deckSync.test.ts"
+  ],
+  "exclude": []
+}

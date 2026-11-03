@@ -34,6 +34,7 @@ src/ui/         shared components
 
 - Card content (`cards`) and user progress (`card_state`, `review_log`) are separate tables joined by a stable `card_id` like `en-a1-0001`. Never renumber ids; mark removed cards `retired`.
 - User rows get a UUID and `updated_at`; `review_log` is append-only. Times are stored as UTC ms.
+- Deck content is edited only in `scripts/content/words.csv` (see its README); never hand-edit the deck JSON.
 - Languages are BCP 47 tags with script: `ru`, `uz-Latn`, later `uz-Cyrl`. Translation columns carry the script suffix (`translation_uz_latn`).
 
 ## Product rules
@@ -51,6 +52,7 @@ npm test            # Jest
 npm run typecheck   # tsc --noEmit
 npm run lint        # expo lint
 npx drizzle-kit generate --name <change>   # after editing src/db/schema.ts; commit the new files in drizzle/
+npm run deck        # after editing scripts/content/words.csv; rebuilds assets/decks/en-a1a2.json
 ```
 
 Run test, typecheck and lint before calling a change done.
