@@ -1,6 +1,7 @@
-import { ScrollView, StyleSheet, Switch, Text, View } from "react-native";
+import { Alert, Pressable, ScrollView, StyleSheet, Switch, Text, View } from "react-native";
 
 import { PACE_OPTIONS } from "../domain/config";
+import { useDevTools } from "../hooks/useDevTools";
 import { useProfile } from "../hooks/useProfile";
 import { LANGUAGE_NAMES, useStrings, type UiLang } from "../i18n";
 import { OptionList } from "../ui/OptionList";
@@ -45,7 +46,42 @@ export default function Settings() {
         </View>
         <Text style={[styles.note, { color: c.muted }]}>{t.settings.gameNote}</Text>
       </View>
+
+      {__DEV__ && <DevTools />}
     </ScrollView>
+  );
+}
+
+/** Development only, never in a release build: test reviews on later days, or start over. */
+function DevTools() {
+  const { today, offsetDays, nextDay, reset } = useDevTools();
+  const t = useStrings();
+  const c = useColors();
+  const dev = t.settings.dev;
+
+  function confirmReset() {
+    Alert.alert(dev.resetTitle, dev.resetText, [
+      { text: dev.cancel, style: "cancel" },
+      { text: dev.reset, style: "destructive", onPress: reset },
+    ]);
+  }
+
+  return (
+    <View style={styles.section}>
+      <Text style={[styles.heading, { color: c.muted }]}>{dev.title}</Text>
+      <View style={[styles.group, { backgroundColor: c.surface, borderColor: c.border }]}>
+        <Text style={[styles.row, styles.label, { color: c.muted }]}>
+          {dev.clock(t.date(today, Number(today.slice(0, 4))), offsetDays)}
+        </Text>
+        <Pressable accessibilityRole="button" onPress={nextDay} style={[styles.row, styles.divider, { borderColor: c.border }]}>
+          <Text style={[styles.label, { color: c.accent }]}>{dev.nextDay}</Text>
+        </Pressable>
+        <Pressable accessibilityRole="button" onPress={confirmReset} style={[styles.row, styles.divider, { borderColor: c.border }]}>
+          <Text style={[styles.label, { color: c.danger }]}>{dev.reset}</Text>
+        </Pressable>
+      </View>
+      <Text style={[styles.note, { color: c.muted }]}>{dev.note}</Text>
+    </View>
   );
 }
 
@@ -64,4 +100,7 @@ const styles = StyleSheet.create({
     minHeight: 56,
   },
   label: { fontSize: 17 },
+  group: { borderRadius: 14, borderWidth: StyleSheet.hairlineWidth, overflow: "hidden" },
+  row: { minHeight: 52, paddingHorizontal: 16, paddingVertical: 14, justifyContent: "center" },
+  divider: { borderTopWidth: StyleSheet.hairlineWidth },
 });

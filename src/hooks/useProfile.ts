@@ -1,5 +1,6 @@
 import { db } from "../db/client";
 import { updateProfile, type ProfileRow, type ProfileSettings } from "../db/profile";
+import { now } from "../services/clock";
 import { useAppDispatch, useAppSelector } from "../store";
 import { profileLoaded } from "../store/profileSlice";
 
@@ -10,7 +11,7 @@ export function useProfile(): { profile: ProfileRow; update: (settings: ProfileS
   if (!profile) throw new Error("useProfile before the database is ready");
 
   function update(settings: ProfileSettings) {
-    dispatch(profileLoaded(updateProfile(db, settings, new Date())));
+    dispatch(profileLoaded(updateProfile(db, settings, now())));
   }
 
   return { profile, update };

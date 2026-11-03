@@ -11,6 +11,7 @@ const light = {
   track: "#E8E8E3",
   noticeBg: "#FFF3DC",
   noticeText: "#7A4A00",
+  danger: "#C8323A",
 };
 
 const dark: typeof light = {
@@ -24,6 +25,7 @@ const dark: typeof light = {
   track: "#2F2F2D",
   noticeBg: "#3A2A0E",
   noticeText: "#FFD99A",
+  danger: "#F0646A",
 };
 
 export type Colors = typeof light;

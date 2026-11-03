@@ -10,6 +10,11 @@ export type ProfileRow = typeof profile.$inferSelect;
 
 const PROFILE_ID = 1;
 
+/** Settings of a new install. */
+export function defaultSettings(): Pick<ProfileRow, "uiLang" | "newPerDay" | "gameEnabled"> {
+  return { uiLang: "ru", newPerDay: FREE_NEW_PER_DAY, gameEnabled: true };
+}
+
 /** Creates the single profile row on first launch and returns it. */
 export function ensureProfile(db: Db, now: Date): ProfileRow {
   const existing = db.select().from(profile).where(eq(profile.id, PROFILE_ID)).get();
@@ -17,9 +22,7 @@ export function ensureProfile(db: Db, now: Date): ProfileRow {
   const row: ProfileRow = {
     id: PROFILE_ID,
     installId: newId(),
-    uiLang: "ru",
-    newPerDay: FREE_NEW_PER_DAY,
-    gameEnabled: true,
+    ...defaultSettings(),
     recoveryStartedOn: null,
     recoveryQuota: null,
     onboardedAt: null,

@@ -10,6 +10,7 @@ Android app (iOS later) for learning English vocabulary with spaced repetition (
 - **`src/domain` is pure TypeScript.** No React, React Native, Expo or SQLite imports. Functions take data and `now`, return results. Every rule there gets a Jest test.
 - **Only `src/domain/fsrs.ts` imports `ts-fsrs`.** Everything else uses its wrapper.
 - **Study day rolls over at 04:00 local time.** Always use `studyDay(now)`, never raw calendar dates, for norms, streaks and stats.
+- Hooks and screens get the time from `now()` in `src/services/clock.ts`, never `new Date()`: in development the clock can run days ahead (Settings → «Для разработки»). Domain functions still take `now` as an argument.
 - Screens call hooks in `src/hooks`; a hook reads from `src/db`, computes with `src/domain`, writes back to `src/db`. A rating writes `review_log` and `card_state` in one transaction.
 - Hook logic lives in plain functions (`src/hooks/study.ts`) that take a `Db`; the `use*` hooks only wrap them. Repositories in `src/db` also take a `Db` (`src/db/types.ts`), so Jest runs all of it on real SQLite via sql.js (`src/db/testing/testDb.ts`). Only `src/db/client.ts` opens expo-sqlite.
 - Tunable numbers live in `src/domain/config.ts`. Don't invent thresholds inside functions.
