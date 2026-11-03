@@ -11,6 +11,7 @@ Android app (iOS later) for learning English vocabulary with spaced repetition (
 - **Only `src/domain/fsrs.ts` imports `ts-fsrs`.** Everything else uses its wrapper.
 - **Study day rolls over at 04:00 local time.** Always use `studyDay(now)`, never raw calendar dates, for norms, streaks and stats.
 - Screens call hooks in `src/hooks`; a hook reads from `src/db`, computes with `src/domain`, writes back to `src/db`. A rating writes `review_log` and `card_state` in one transaction.
+- Hook logic lives in plain functions (`src/hooks/study.ts`) that take a `Db`; the `use*` hooks only wrap them. Repositories in `src/db` also take a `Db` (`src/db/types.ts`), so Jest runs all of it on real SQLite via sql.js (`src/db/testing/testDb.ts`). Only `src/db/client.ts` opens expo-sqlite.
 - Tunable numbers live in `src/domain/config.ts`. Don't invent thresholds inside functions.
 - UI state: Redux Toolkit. Persistent data is in SQLite, not in the store.
 - **The app must keep running in Expo Go.** The developer follows progress on an iPhone through Expo Go (`npm run go`). Prefer Expo SDK modules that ship in Expo Go. A native module that Expo Go lacks (e.g. Firebase) goes behind its `src/services` wrapper, is loaded lazily, and falls back to a no-op when `Constants.executionEnvironment === ExecutionEnvironment.StoreClient`.
@@ -47,6 +48,7 @@ npm run go          # dev server for Expo Go (iPhone)
 npm test            # Jest
 npm run typecheck   # tsc --noEmit
 npm run lint        # expo lint
+npx drizzle-kit generate --name <change>   # after editing src/db/schema.ts; commit the new files in drizzle/
 ```
 
 Run test, typecheck and lint before calling a change done.

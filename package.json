@@ -4,8 +4,10 @@
   "main": "expo-router/entry",
   "dependencies": {
     "@expo/ui": "~58.0.23",
+    "drizzle-orm": "^0.45.4",
     "expo": "~58.0.19",
     "expo-constants": "~58.0.13",
+    "expo-crypto": "~58.0.7",
     "expo-dev-client": "~58.0.15",
     "expo-device": "~58.0.5",
     "expo-font": "~58.0.10",
@@ -13,7 +15,9 @@
     "expo-image": "~58.0.17",
     "expo-linking": "~58.0.14",
     "expo-router": "~58.0.26",
+    "expo-speech": "~58.0.3",
     "expo-splash-screen": "~58.0.11",
+    "expo-sqlite": "~58.0.14",
     "expo-status-bar": "~58.0.4",
     "expo-symbols": "~58.0.4",
     "expo-system-ui": "~58.0.6",
@@ -34,10 +38,14 @@
     "@react-native/jest-preset": "^0.88.0",
     "@types/jest": "^30.0.0",
     "@types/react": "~19.3.0",
+    "@types/sql.js": "^1.4.11",
+    "babel-plugin-inline-import": "^3.0.0",
+    "drizzle-kit": "^0.31.11",
     "eslint": "^9.39.5",
     "eslint-config-expo": "~58.0.4",
     "jest": "^30.5.2",
     "jest-expo": "~58.0.12",
+    "sql.js": "^1.15.2",
     "typescript": "~6.0.3"
   },
   "scripts": {
@@ -52,6 +60,9 @@
   },
   "private": true,
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupFiles": [
+      "<rootDir>/jest.setup.ts"
+    ]
   }
 }
