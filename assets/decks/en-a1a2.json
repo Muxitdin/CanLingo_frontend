@@ -1,13 +1,14 @@
 {
   "id": "en-a1a2",
-  "version": 1,
-  "note": "Development sample: 50 A1 words. RU and UZ (Latin) drafted by Claude, not yet reviewed; the full deck will come from the content pipeline.",
+  "version": 3,
+  "contentHash": "04332de2",
+  "source": "Sources and licences: scripts/content/SOURCES.md",
   "cards": [
     {
       "id": "en-a1-0001",
       "word": "hello",
       "pos": "interjection",
-      "ipa": "/həˈləʊ/",
+      "ipa": "/həˈloʊ/",
       "level": "A1",
       "unit": 1,
       "position": 1,
@@ -27,8 +28,8 @@
       "pos": "noun",
       "ipa": "/neɪm/",
       "level": "A1",
-      "unit": 1,
-      "position": 2,
+      "unit": 2,
+      "position": 10,
       "translation": {
         "ru": "имя",
         "uz-Latn": "ism"
@@ -43,10 +44,10 @@
       "id": "en-a1-0003",
       "word": "friend",
       "pos": "noun",
-      "ipa": "/frend/",
+      "ipa": "/frɛnd/",
       "level": "A1",
-      "unit": 1,
-      "position": 3,
+      "unit": 2,
+      "position": 11,
       "translation": {
         "ru": "друг",
         "uz-Latn": "doʻst"
@@ -63,8 +64,8 @@
       "pos": "noun",
       "ipa": "/ˈfæməli/",
       "level": "A1",
-      "unit": 1,
-      "position": 4,
+      "unit": 2,
+      "position": 12,
       "translation": {
         "ru": "семья",
         "uz-Latn": "oila"
@@ -79,10 +80,10 @@
       "id": "en-a1-0005",
       "word": "mother",
       "pos": "noun",
-      "ipa": "/ˈmʌðə/",
+      "ipa": "/ˈmʌðɚ/",
       "level": "A1",
-      "unit": 1,
-      "position": 5,
+      "unit": 2,
+      "position": 13,
       "translation": {
         "ru": "мама, мать",
         "uz-Latn": "ona"
@@ -97,10 +98,10 @@
       "id": "en-a1-0006",
       "word": "father",
       "pos": "noun",
-      "ipa": "/ˈfɑːðə/",
+      "ipa": "/ˈfɑðɚ/",
       "level": "A1",
-      "unit": 1,
-      "position": 6,
+      "unit": 2,
+      "position": 14,
       "translation": {
         "ru": "папа, отец",
         "uz-Latn": "ota"
@@ -117,8 +118,8 @@
       "pos": "noun",
       "ipa": "/tʃaɪld/",
       "level": "A1",
-      "unit": 1,
-      "position": 7,
+      "unit": 2,
+      "position": 15,
       "translation": {
         "ru": "ребёнок",
         "uz-Latn": "bola"
@@ -135,8 +136,8 @@
       "pos": "noun",
       "ipa": "/mæn/",
       "level": "A1",
-      "unit": 1,
-      "position": 8,
+      "unit": 2,
+      "position": 16,
       "translation": {
         "ru": "мужчина",
         "uz-Latn": "erkak"
@@ -153,8 +154,8 @@
       "pos": "noun",
       "ipa": "/ˈwʊmən/",
       "level": "A1",
-      "unit": 1,
-      "position": 9,
+      "unit": 2,
+      "position": 17,
       "translation": {
         "ru": "женщина",
         "uz-Latn": "ayol"
@@ -169,10 +170,10 @@
       "id": "en-a1-0010",
       "word": "people",
       "pos": "noun",
-      "ipa": "/ˈpiːpl/",
+      "ipa": "/ˈpipəl/",
       "level": "A1",
-      "unit": 1,
-      "position": 10,
+      "unit": 2,
+      "position": 18,
       "translation": {
         "ru": "люди",
         "uz-Latn": "odamlar"
@@ -184,373 +185,13 @@
       }
     },
     {
-      "id": "en-a1-0011",
-      "word": "house",
-      "pos": "noun",
-      "ipa": "/haʊs/",
-      "level": "A1",
-      "unit": 2,
-      "position": 11,
-      "translation": {
-        "ru": "дом",
-        "uz-Latn": "uy"
-      },
-      "example": {
-        "en": "Our house is big.",
-        "ru": "Наш дом большой.",
-        "uz-Latn": "Bizning uyimiz katta."
-      }
-    },
-    {
-      "id": "en-a1-0012",
-      "word": "room",
-      "pos": "noun",
-      "ipa": "/ruːm/",
-      "level": "A1",
-      "unit": 2,
-      "position": 12,
-      "translation": {
-        "ru": "комната",
-        "uz-Latn": "xona"
-      },
-      "example": {
-        "en": "This is my room.",
-        "ru": "Это моя комната.",
-        "uz-Latn": "Bu mening xonam."
-      }
-    },
-    {
-      "id": "en-a1-0013",
-      "word": "door",
-      "pos": "noun",
-      "ipa": "/dɔː/",
-      "level": "A1",
-      "unit": 2,
-      "position": 13,
-      "translation": {
-        "ru": "дверь",
-        "uz-Latn": "eshik"
-      },
-      "example": {
-        "en": "Please close the door.",
-        "ru": "Закрой, пожалуйста, дверь.",
-        "uz-Latn": "Iltimos, eshikni yoping."
-      }
-    },
-    {
-      "id": "en-a1-0014",
-      "word": "window",
-      "pos": "noun",
-      "ipa": "/ˈwɪndəʊ/",
-      "level": "A1",
-      "unit": 2,
-      "position": 14,
-      "translation": {
-        "ru": "окно",
-        "uz-Latn": "deraza"
-      },
-      "example": {
-        "en": "Open the window, please.",
-        "ru": "Открой окно, пожалуйста.",
-        "uz-Latn": "Iltimos, derazani oching."
-      }
-    },
-    {
-      "id": "en-a1-0015",
-      "word": "table",
-      "pos": "noun",
-      "ipa": "/ˈteɪbl/",
-      "level": "A1",
-      "unit": 2,
-      "position": 15,
-      "translation": {
-        "ru": "стол",
-        "uz-Latn": "stol"
-      },
-      "example": {
-        "en": "The book is on the table.",
-        "ru": "Книга на столе.",
-        "uz-Latn": "Kitob stol ustida."
-      }
-    },
-    {
-      "id": "en-a1-0016",
-      "word": "chair",
-      "pos": "noun",
-      "ipa": "/tʃeə/",
-      "level": "A1",
-      "unit": 2,
-      "position": 16,
-      "translation": {
-        "ru": "стул",
-        "uz-Latn": "stul"
-      },
-      "example": {
-        "en": "Sit on the chair, please.",
-        "ru": "Садись на стул, пожалуйста.",
-        "uz-Latn": "Iltimos, stulga oʻtiring."
-      }
-    },
-    {
-      "id": "en-a1-0017",
-      "word": "bed",
-      "pos": "noun",
-      "ipa": "/bed/",
-      "level": "A1",
-      "unit": 2,
-      "position": 17,
-      "translation": {
-        "ru": "кровать",
-        "uz-Latn": "karavot"
-      },
-      "example": {
-        "en": "I go to bed at ten.",
-        "ru": "Я ложусь спать в десять.",
-        "uz-Latn": "Men soat oʻnda uxlashga yotaman."
-      }
-    },
-    {
-      "id": "en-a1-0018",
-      "word": "kitchen",
-      "pos": "noun",
-      "ipa": "/ˈkɪtʃɪn/",
-      "level": "A1",
-      "unit": 2,
-      "position": 18,
-      "translation": {
-        "ru": "кухня",
-        "uz-Latn": "oshxona"
-      },
-      "example": {
-        "en": "My mother is in the kitchen.",
-        "ru": "Мама на кухне.",
-        "uz-Latn": "Onam oshxonada."
-      }
-    },
-    {
-      "id": "en-a1-0019",
-      "word": "water",
-      "pos": "noun",
-      "ipa": "/ˈwɔːtə/",
-      "level": "A1",
-      "unit": 2,
-      "position": 19,
-      "translation": {
-        "ru": "вода",
-        "uz-Latn": "suv"
-      },
-      "example": {
-        "en": "Can I have some water?",
-        "ru": "Можно мне воды?",
-        "uz-Latn": "Menga suv bera olasizmi?"
-      }
-    },
-    {
-      "id": "en-a1-0020",
-      "word": "light",
-      "pos": "noun",
-      "ipa": "/laɪt/",
-      "level": "A1",
-      "unit": 2,
-      "position": 20,
-      "translation": {
-        "ru": "свет",
-        "uz-Latn": "chiroq, yorugʻlik"
-      },
-      "example": {
-        "en": "Turn on the light, please.",
-        "ru": "Включи свет, пожалуйста.",
-        "uz-Latn": "Iltimos, chiroqni yoqing."
-      }
-    },
-    {
-      "id": "en-a1-0021",
-      "word": "food",
-      "pos": "noun",
-      "ipa": "/fuːd/",
-      "level": "A1",
-      "unit": 3,
-      "position": 21,
-      "translation": {
-        "ru": "еда",
-        "uz-Latn": "ovqat"
-      },
-      "example": {
-        "en": "I like this food.",
-        "ru": "Мне нравится эта еда.",
-        "uz-Latn": "Menga bu ovqat yoqadi."
-      }
-    },
-    {
-      "id": "en-a1-0022",
-      "word": "bread",
-      "pos": "noun",
-      "ipa": "/bred/",
-      "level": "A1",
-      "unit": 3,
-      "position": 22,
-      "translation": {
-        "ru": "хлеб",
-        "uz-Latn": "non"
-      },
-      "example": {
-        "en": "We eat bread every day.",
-        "ru": "Мы едим хлеб каждый день.",
-        "uz-Latn": "Biz har kuni non yeymiz."
-      }
-    },
-    {
-      "id": "en-a1-0023",
-      "word": "tea",
-      "pos": "noun",
-      "ipa": "/tiː/",
-      "level": "A1",
-      "unit": 3,
-      "position": 23,
-      "translation": {
-        "ru": "чай",
-        "uz-Latn": "choy"
-      },
-      "example": {
-        "en": "Would you like some tea?",
-        "ru": "Хочешь чаю?",
-        "uz-Latn": "Choy ichasizmi?"
-      }
-    },
-    {
-      "id": "en-a1-0024",
-      "word": "apple",
-      "pos": "noun",
-      "ipa": "/ˈæpl/",
-      "level": "A1",
-      "unit": 3,
-      "position": 24,
-      "translation": {
-        "ru": "яблоко",
-        "uz-Latn": "olma"
-      },
-      "example": {
-        "en": "I eat an apple every morning.",
-        "ru": "Я ем яблоко каждое утро.",
-        "uz-Latn": "Men har kuni ertalab olma yeyman."
-      }
-    },
-    {
-      "id": "en-a1-0025",
-      "word": "milk",
-      "pos": "noun",
-      "ipa": "/mɪlk/",
-      "level": "A1",
-      "unit": 3,
-      "position": 25,
-      "translation": {
-        "ru": "молоко",
-        "uz-Latn": "sut"
-      },
-      "example": {
-        "en": "The cat drinks milk.",
-        "ru": "Кошка пьёт молоко.",
-        "uz-Latn": "Mushuk sut ichadi."
-      }
-    },
-    {
-      "id": "en-a1-0026",
-      "word": "meat",
-      "pos": "noun",
-      "ipa": "/miːt/",
-      "level": "A1",
-      "unit": 3,
-      "position": 26,
-      "translation": {
-        "ru": "мясо",
-        "uz-Latn": "goʻsht"
-      },
-      "example": {
-        "en": "I don't eat meat.",
-        "ru": "Я не ем мясо.",
-        "uz-Latn": "Men goʻsht yemayman."
-      }
-    },
-    {
-      "id": "en-a1-0027",
-      "word": "rice",
-      "pos": "noun",
-      "ipa": "/raɪs/",
-      "level": "A1",
-      "unit": 3,
-      "position": 27,
-      "translation": {
-        "ru": "рис",
-        "uz-Latn": "guruch"
-      },
-      "example": {
-        "en": "Plov is made with rice.",
-        "ru": "Плов готовят из риса.",
-        "uz-Latn": "Osh guruchdan tayyorlanadi."
-      }
-    },
-    {
-      "id": "en-a1-0028",
-      "word": "eat",
-      "pos": "verb",
-      "ipa": "/iːt/",
-      "level": "A1",
-      "unit": 3,
-      "position": 28,
-      "translation": {
-        "ru": "есть, кушать",
-        "uz-Latn": "yemoq"
-      },
-      "example": {
-        "en": "We eat at seven.",
-        "ru": "Мы едим в семь.",
-        "uz-Latn": "Biz soat yettida ovqat yeymiz."
-      }
-    },
-    {
-      "id": "en-a1-0029",
-      "word": "drink",
-      "pos": "verb",
-      "ipa": "/drɪŋk/",
-      "level": "A1",
-      "unit": 3,
-      "position": 29,
-      "translation": {
-        "ru": "пить",
-        "uz-Latn": "ichmoq"
-      },
-      "example": {
-        "en": "I drink coffee in the morning.",
-        "ru": "Утром я пью кофе.",
-        "uz-Latn": "Men ertalab qahva ichaman."
-      }
-    },
-    {
-      "id": "en-a1-0030",
-      "word": "hungry",
-      "pos": "adjective",
-      "ipa": "/ˈhʌŋɡri/",
-      "level": "A1",
-      "unit": 3,
-      "position": 30,
-      "translation": {
-        "ru": "голодный",
-        "uz-Latn": "och, qorni och"
-      },
-      "example": {
-        "en": "Are you hungry?",
-        "ru": "Ты голоден?",
-        "uz-Latn": "Qorningiz ochmi?"
-      }
-    },
-    {
       "id": "en-a1-0031",
       "word": "go",
       "pos": "verb",
-      "ipa": "/ɡəʊ/",
+      "ipa": "/ɡoʊ/",
       "level": "A1",
-      "unit": 4,
-      "position": 31,
+      "unit": 5,
+      "position": 42,
       "translation": {
         "ru": "идти, ехать",
         "uz-Latn": "bormoq"
@@ -567,8 +208,8 @@
       "pos": "verb",
       "ipa": "/kʌm/",
       "level": "A1",
-      "unit": 4,
-      "position": 32,
+      "unit": 5,
+      "position": 43,
       "translation": {
         "ru": "приходить",
         "uz-Latn": "kelmoq"
@@ -583,10 +224,10 @@
       "id": "en-a1-0033",
       "word": "see",
       "pos": "verb",
-      "ipa": "/siː/",
+      "ipa": "/si/",
       "level": "A1",
-      "unit": 4,
-      "position": 33,
+      "unit": 5,
+      "position": 44,
       "translation": {
         "ru": "видеть",
         "uz-Latn": "koʻrmoq"
@@ -601,10 +242,10 @@
       "id": "en-a1-0034",
       "word": "know",
       "pos": "verb",
-      "ipa": "/nəʊ/",
+      "ipa": "/noʊ/",
       "level": "A1",
-      "unit": 4,
-      "position": 34,
+      "unit": 5,
+      "position": 45,
       "translation": {
         "ru": "знать",
         "uz-Latn": "bilmoq"
@@ -619,10 +260,10 @@
       "id": "en-a1-0035",
       "word": "want",
       "pos": "verb",
-      "ipa": "/wɒnt/",
+      "ipa": "/wɑnt/",
       "level": "A1",
-      "unit": 4,
-      "position": 35,
+      "unit": 5,
+      "position": 46,
       "translation": {
         "ru": "хотеть",
         "uz-Latn": "xohlamoq"
@@ -639,8 +280,8 @@
       "pos": "verb",
       "ipa": "/laɪk/",
       "level": "A1",
-      "unit": 4,
-      "position": 36,
+      "unit": 5,
+      "position": 47,
       "translation": {
         "ru": "нравиться, любить",
         "uz-Latn": "yoqtirmoq"
@@ -652,75 +293,273 @@
       }
     },
     {
-      "id": "en-a1-0037",
-      "word": "work",
-      "pos": "verb",
-      "ipa": "/wɜːk/",
+      "id": "en-a1-0021",
+      "word": "food",
+      "pos": "noun",
+      "ipa": "/fud/",
       "level": "A1",
-      "unit": 4,
-      "position": 37,
+      "unit": 6,
+      "position": 48,
       "translation": {
-        "ru": "работать",
-        "uz-Latn": "ishlamoq"
+        "ru": "еда",
+        "uz-Latn": "ovqat"
       },
       "example": {
-        "en": "She works in a hospital.",
-        "ru": "Она работает в больнице.",
-        "uz-Latn": "U kasalxonada ishlaydi."
+        "en": "I like this food.",
+        "ru": "Мне нравится эта еда.",
+        "uz-Latn": "Menga bu ovqat yoqadi."
       }
     },
     {
-      "id": "en-a1-0038",
-      "word": "read",
-      "pos": "verb",
-      "ipa": "/riːd/",
+      "id": "en-a1-0019",
+      "word": "water",
+      "pos": "noun",
+      "ipa": "/ˈwɔtɚ/",
       "level": "A1",
-      "unit": 4,
-      "position": 38,
+      "unit": 6,
+      "position": 49,
       "translation": {
-        "ru": "читать",
-        "uz-Latn": "oʻqimoq"
+        "ru": "вода",
+        "uz-Latn": "suv"
       },
       "example": {
-        "en": "I read a book every week.",
-        "ru": "Я читаю книгу каждую неделю.",
-        "uz-Latn": "Men har hafta kitob oʻqiyman."
+        "en": "Can I have some water?",
+        "ru": "Можно мне воды?",
+        "uz-Latn": "Menga suv bera olasizmi?"
       }
     },
     {
-      "id": "en-a1-0039",
-      "word": "write",
-      "pos": "verb",
-      "ipa": "/raɪt/",
+      "id": "en-a1-0022",
+      "word": "bread",
+      "pos": "noun",
+      "ipa": "/brɛd/",
       "level": "A1",
-      "unit": 4,
-      "position": 39,
+      "unit": 6,
+      "position": 50,
       "translation": {
-        "ru": "писать",
-        "uz-Latn": "yozmoq"
+        "ru": "хлеб",
+        "uz-Latn": "non"
       },
       "example": {
-        "en": "Write your name here.",
-        "ru": "Напиши здесь своё имя.",
-        "uz-Latn": "Ismingizni shu yerga yozing."
+        "en": "We eat bread every day.",
+        "ru": "Мы едим хлеб каждый день.",
+        "uz-Latn": "Biz har kuni non yeymiz."
       }
     },
     {
-      "id": "en-a1-0040",
-      "word": "speak",
-      "pos": "verb",
-      "ipa": "/spiːk/",
+      "id": "en-a1-0023",
+      "word": "tea",
+      "pos": "noun",
+      "ipa": "/ti/",
       "level": "A1",
-      "unit": 4,
-      "position": 40,
+      "unit": 6,
+      "position": 51,
       "translation": {
-        "ru": "говорить",
-        "uz-Latn": "gapirmoq"
+        "ru": "чай",
+        "uz-Latn": "choy"
       },
       "example": {
-        "en": "Do you speak English?",
-        "ru": "Ты говоришь по-английски?",
-        "uz-Latn": "Siz inglizcha gapirasizmi?"
+        "en": "Would you like some tea?",
+        "ru": "Хочешь чаю?",
+        "uz-Latn": "Choy ichasizmi?"
+      }
+    },
+    {
+      "id": "en-a1-0025",
+      "word": "milk",
+      "pos": "noun",
+      "ipa": "/mɪlk/",
+      "level": "A1",
+      "unit": 6,
+      "position": 53,
+      "translation": {
+        "ru": "молоко",
+        "uz-Latn": "sut"
+      },
+      "example": {
+        "en": "The cat drinks milk.",
+        "ru": "Кошка пьёт молоко.",
+        "uz-Latn": "Mushuk sut ichadi."
+      }
+    },
+    {
+      "id": "en-a1-0024",
+      "word": "apple",
+      "pos": "noun",
+      "ipa": "/ˈæpəl/",
+      "level": "A1",
+      "unit": 6,
+      "position": 55,
+      "translation": {
+        "ru": "яблоко",
+        "uz-Latn": "olma"
+      },
+      "example": {
+        "en": "I eat an apple every morning.",
+        "ru": "Я ем яблоко каждое утро.",
+        "uz-Latn": "Men har kuni ertalab olma yeyman."
+      }
+    },
+    {
+      "id": "en-a1-0011",
+      "word": "house",
+      "pos": "noun",
+      "ipa": "/haʊs/",
+      "level": "A1",
+      "unit": 7,
+      "position": 58,
+      "translation": {
+        "ru": "дом",
+        "uz-Latn": "uy"
+      },
+      "example": {
+        "en": "Our house is big.",
+        "ru": "Наш дом большой.",
+        "uz-Latn": "Bizning uyimiz katta."
+      }
+    },
+    {
+      "id": "en-a1-0012",
+      "word": "room",
+      "pos": "noun",
+      "ipa": "/rum/",
+      "level": "A1",
+      "unit": 7,
+      "position": 60,
+      "translation": {
+        "ru": "комната",
+        "uz-Latn": "xona"
+      },
+      "example": {
+        "en": "This is my room.",
+        "ru": "Это моя комната.",
+        "uz-Latn": "Bu mening xonam."
+      }
+    },
+    {
+      "id": "en-a1-0013",
+      "word": "door",
+      "pos": "noun",
+      "ipa": "/dɔr/",
+      "level": "A1",
+      "unit": 7,
+      "position": 61,
+      "translation": {
+        "ru": "дверь",
+        "uz-Latn": "eshik"
+      },
+      "example": {
+        "en": "Please close the door.",
+        "ru": "Закрой, пожалуйста, дверь.",
+        "uz-Latn": "Iltimos, eshikni yoping."
+      }
+    },
+    {
+      "id": "en-a1-0014",
+      "word": "window",
+      "pos": "noun",
+      "ipa": "/ˈwɪndoʊ/",
+      "level": "A1",
+      "unit": 7,
+      "position": 62,
+      "translation": {
+        "ru": "окно",
+        "uz-Latn": "deraza"
+      },
+      "example": {
+        "en": "Open the window, please.",
+        "ru": "Открой окно, пожалуйста.",
+        "uz-Latn": "Iltimos, derazani oching."
+      }
+    },
+    {
+      "id": "en-a1-0015",
+      "word": "table",
+      "pos": "noun",
+      "ipa": "/ˈteɪbəl/",
+      "level": "A1",
+      "unit": 7,
+      "position": 63,
+      "translation": {
+        "ru": "стол",
+        "uz-Latn": "stol"
+      },
+      "example": {
+        "en": "The book is on the table.",
+        "ru": "Книга на столе.",
+        "uz-Latn": "Kitob stol ustida."
+      }
+    },
+    {
+      "id": "en-a1-0016",
+      "word": "chair",
+      "pos": "noun",
+      "ipa": "/tʃɛr/",
+      "level": "A1",
+      "unit": 7,
+      "position": 64,
+      "translation": {
+        "ru": "стул",
+        "uz-Latn": "stul"
+      },
+      "example": {
+        "en": "Sit on the chair, please.",
+        "ru": "Садись на стул, пожалуйста.",
+        "uz-Latn": "Iltimos, stulga oʻtiring."
+      }
+    },
+    {
+      "id": "en-a1-0017",
+      "word": "bed",
+      "pos": "noun",
+      "ipa": "/bɛd/",
+      "level": "A1",
+      "unit": 7,
+      "position": 65,
+      "translation": {
+        "ru": "кровать",
+        "uz-Latn": "karavot"
+      },
+      "example": {
+        "en": "I go to bed at ten.",
+        "ru": "Я ложусь спать в десять.",
+        "uz-Latn": "Men soat oʻnda uxlashga yotaman."
+      }
+    },
+    {
+      "id": "en-a1-0018",
+      "word": "kitchen",
+      "pos": "noun",
+      "ipa": "/ˈkɪtʃən/",
+      "level": "A1",
+      "unit": 7,
+      "position": 66,
+      "translation": {
+        "ru": "кухня",
+        "uz-Latn": "oshxona"
+      },
+      "example": {
+        "en": "My mother is in the kitchen.",
+        "ru": "Мама на кухне.",
+        "uz-Latn": "Onam oshxonada."
+      }
+    },
+    {
+      "id": "en-a1-0046",
+      "word": "time",
+      "pos": "noun",
+      "ipa": "/taɪm/",
+      "level": "A1",
+      "unit": 8,
+      "position": 67,
+      "translation": {
+        "ru": "время",
+        "uz-Latn": "vaqt"
+      },
+      "example": {
+        "en": "I don't have time.",
+        "ru": "У меня нет времени.",
+        "uz-Latn": "Mening vaqtim yoʻq."
       }
     },
     {
@@ -729,8 +568,8 @@
       "pos": "noun",
       "ipa": "/deɪ/",
       "level": "A1",
-      "unit": 5,
-      "position": 41,
+      "unit": 8,
+      "position": 68,
       "translation": {
         "ru": "день",
         "uz-Latn": "kun"
@@ -745,10 +584,10 @@
       "id": "en-a1-0042",
       "word": "week",
       "pos": "noun",
-      "ipa": "/wiːk/",
+      "ipa": "/wik/",
       "level": "A1",
-      "unit": 5,
-      "position": 42,
+      "unit": 8,
+      "position": 69,
       "translation": {
         "ru": "неделя",
         "uz-Latn": "hafta"
@@ -763,10 +602,10 @@
       "id": "en-a1-0043",
       "word": "year",
       "pos": "noun",
-      "ipa": "/jɪə/",
+      "ipa": "/jɪr/",
       "level": "A1",
-      "unit": 5,
-      "position": 43,
+      "unit": 8,
+      "position": 71,
       "translation": {
         "ru": "год",
         "uz-Latn": "yil"
@@ -783,8 +622,8 @@
       "pos": "adverb",
       "ipa": "/təˈdeɪ/",
       "level": "A1",
-      "unit": 5,
-      "position": 44,
+      "unit": 8,
+      "position": 72,
       "translation": {
         "ru": "сегодня",
         "uz-Latn": "bugun"
@@ -799,10 +638,10 @@
       "id": "en-a1-0045",
       "word": "tomorrow",
       "pos": "adverb",
-      "ipa": "/təˈmɒrəʊ/",
+      "ipa": "/təˈmɑˌroʊ/",
       "level": "A1",
-      "unit": 5,
-      "position": 45,
+      "unit": 8,
+      "position": 73,
       "translation": {
         "ru": "завтра",
         "uz-Latn": "ertaga"
@@ -814,31 +653,13 @@
       }
     },
     {
-      "id": "en-a1-0046",
-      "word": "time",
-      "pos": "noun",
-      "ipa": "/taɪm/",
-      "level": "A1",
-      "unit": 5,
-      "position": 46,
-      "translation": {
-        "ru": "время",
-        "uz-Latn": "vaqt"
-      },
-      "example": {
-        "en": "I don't have time.",
-        "ru": "У меня нет времени.",
-        "uz-Latn": "Mening vaqtim yoʻq."
-      }
-    },
-    {
       "id": "en-a1-0047",
       "word": "good",
       "pos": "adjective",
       "ipa": "/ɡʊd/",
       "level": "A1",
-      "unit": 5,
-      "position": 47,
+      "unit": 9,
+      "position": 77,
       "translation": {
         "ru": "хороший",
         "uz-Latn": "yaxshi"
@@ -855,8 +676,8 @@
       "pos": "adjective",
       "ipa": "/bɪɡ/",
       "level": "A1",
-      "unit": 5,
-      "position": 48,
+      "unit": 9,
+      "position": 79,
       "translation": {
         "ru": "большой",
         "uz-Latn": "katta"
@@ -871,10 +692,10 @@
       "id": "en-a1-0049",
       "word": "small",
       "pos": "adjective",
-      "ipa": "/smɔːl/",
+      "ipa": "/smɔl/",
       "level": "A1",
-      "unit": 5,
-      "position": 49,
+      "unit": 9,
+      "position": 80,
       "translation": {
         "ru": "маленький",
         "uz-Latn": "kichik"
@@ -889,10 +710,10 @@
       "id": "en-a1-0050",
       "word": "new",
       "pos": "adjective",
-      "ipa": "/njuː/",
+      "ipa": "/nu/",
       "level": "A1",
-      "unit": 5,
-      "position": 50,
+      "unit": 9,
+      "position": 81,
       "translation": {
         "ru": "новый",
         "uz-Latn": "yangi"
@@ -901,6 +722,186 @@
         "en": "I have a new phone.",
         "ru": "У меня новый телефон.",
         "uz-Latn": "Mening yangi telefonim bor."
+      }
+    },
+    {
+      "id": "en-a1-0037",
+      "word": "work",
+      "pos": "verb",
+      "ipa": "/wɝk/",
+      "level": "A1",
+      "unit": 16,
+      "position": 141,
+      "translation": {
+        "ru": "работать",
+        "uz-Latn": "ishlamoq"
+      },
+      "example": {
+        "en": "She works in a hospital.",
+        "ru": "Она работает в больнице.",
+        "uz-Latn": "U kasalxonada ishlaydi."
+      }
+    },
+    {
+      "id": "en-a1-0040",
+      "word": "speak",
+      "pos": "verb",
+      "ipa": "/spik/",
+      "level": "A1",
+      "unit": 22,
+      "position": 206,
+      "translation": {
+        "ru": "говорить",
+        "uz-Latn": "gapirmoq"
+      },
+      "example": {
+        "en": "Do you speak English?",
+        "ru": "Ты говоришь по-английски?",
+        "uz-Latn": "Siz inglizcha gapirasizmi?"
+      }
+    },
+    {
+      "id": "en-a1-0027",
+      "word": "rice",
+      "pos": "noun",
+      "ipa": "/raɪs/",
+      "level": "A1",
+      "unit": 32,
+      "position": 295,
+      "translation": {
+        "ru": "рис",
+        "uz-Latn": "guruch"
+      },
+      "example": {
+        "en": "Plov is made with rice.",
+        "ru": "Плов готовят из риса.",
+        "uz-Latn": "Osh guruchdan tayyorlanadi."
+      }
+    },
+    {
+      "id": "en-a1-0026",
+      "word": "meat",
+      "pos": "noun",
+      "ipa": "/mit/",
+      "level": "A1",
+      "unit": 32,
+      "position": 296,
+      "translation": {
+        "ru": "мясо",
+        "uz-Latn": "goʻsht"
+      },
+      "example": {
+        "en": "I don't eat meat.",
+        "ru": "Я не ем мясо.",
+        "uz-Latn": "Men goʻsht yemayman."
+      }
+    },
+    {
+      "id": "en-a1-0020",
+      "word": "light",
+      "pos": "noun",
+      "ipa": "/laɪt/",
+      "level": "A1",
+      "unit": 58,
+      "position": 537,
+      "translation": {
+        "ru": "свет",
+        "uz-Latn": "chiroq, yorugʻlik"
+      },
+      "example": {
+        "en": "Turn on the light, please.",
+        "ru": "Включи свет, пожалуйста.",
+        "uz-Latn": "Iltimos, chiroqni yoqing."
+      }
+    },
+    {
+      "id": "en-a1-0038",
+      "word": "read",
+      "pos": "verb",
+      "ipa": "/rɛd/",
+      "level": "A1",
+      "unit": 85,
+      "position": 787,
+      "translation": {
+        "ru": "читать",
+        "uz-Latn": "oʻqimoq"
+      },
+      "example": {
+        "en": "I read a book every week.",
+        "ru": "Я читаю книгу каждую неделю.",
+        "uz-Latn": "Men har hafta kitob oʻqiyman."
+      }
+    },
+    {
+      "id": "en-a1-0039",
+      "word": "write",
+      "pos": "verb",
+      "ipa": "/raɪt/",
+      "level": "A1",
+      "unit": 85,
+      "position": 788,
+      "translation": {
+        "ru": "писать",
+        "uz-Latn": "yozmoq"
+      },
+      "example": {
+        "en": "Write your name here.",
+        "ru": "Напиши здесь своё имя.",
+        "uz-Latn": "Ismingizni shu yerga yozing."
+      }
+    },
+    {
+      "id": "en-a1-0028",
+      "word": "eat",
+      "pos": "verb",
+      "ipa": "/it/",
+      "level": "A1",
+      "unit": 115,
+      "position": 1033,
+      "translation": {
+        "ru": "есть, кушать",
+        "uz-Latn": "yemoq"
+      },
+      "example": {
+        "en": "We eat at seven.",
+        "ru": "Мы едим в семь.",
+        "uz-Latn": "Biz soat yettida ovqat yeymiz."
+      }
+    },
+    {
+      "id": "en-a1-0029",
+      "word": "drink",
+      "pos": "verb",
+      "ipa": "/drɪŋk/",
+      "level": "A1",
+      "unit": 115,
+      "position": 1034,
+      "translation": {
+        "ru": "пить",
+        "uz-Latn": "ichmoq"
+      },
+      "example": {
+        "en": "I drink coffee in the morning.",
+        "ru": "Утром я пью кофе.",
+        "uz-Latn": "Men ertalab qahva ichaman."
+      }
+    },
+    {
+      "id": "en-a1-0030",
+      "word": "hungry",
+      "pos": "adjective",
+      "ipa": "/ˈhʌŋɡri/",
+      "level": "A1",
+      "unit": 115,
+      "position": 1037,
+      "translation": {
+        "ru": "голодный",
+        "uz-Latn": "och, qorni och"
+      },
+      "example": {
+        "en": "Are you hungry?",
+        "ru": "Ты голоден?",
+        "uz-Latn": "Qorningiz ochmi?"
       }
     }
   ]

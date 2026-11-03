@@ -48,9 +48,8 @@ export function parseDeck(raw: unknown): DeckFile {
     ids.add(id);
     if (!LEVELS.has(c.level)) problems.push(`${where}: bad level`);
     else if (!id.startsWith(`en-${c.level.toLowerCase()}-`)) problems.push(`${where}: id does not match level`);
-    const pos = `${c.level}:${c.position}`;
-    if (positions.has(pos)) problems.push(`${where}: duplicate position`);
-    positions.add(pos);
+    if (positions.has(String(c.position))) problems.push(`${where}: duplicate position`);
+    positions.add(String(c.position));
     if (!Number.isInteger(c.unit) || !Number.isInteger(c.position)) problems.push(`${where}: unit and position must be integers`);
     for (const [field, value] of [
       ["word", c.word],
