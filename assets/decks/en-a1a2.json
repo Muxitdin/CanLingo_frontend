@@ -1,7 +1,7 @@
 {
   "id": "en-a1a2",
-  "version": 4,
-  "contentHash": "8ea73a65",
+  "version": 6,
+  "contentHash": "0860b766",
   "source": "Sources and licences: scripts/content/SOURCES.md",
   "cards": [
     {
@@ -4379,6 +4379,924 @@
       }
     },
     {
+      "id": "en-a1-0248",
+      "word": "sorry",
+      "pos": "adjective",
+      "ipa": "/ˈsɑri/",
+      "level": "A1",
+      "unit": 27,
+      "position": 244,
+      "translation": {
+        "ru": "извините; жаль",
+        "uz-Latn": "kechirasiz; afsus"
+      },
+      "example": {
+        "en": "I'm sorry, I'm late.",
+        "ru": "Извините, я опоздал.",
+        "uz-Latn": "Kechirasiz, kechikdim."
+      }
+    },
+    {
+      "id": "en-a1-0249",
+      "word": "excuse",
+      "pos": "verb",
+      "ipa": "/ɪkˈskjuz/",
+      "level": "A1",
+      "unit": 27,
+      "position": 245,
+      "translation": {
+        "ru": "извинять, простить",
+        "uz-Latn": "kechirmoq"
+      },
+      "example": {
+        "en": "Excuse me, where is the bank?",
+        "ru": "Извините, где банк?",
+        "uz-Latn": "Kechirasiz, bank qayerda?"
+      }
+    },
+    {
+      "id": "en-a1-0250",
+      "word": "welcome",
+      "pos": "interjection",
+      "ipa": "/ˈwɛlkəm/",
+      "level": "A1",
+      "unit": 27,
+      "position": 246,
+      "translation": {
+        "ru": "добро пожаловать",
+        "uz-Latn": "xush kelibsiz"
+      },
+      "example": {
+        "en": "Welcome to Tashkent!",
+        "ru": "Добро пожаловать в Ташкент!",
+        "uz-Latn": "Toshkentga xush kelibsiz!"
+      }
+    },
+    {
+      "id": "en-a1-0251",
+      "word": "yes",
+      "pos": "adverb",
+      "ipa": "/jɛs/",
+      "level": "A1",
+      "unit": 27,
+      "position": 247,
+      "translation": {
+        "ru": "да",
+        "uz-Latn": "ha"
+      },
+      "example": {
+        "en": "Yes, I am ready.",
+        "ru": "Да, я готов.",
+        "uz-Latn": "Ha, men tayyorman."
+      }
+    },
+    {
+      "id": "en-a1-0252",
+      "word": "no",
+      "pos": "adverb",
+      "ipa": "/noʊ/",
+      "level": "A1",
+      "unit": 27,
+      "position": 248,
+      "translation": {
+        "ru": "нет",
+        "uz-Latn": "yoʻq"
+      },
+      "example": {
+        "en": "No, thank you.",
+        "ru": "Нет, спасибо.",
+        "uz-Latn": "Yoʻq, rahmat."
+      }
+    },
+    {
+      "id": "en-a1-0253",
+      "word": "OK",
+      "pos": "adjective",
+      "ipa": "/ˌoʊˈkeɪ/",
+      "level": "A1",
+      "unit": 27,
+      "position": 249,
+      "translation": {
+        "ru": "в порядке, нормально",
+        "uz-Latn": "yaxshi, joyida"
+      },
+      "example": {
+        "en": "Are you OK?",
+        "ru": "Ты в порядке?",
+        "uz-Latn": "Yaxshimisan?"
+      }
+    },
+    {
+      "id": "en-a1-0254",
+      "word": "fine",
+      "pos": "adjective",
+      "ipa": "/faɪn/",
+      "level": "A1",
+      "unit": 27,
+      "position": 250,
+      "translation": {
+        "ru": "хороший, в порядке",
+        "uz-Latn": "yaxshi"
+      },
+      "example": {
+        "en": "I'm fine, thanks.",
+        "ru": "Я в порядке, спасибо.",
+        "uz-Latn": "Yaxshiman, rahmat."
+      }
+    },
+    {
+      "id": "en-a1-0255",
+      "word": "all right",
+      "pos": "adjective",
+      "ipa": "/ɔl raɪt/",
+      "level": "A1",
+      "unit": 27,
+      "position": 251,
+      "translation": {
+        "ru": "в порядке, нормально",
+        "uz-Latn": "yaxshi, joyida"
+      },
+      "example": {
+        "en": "Is everything all right?",
+        "ru": "Всё в порядке?",
+        "uz-Latn": "Hammasi joyidami?"
+      }
+    },
+    {
+      "id": "en-a1-0256",
+      "word": "pardon",
+      "pos": "interjection",
+      "ipa": "/ˈpɑrdən/",
+      "level": "A1",
+      "unit": 27,
+      "position": 252,
+      "translation": {
+        "ru": "простите? (переспросить)",
+        "uz-Latn": "kechirasiz? (qayta soʻrash)"
+      },
+      "example": {
+        "en": "Pardon? Can you say that again?",
+        "ru": "Простите? Можете повторить?",
+        "uz-Latn": "Kechirasiz, yana bir bor ayta olasizmi?"
+      }
+    },
+    {
+      "id": "en-a1-0257",
+      "word": "person",
+      "pos": "noun",
+      "ipa": "/ˈpɝsən/",
+      "level": "A1",
+      "unit": 28,
+      "position": 253,
+      "translation": {
+        "ru": "человек",
+        "uz-Latn": "odam, shaxs"
+      },
+      "example": {
+        "en": "She is a kind person.",
+        "ru": "Она добрый человек.",
+        "uz-Latn": "U mehribon odam."
+      }
+    },
+    {
+      "id": "en-a1-0258",
+      "word": "boy",
+      "pos": "noun",
+      "ipa": "/bɔɪ/",
+      "level": "A1",
+      "unit": 28,
+      "position": 254,
+      "translation": {
+        "ru": "мальчик",
+        "uz-Latn": "oʻgʻil bola"
+      },
+      "example": {
+        "en": "The boy is playing football.",
+        "ru": "Мальчик играет в футбол.",
+        "uz-Latn": "Oʻgʻil bola futbol oʻynayapti."
+      }
+    },
+    {
+      "id": "en-a1-0259",
+      "word": "girl",
+      "pos": "noun",
+      "ipa": "/ɡɝl/",
+      "level": "A1",
+      "unit": 28,
+      "position": 255,
+      "translation": {
+        "ru": "девочка, девушка",
+        "uz-Latn": "qiz"
+      },
+      "example": {
+        "en": "That girl is my sister.",
+        "ru": "Та девочка — моя сестра.",
+        "uz-Latn": "Anavi qiz mening singlim."
+      }
+    },
+    {
+      "id": "en-a1-0260",
+      "word": "baby",
+      "pos": "noun",
+      "ipa": "/ˈbeɪbi/",
+      "level": "A1",
+      "unit": 28,
+      "position": 256,
+      "translation": {
+        "ru": "малыш, младенец",
+        "uz-Latn": "chaqaloq"
+      },
+      "example": {
+        "en": "The baby is crying.",
+        "ru": "Малыш плачет.",
+        "uz-Latn": "Chaqaloq yigʻlayapti."
+      }
+    },
+    {
+      "id": "en-a1-0261",
+      "word": "brother",
+      "pos": "noun",
+      "ipa": "/ˈbrʌðɚ/",
+      "level": "A1",
+      "unit": 28,
+      "position": 257,
+      "translation": {
+        "ru": "брат",
+        "uz-Latn": "aka, uka"
+      },
+      "example": {
+        "en": "My brother lives in Moscow.",
+        "ru": "Мой брат живёт в Москве.",
+        "uz-Latn": "Akam Moskvada yashaydi."
+      }
+    },
+    {
+      "id": "en-a1-0262",
+      "word": "sister",
+      "pos": "noun",
+      "ipa": "/ˈsɪstɚ/",
+      "level": "A1",
+      "unit": 28,
+      "position": 258,
+      "translation": {
+        "ru": "сестра",
+        "uz-Latn": "opa, singil"
+      },
+      "example": {
+        "en": "My sister is a teacher.",
+        "ru": "Моя сестра — учительница.",
+        "uz-Latn": "Opam oʻqituvchi."
+      }
+    },
+    {
+      "id": "en-a1-0263",
+      "word": "son",
+      "pos": "noun",
+      "ipa": "/sʌn/",
+      "level": "A1",
+      "unit": 28,
+      "position": 259,
+      "translation": {
+        "ru": "сын",
+        "uz-Latn": "oʻgʻil"
+      },
+      "example": {
+        "en": "Their son is five.",
+        "ru": "Их сыну пять лет.",
+        "uz-Latn": "Ularning oʻgʻli besh yoshda."
+      }
+    },
+    {
+      "id": "en-a1-0264",
+      "word": "daughter",
+      "pos": "noun",
+      "ipa": "/ˈdɔtɚ/",
+      "level": "A1",
+      "unit": 28,
+      "position": 260,
+      "translation": {
+        "ru": "дочь",
+        "uz-Latn": "qiz (farzand)"
+      },
+      "example": {
+        "en": "My daughter goes to school.",
+        "ru": "Моя дочь ходит в школу.",
+        "uz-Latn": "Qizim maktabga boradi."
+      }
+    },
+    {
+      "id": "en-a1-0265",
+      "word": "parent",
+      "pos": "noun",
+      "ipa": "/ˈpɛrənt/",
+      "level": "A1",
+      "unit": 28,
+      "position": 261,
+      "translation": {
+        "ru": "родитель",
+        "uz-Latn": "ota-ona"
+      },
+      "example": {
+        "en": "My parents live in Fergana.",
+        "ru": "Мои родители живут в Фергане.",
+        "uz-Latn": "Ota-onam Fargʻonada yashaydi."
+      }
+    },
+    {
+      "id": "en-a1-0266",
+      "word": "us",
+      "pos": "pronoun",
+      "ipa": "/ʌs/",
+      "level": "A1",
+      "unit": 29,
+      "position": 262,
+      "translation": {
+        "ru": "нас, нам",
+        "uz-Latn": "bizni, bizga"
+      },
+      "example": {
+        "en": "Can you help us?",
+        "ru": "Можешь нам помочь?",
+        "uz-Latn": "Bizga yordam bera olasanmi?"
+      }
+    },
+    {
+      "id": "en-a1-0267",
+      "word": "them",
+      "pos": "pronoun",
+      "ipa": "/ðɛm/",
+      "level": "A1",
+      "unit": 29,
+      "position": 263,
+      "translation": {
+        "ru": "их, им",
+        "uz-Latn": "ularni, ularga"
+      },
+      "example": {
+        "en": "I see them every day.",
+        "ru": "Я вижу их каждый день.",
+        "uz-Latn": "Men ularni har kuni koʻraman."
+      }
+    },
+    {
+      "id": "en-a1-0268",
+      "word": "my",
+      "pos": "determiner",
+      "ipa": "/maɪ/",
+      "level": "A1",
+      "unit": 29,
+      "position": 264,
+      "translation": {
+        "ru": "мой",
+        "uz-Latn": "mening"
+      },
+      "example": {
+        "en": "This is my bag.",
+        "ru": "Это моя сумка.",
+        "uz-Latn": "Bu mening sumkam."
+      }
+    },
+    {
+      "id": "en-a1-0269",
+      "word": "your",
+      "pos": "determiner",
+      "ipa": "/jɔr/",
+      "level": "A1",
+      "unit": 29,
+      "position": 265,
+      "translation": {
+        "ru": "твой, ваш",
+        "uz-Latn": "sening, sizning"
+      },
+      "example": {
+        "en": "Is this your phone?",
+        "ru": "Это твой телефон?",
+        "uz-Latn": "Bu sening telefoningmi?"
+      }
+    },
+    {
+      "id": "en-a1-0270",
+      "word": "his",
+      "pos": "determiner",
+      "ipa": "/hɪz/",
+      "level": "A1",
+      "unit": 29,
+      "position": 266,
+      "translation": {
+        "ru": "его",
+        "uz-Latn": "uning (erkak)"
+      },
+      "example": {
+        "en": "His car is red.",
+        "ru": "Его машина красная.",
+        "uz-Latn": "Uning mashinasi qizil."
+      }
+    },
+    {
+      "id": "en-a1-0271",
+      "word": "our",
+      "pos": "determiner",
+      "ipa": "/ˈaʊɚ/",
+      "level": "A1",
+      "unit": 29,
+      "position": 267,
+      "translation": {
+        "ru": "наш",
+        "uz-Latn": "bizning"
+      },
+      "example": {
+        "en": "Our house is small.",
+        "ru": "Наш дом маленький.",
+        "uz-Latn": "Bizning uyimiz kichik."
+      }
+    },
+    {
+      "id": "en-a1-0272",
+      "word": "their",
+      "pos": "determiner",
+      "ipa": "/ðɛr/",
+      "level": "A1",
+      "unit": 29,
+      "position": 268,
+      "translation": {
+        "ru": "их",
+        "uz-Latn": "ularning"
+      },
+      "example": {
+        "en": "Their children are at school.",
+        "ru": "Их дети в школе.",
+        "uz-Latn": "Ularning bolalari maktabda."
+      }
+    },
+    {
+      "id": "en-a1-0273",
+      "word": "its",
+      "pos": "determiner",
+      "ipa": "/ɪts/",
+      "level": "A1",
+      "unit": 29,
+      "position": 269,
+      "translation": {
+        "ru": "его, её (о предмете, животном)",
+        "uz-Latn": "uning (narsa, hayvon)"
+      },
+      "example": {
+        "en": "The dog is eating its food.",
+        "ru": "Собака ест свою еду.",
+        "uz-Latn": "It ovqatini yeyapti."
+      }
+    },
+    {
+      "id": "en-a1-0274",
+      "word": "mine",
+      "pos": "pronoun",
+      "ipa": "/maɪn/",
+      "level": "A1",
+      "unit": 29,
+      "position": 270,
+      "translation": {
+        "ru": "мой (без существительного)",
+        "uz-Latn": "meniki"
+      },
+      "example": {
+        "en": "This bag is mine.",
+        "ru": "Эта сумка моя.",
+        "uz-Latn": "Bu sumka meniki."
+      }
+    },
+    {
+      "id": "en-a1-0275",
+      "word": "yours",
+      "pos": "pronoun",
+      "ipa": "/jʊrz/",
+      "level": "A1",
+      "unit": 29,
+      "position": 271,
+      "translation": {
+        "ru": "твой, ваш (без существительного)",
+        "uz-Latn": "seniki, sizniki"
+      },
+      "example": {
+        "en": "Is this pen yours?",
+        "ru": "Это твоя ручка?",
+        "uz-Latn": "Bu ruchka senikimi?"
+      }
+    },
+    {
+      "id": "en-a1-0276",
+      "word": "eleven",
+      "pos": "number",
+      "ipa": "/ɪˈlɛvən/",
+      "level": "A1",
+      "unit": 30,
+      "position": 272,
+      "translation": {
+        "ru": "одиннадцать",
+        "uz-Latn": "oʻn bir"
+      },
+      "example": {
+        "en": "My son is eleven.",
+        "ru": "Моему сыну одиннадцать.",
+        "uz-Latn": "Oʻgʻlim oʻn bir yoshda."
+      }
+    },
+    {
+      "id": "en-a1-0277",
+      "word": "twelve",
+      "pos": "number",
+      "ipa": "/twɛlv/",
+      "level": "A1",
+      "unit": 30,
+      "position": 273,
+      "translation": {
+        "ru": "двенадцать",
+        "uz-Latn": "oʻn ikki"
+      },
+      "example": {
+        "en": "A year has twelve months.",
+        "ru": "В году двенадцать месяцев.",
+        "uz-Latn": "Bir yilda oʻn ikki oy bor."
+      }
+    },
+    {
+      "id": "en-a1-0278",
+      "word": "thirteen",
+      "pos": "number",
+      "ipa": "/ˌθɝˈtin/",
+      "level": "A1",
+      "unit": 30,
+      "position": 274,
+      "translation": {
+        "ru": "тринадцать",
+        "uz-Latn": "oʻn uch"
+      },
+      "example": {
+        "en": "There are thirteen students in the group.",
+        "ru": "В группе тринадцать студентов.",
+        "uz-Latn": "Guruhda oʻn uchta talaba bor."
+      }
+    },
+    {
+      "id": "en-a1-0279",
+      "word": "fourteen",
+      "pos": "number",
+      "ipa": "/ˌfɔrˈtin/",
+      "level": "A1",
+      "unit": 30,
+      "position": 275,
+      "translation": {
+        "ru": "четырнадцать",
+        "uz-Latn": "oʻn toʻrt"
+      },
+      "example": {
+        "en": "She is fourteen years old.",
+        "ru": "Ей четырнадцать лет.",
+        "uz-Latn": "U oʻn toʻrt yoshda."
+      }
+    },
+    {
+      "id": "en-a1-0280",
+      "word": "fifteen",
+      "pos": "number",
+      "ipa": "/fɪfˈtin/",
+      "level": "A1",
+      "unit": 30,
+      "position": 276,
+      "translation": {
+        "ru": "пятнадцать",
+        "uz-Latn": "oʻn besh"
+      },
+      "example": {
+        "en": "The bus comes in fifteen minutes.",
+        "ru": "Автобус придёт через пятнадцать минут.",
+        "uz-Latn": "Avtobus oʻn besh daqiqadan keyin keladi."
+      }
+    },
+    {
+      "id": "en-a1-0281",
+      "word": "sixteen",
+      "pos": "number",
+      "ipa": "/sɪkˈstin/",
+      "level": "A1",
+      "unit": 30,
+      "position": 277,
+      "translation": {
+        "ru": "шестнадцать",
+        "uz-Latn": "oʻn olti"
+      },
+      "example": {
+        "en": "Our building has sixteen floors.",
+        "ru": "В нашем доме шестнадцать этажей.",
+        "uz-Latn": "Binomiz oʻn olti qavatli."
+      }
+    },
+    {
+      "id": "en-a1-0282",
+      "word": "seventeen",
+      "pos": "number",
+      "ipa": "/ˌsɛvənˈtin/",
+      "level": "A1",
+      "unit": 30,
+      "position": 278,
+      "translation": {
+        "ru": "семнадцать",
+        "uz-Latn": "oʻn yetti"
+      },
+      "example": {
+        "en": "My cousin is seventeen.",
+        "ru": "Моему двоюродному брату семнадцать.",
+        "uz-Latn": "Amakivachcham oʻn yetti yoshda."
+      }
+    },
+    {
+      "id": "en-a1-0283",
+      "word": "eighteen",
+      "pos": "number",
+      "ipa": "/eɪˈtin/",
+      "level": "A1",
+      "unit": 30,
+      "position": 279,
+      "translation": {
+        "ru": "восемнадцать",
+        "uz-Latn": "oʻn sakkiz"
+      },
+      "example": {
+        "en": "You can drive at eighteen.",
+        "ru": "Водить можно с восемнадцати лет.",
+        "uz-Latn": "Oʻn sakkiz yoshdan mashina haydash mumkin."
+      }
+    },
+    {
+      "id": "en-a1-0284",
+      "word": "nineteen",
+      "pos": "number",
+      "ipa": "/ˌnaɪnˈtin/",
+      "level": "A1",
+      "unit": 30,
+      "position": 280,
+      "translation": {
+        "ru": "девятнадцать",
+        "uz-Latn": "oʻn toʻqqiz"
+      },
+      "example": {
+        "en": "I paid nineteen dollars.",
+        "ru": "Я заплатил девятнадцать долларов.",
+        "uz-Latn": "Men oʻn toʻqqiz dollar toʻladim."
+      }
+    },
+    {
+      "id": "en-a1-0285",
+      "word": "twenty",
+      "pos": "number",
+      "ipa": "/ˈtwɛnti/",
+      "level": "A1",
+      "unit": 30,
+      "position": 281,
+      "translation": {
+        "ru": "двадцать",
+        "uz-Latn": "yigirma"
+      },
+      "example": {
+        "en": "I am twenty years old.",
+        "ru": "Мне двадцать лет.",
+        "uz-Latn": "Men yigirma yoshdaman."
+      }
+    },
+    {
+      "id": "en-a1-0286",
+      "word": "make",
+      "pos": "verb",
+      "ipa": "/meɪk/",
+      "level": "A1",
+      "unit": 31,
+      "position": 282,
+      "translation": {
+        "ru": "делать, изготовлять",
+        "uz-Latn": "qilmoq, yasamoq"
+      },
+      "example": {
+        "en": "My mother makes plov every Sunday.",
+        "ru": "Мама готовит плов каждое воскресенье.",
+        "uz-Latn": "Onam har yakshanba osh qiladi."
+      }
+    },
+    {
+      "id": "en-a1-0287",
+      "word": "get",
+      "pos": "verb",
+      "ipa": "/ɡɛt/",
+      "level": "A1",
+      "unit": 31,
+      "position": 283,
+      "translation": {
+        "ru": "получать; доставать",
+        "uz-Latn": "olmoq"
+      },
+      "example": {
+        "en": "Where can I get a ticket?",
+        "ru": "Где можно взять билет?",
+        "uz-Latn": "Chiptani qayerdan olsa boʻladi?"
+      }
+    },
+    {
+      "id": "en-a1-0288",
+      "word": "give",
+      "pos": "verb",
+      "ipa": "/ɡɪv/",
+      "level": "A1",
+      "unit": 31,
+      "position": 284,
+      "translation": {
+        "ru": "давать",
+        "uz-Latn": "bermoq"
+      },
+      "example": {
+        "en": "Give me the book, please.",
+        "ru": "Дай мне книгу, пожалуйста.",
+        "uz-Latn": "Iltimos, kitobni menga ber."
+      }
+    },
+    {
+      "id": "en-a1-0289",
+      "word": "take",
+      "pos": "verb",
+      "ipa": "/teɪk/",
+      "level": "A1",
+      "unit": 31,
+      "position": 285,
+      "translation": {
+        "ru": "брать",
+        "uz-Latn": "olmoq"
+      },
+      "example": {
+        "en": "Take an umbrella.",
+        "ru": "Возьми зонт.",
+        "uz-Latn": "Soyabon ol."
+      }
+    },
+    {
+      "id": "en-a1-0290",
+      "word": "say",
+      "pos": "verb",
+      "ipa": "/seɪ/",
+      "level": "A1",
+      "unit": 31,
+      "position": 286,
+      "translation": {
+        "ru": "сказать",
+        "uz-Latn": "aytmoq"
+      },
+      "example": {
+        "en": "What did he say?",
+        "ru": "Что он сказал?",
+        "uz-Latn": "U nima dedi?"
+      }
+    },
+    {
+      "id": "en-a1-0291",
+      "word": "tell",
+      "pos": "verb",
+      "ipa": "/tɛl/",
+      "level": "A1",
+      "unit": 31,
+      "position": 287,
+      "translation": {
+        "ru": "рассказывать, сказать (кому-то)",
+        "uz-Latn": "aytmoq, aytib bermoq"
+      },
+      "example": {
+        "en": "Tell me about your family.",
+        "ru": "Расскажи мне о своей семье.",
+        "uz-Latn": "Menga oilang haqida aytib ber."
+      }
+    },
+    {
+      "id": "en-a1-0292",
+      "word": "think",
+      "pos": "verb",
+      "ipa": "/θɪŋk/",
+      "level": "A1",
+      "unit": 31,
+      "position": 288,
+      "translation": {
+        "ru": "думать",
+        "uz-Latn": "oʻylamoq"
+      },
+      "example": {
+        "en": "I think it is a good idea.",
+        "ru": "Я думаю, это хорошая идея.",
+        "uz-Latn": "Menimcha, bu yaxshi fikr."
+      }
+    },
+    {
+      "id": "en-a1-0293",
+      "word": "look",
+      "pos": "verb",
+      "ipa": "/lʊk/",
+      "level": "A1",
+      "unit": 31,
+      "position": 289,
+      "translation": {
+        "ru": "смотреть; выглядеть",
+        "uz-Latn": "qaramoq; koʻrinmoq"
+      },
+      "example": {
+        "en": "Look at this picture.",
+        "ru": "Посмотри на эту картину.",
+        "uz-Latn": "Bu rasmga qara."
+      }
+    },
+    {
+      "id": "en-a1-0294",
+      "word": "need",
+      "pos": "verb",
+      "ipa": "/nid/",
+      "level": "A1",
+      "unit": 31,
+      "position": 290,
+      "translation": {
+        "ru": "нуждаться, нужно",
+        "uz-Latn": "kerak boʻlmoq"
+      },
+      "example": {
+        "en": "I need your help.",
+        "ru": "Мне нужна твоя помощь.",
+        "uz-Latn": "Menga yordaming kerak."
+      }
+    },
+    {
+      "id": "en-a1-0295",
+      "word": "fruit",
+      "pos": "noun",
+      "ipa": "/frut/",
+      "level": "A1",
+      "unit": 32,
+      "position": 291,
+      "translation": {
+        "ru": "фрукты",
+        "uz-Latn": "meva"
+      },
+      "example": {
+        "en": "Uzbekistan has very sweet fruit.",
+        "ru": "В Узбекистане очень сладкие фрукты.",
+        "uz-Latn": "Oʻzbekistonda mevalar juda shirin."
+      }
+    },
+    {
+      "id": "en-a1-0296",
+      "word": "vegetable",
+      "pos": "noun",
+      "ipa": "/ˈvɛdʒtəbəl/",
+      "level": "A1",
+      "unit": 32,
+      "position": 292,
+      "translation": {
+        "ru": "овощ",
+        "uz-Latn": "sabzavot"
+      },
+      "example": {
+        "en": "Eat more vegetables.",
+        "ru": "Ешь больше овощей.",
+        "uz-Latn": "Koʻproq sabzavot ye."
+      }
+    },
+    {
+      "id": "en-a1-0297",
+      "word": "potato",
+      "pos": "noun",
+      "ipa": "/pəˈteɪˌtoʊ/",
+      "level": "A1",
+      "unit": 32,
+      "position": 293,
+      "translation": {
+        "ru": "картофель",
+        "uz-Latn": "kartoshka"
+      },
+      "example": {
+        "en": "We need two kilos of potatoes.",
+        "ru": "Нам нужно два кило картошки.",
+        "uz-Latn": "Bizga ikki kilo kartoshka kerak."
+      }
+    },
+    {
+      "id": "en-a1-0298",
+      "word": "tomato",
+      "pos": "noun",
+      "ipa": "/təˈmeɪtoʊ/",
+      "level": "A1",
+      "unit": 32,
+      "position": 294,
+      "translation": {
+        "ru": "помидор",
+        "uz-Latn": "pomidor"
+      },
+      "example": {
+        "en": "Tomatoes are cheap in summer.",
+        "ru": "Летом помидоры дешёвые.",
+        "uz-Latn": "Yozda pomidor arzon."
+      }
+    },
+    {
       "id": "en-a1-0027",
       "word": "rice",
       "pos": "noun",
@@ -4412,6 +5330,3372 @@
         "en": "I don't eat meat.",
         "ru": "Я не ем мясо.",
         "uz-Latn": "Men goʻsht yemayman."
+      }
+    },
+    {
+      "id": "en-a1-0299",
+      "word": "chicken",
+      "pos": "noun",
+      "ipa": "/ˈtʃɪkən/",
+      "level": "A1",
+      "unit": 32,
+      "position": 297,
+      "translation": {
+        "ru": "курица",
+        "uz-Latn": "tovuq"
+      },
+      "example": {
+        "en": "We had chicken for dinner.",
+        "ru": "На ужин у нас была курица.",
+        "uz-Latn": "Kechki ovqatga tovuq yedik."
+      }
+    },
+    {
+      "id": "en-a1-0300",
+      "word": "fish",
+      "pos": "noun",
+      "ipa": "/fɪʃ/",
+      "level": "A1",
+      "unit": 32,
+      "position": 298,
+      "translation": {
+        "ru": "рыба",
+        "uz-Latn": "baliq"
+      },
+      "example": {
+        "en": "I don't eat fish.",
+        "ru": "Я не ем рыбу.",
+        "uz-Latn": "Men baliq yemayman."
+      }
+    },
+    {
+      "id": "en-a1-0301",
+      "word": "egg",
+      "pos": "noun",
+      "ipa": "/ɛɡ/",
+      "level": "A1",
+      "unit": 32,
+      "position": 299,
+      "translation": {
+        "ru": "яйцо",
+        "uz-Latn": "tuxum"
+      },
+      "example": {
+        "en": "I eat two eggs for breakfast.",
+        "ru": "На завтрак я ем два яйца.",
+        "uz-Latn": "Nonushtaga ikkita tuxum yeyman."
+      }
+    },
+    {
+      "id": "en-a1-0302",
+      "word": "cheese",
+      "pos": "noun",
+      "ipa": "/tʃiz/",
+      "level": "A1",
+      "unit": 32,
+      "position": 300,
+      "translation": {
+        "ru": "сыр",
+        "uz-Latn": "pishloq"
+      },
+      "example": {
+        "en": "I like bread with cheese.",
+        "ru": "Я люблю хлеб с сыром.",
+        "uz-Latn": "Men nonni pishloq bilan yaxshi koʻraman."
+      }
+    },
+    {
+      "id": "en-a1-0303",
+      "word": "bathroom",
+      "pos": "noun",
+      "ipa": "/ˈbæˌθrum/",
+      "level": "A1",
+      "unit": 33,
+      "position": 301,
+      "translation": {
+        "ru": "ванная",
+        "uz-Latn": "vannaxona"
+      },
+      "example": {
+        "en": "The bathroom is next to the bedroom.",
+        "ru": "Ванная рядом со спальней.",
+        "uz-Latn": "Vannaxona yotoqxona yonida."
+      }
+    },
+    {
+      "id": "en-a1-0304",
+      "word": "bedroom",
+      "pos": "noun",
+      "ipa": "/ˈbɛˌdrum/",
+      "level": "A1",
+      "unit": 33,
+      "position": 302,
+      "translation": {
+        "ru": "спальня",
+        "uz-Latn": "yotoqxona"
+      },
+      "example": {
+        "en": "Our flat has two bedrooms.",
+        "ru": "В нашей квартире две спальни.",
+        "uz-Latn": "Kvartiramizda ikkita yotoqxona bor."
+      }
+    },
+    {
+      "id": "en-a1-0305",
+      "word": "living room",
+      "pos": "noun",
+      "ipa": "/ˈlɪvɪŋ rum/",
+      "level": "A1",
+      "unit": 33,
+      "position": 303,
+      "translation": {
+        "ru": "гостиная",
+        "uz-Latn": "mehmonxona (uyda), zal"
+      },
+      "example": {
+        "en": "We watch TV in the living room.",
+        "ru": "Мы смотрим телевизор в гостиной.",
+        "uz-Latn": "Biz zalda televizor koʻramiz."
+      }
+    },
+    {
+      "id": "en-a1-0306",
+      "word": "floor",
+      "pos": "noun",
+      "ipa": "/flɔr/",
+      "level": "A1",
+      "unit": 33,
+      "position": 304,
+      "translation": {
+        "ru": "пол; этаж",
+        "uz-Latn": "pol; qavat"
+      },
+      "example": {
+        "en": "I live on the third floor.",
+        "ru": "Я живу на третьем этаже.",
+        "uz-Latn": "Men uchinchi qavatda yashayman."
+      }
+    },
+    {
+      "id": "en-a1-0307",
+      "word": "wall",
+      "pos": "noun",
+      "ipa": "/wɔl/",
+      "level": "A1",
+      "unit": 33,
+      "position": 305,
+      "translation": {
+        "ru": "стена",
+        "uz-Latn": "devor"
+      },
+      "example": {
+        "en": "There is a clock on the wall.",
+        "ru": "На стене часы.",
+        "uz-Latn": "Devorda soat bor."
+      }
+    },
+    {
+      "id": "en-a1-0308",
+      "word": "garden",
+      "pos": "noun",
+      "ipa": "/ˈɡɑrdən/",
+      "level": "A1",
+      "unit": 33,
+      "position": 306,
+      "translation": {
+        "ru": "сад",
+        "uz-Latn": "bogʻ"
+      },
+      "example": {
+        "en": "My grandfather works in the garden.",
+        "ru": "Дедушка работает в саду.",
+        "uz-Latn": "Bobom bogʻda ishlaydi."
+      }
+    },
+    {
+      "id": "en-a1-0309",
+      "word": "toilet",
+      "pos": "noun",
+      "ipa": "/ˈtɔɪlət/",
+      "level": "A1",
+      "unit": 33,
+      "position": 307,
+      "translation": {
+        "ru": "туалет",
+        "uz-Latn": "hojatxona"
+      },
+      "example": {
+        "en": "Where is the toilet?",
+        "ru": "Где туалет?",
+        "uz-Latn": "Hojatxona qayerda?"
+      }
+    },
+    {
+      "id": "en-a1-0310",
+      "word": "shower",
+      "pos": "noun",
+      "ipa": "/ˈʃaʊɚ/",
+      "level": "A1",
+      "unit": 33,
+      "position": 308,
+      "translation": {
+        "ru": "душ",
+        "uz-Latn": "dush"
+      },
+      "example": {
+        "en": "I take a shower every morning.",
+        "ru": "Я принимаю душ каждое утро.",
+        "uz-Latn": "Men har kuni ertalab dush qabul qilaman."
+      }
+    },
+    {
+      "id": "en-a1-0311",
+      "word": "bath",
+      "pos": "noun",
+      "ipa": "/bæθ/",
+      "level": "A1",
+      "unit": 33,
+      "position": 309,
+      "translation": {
+        "ru": "ванна",
+        "uz-Latn": "vanna"
+      },
+      "example": {
+        "en": "The baby is in the bath.",
+        "ru": "Малыш в ванне.",
+        "uz-Latn": "Chaqaloq vannada."
+      }
+    },
+    {
+      "id": "en-a1-0312",
+      "word": "afternoon",
+      "pos": "noun",
+      "ipa": "/ˌæftɚˈnun/",
+      "level": "A1",
+      "unit": 34,
+      "position": 310,
+      "translation": {
+        "ru": "день, время после полудня",
+        "uz-Latn": "tushdan keyin"
+      },
+      "example": {
+        "en": "I have a meeting in the afternoon.",
+        "ru": "Днём у меня встреча.",
+        "uz-Latn": "Tushdan keyin uchrashuvim bor."
+      }
+    },
+    {
+      "id": "en-a1-0313",
+      "word": "evening",
+      "pos": "noun",
+      "ipa": "/ˈivnɪŋ/",
+      "level": "A1",
+      "unit": 34,
+      "position": 311,
+      "translation": {
+        "ru": "вечер",
+        "uz-Latn": "kechqurun, oqshom"
+      },
+      "example": {
+        "en": "We walk in the park in the evening.",
+        "ru": "Вечером мы гуляем в парке.",
+        "uz-Latn": "Kechqurun parkda sayr qilamiz."
+      }
+    },
+    {
+      "id": "en-a1-0314",
+      "word": "night",
+      "pos": "noun",
+      "ipa": "/naɪt/",
+      "level": "A1",
+      "unit": 34,
+      "position": 312,
+      "translation": {
+        "ru": "ночь",
+        "uz-Latn": "tun, kecha"
+      },
+      "example": {
+        "en": "I can't sleep at night.",
+        "ru": "Я не могу спать ночью.",
+        "uz-Latn": "Kechasi uxlay olmayman."
+      }
+    },
+    {
+      "id": "en-a1-0315",
+      "word": "hour",
+      "pos": "noun",
+      "ipa": "/ˈaʊɚ/",
+      "level": "A1",
+      "unit": 34,
+      "position": 313,
+      "translation": {
+        "ru": "час",
+        "uz-Latn": "soat"
+      },
+      "example": {
+        "en": "The trip takes two hours.",
+        "ru": "Поездка занимает два часа.",
+        "uz-Latn": "Yoʻl ikki soat davom etadi."
+      }
+    },
+    {
+      "id": "en-a1-0316",
+      "word": "minute",
+      "pos": "noun",
+      "ipa": "/ˈmɪnət/",
+      "level": "A1",
+      "unit": 34,
+      "position": 314,
+      "translation": {
+        "ru": "минута",
+        "uz-Latn": "daqiqa"
+      },
+      "example": {
+        "en": "Wait a minute!",
+        "ru": "Подожди минутку!",
+        "uz-Latn": "Bir daqiqa kut!"
+      }
+    },
+    {
+      "id": "en-a1-0317",
+      "word": "moment",
+      "pos": "noun",
+      "ipa": "/ˈmoʊmənt/",
+      "level": "A1",
+      "unit": 34,
+      "position": 315,
+      "translation": {
+        "ru": "момент, мгновение",
+        "uz-Latn": "lahza, on"
+      },
+      "example": {
+        "en": "Just a moment, please.",
+        "ru": "Минутку, пожалуйста.",
+        "uz-Latn": "Bir lahza, iltimos."
+      }
+    },
+    {
+      "id": "en-a1-0318",
+      "word": "weekend",
+      "pos": "noun",
+      "ipa": "/ˈwiˌkɛnd/",
+      "level": "A1",
+      "unit": 34,
+      "position": 316,
+      "translation": {
+        "ru": "выходные",
+        "uz-Latn": "dam olish kunlari"
+      },
+      "example": {
+        "en": "What did you do at the weekend?",
+        "ru": "Что ты делал на выходных?",
+        "uz-Latn": "Dam olish kunlari nima qilding?"
+      }
+    },
+    {
+      "id": "en-a1-0319",
+      "word": "o'clock",
+      "pos": "adverb",
+      "ipa": "/əˈklɑk/",
+      "level": "A1",
+      "unit": 34,
+      "position": 317,
+      "translation": {
+        "ru": "час (о времени)",
+        "uz-Latn": "soat (vaqt)"
+      },
+      "example": {
+        "en": "It is three o'clock.",
+        "ru": "Сейчас три часа.",
+        "uz-Latn": "Soat uch boʻldi."
+      }
+    },
+    {
+      "id": "en-a1-0320",
+      "word": "Monday",
+      "pos": "noun",
+      "ipa": "/ˈmʌndi/",
+      "level": "A1",
+      "unit": 34,
+      "position": 318,
+      "translation": {
+        "ru": "понедельник",
+        "uz-Latn": "dushanba"
+      },
+      "example": {
+        "en": "I start work on Monday.",
+        "ru": "Я выхожу на работу в понедельник.",
+        "uz-Latn": "Men dushanba kuni ishni boshlayman."
+      }
+    },
+    {
+      "id": "en-a1-0321",
+      "word": "Tuesday",
+      "pos": "noun",
+      "ipa": "/ˈtuzdi/",
+      "level": "A1",
+      "unit": 34,
+      "position": 319,
+      "translation": {
+        "ru": "вторник",
+        "uz-Latn": "seshanba"
+      },
+      "example": {
+        "en": "We have English on Tuesday.",
+        "ru": "Во вторник у нас английский.",
+        "uz-Latn": "Seshanba kuni ingliz tili darsimiz bor."
+      }
+    },
+    {
+      "id": "en-a1-0322",
+      "word": "large",
+      "pos": "adjective",
+      "ipa": "/lɑrdʒ/",
+      "level": "A1",
+      "unit": 35,
+      "position": 320,
+      "translation": {
+        "ru": "большой, крупный",
+        "uz-Latn": "katta"
+      },
+      "example": {
+        "en": "They live in a large house.",
+        "ru": "Они живут в большом доме.",
+        "uz-Latn": "Ular katta uyda yashashadi."
+      }
+    },
+    {
+      "id": "en-a1-0323",
+      "word": "little",
+      "pos": "adjective",
+      "ipa": "/ˈlɪtəl/",
+      "level": "A1",
+      "unit": 35,
+      "position": 321,
+      "translation": {
+        "ru": "маленький",
+        "uz-Latn": "kichkina"
+      },
+      "example": {
+        "en": "We have a little garden.",
+        "ru": "У нас маленький сад.",
+        "uz-Latn": "Bizning kichkina bogʻimiz bor."
+      }
+    },
+    {
+      "id": "en-a1-0324",
+      "word": "high",
+      "pos": "adjective",
+      "ipa": "/haɪ/",
+      "level": "A1",
+      "unit": 35,
+      "position": 322,
+      "translation": {
+        "ru": "высокий",
+        "uz-Latn": "baland"
+      },
+      "example": {
+        "en": "The mountains are very high.",
+        "ru": "Горы очень высокие.",
+        "uz-Latn": "Togʻlar juda baland."
+      }
+    },
+    {
+      "id": "en-a2-0005",
+      "word": "low",
+      "pos": "adjective",
+      "ipa": "/loʊ/",
+      "level": "A2",
+      "unit": 35,
+      "position": 323,
+      "translation": {
+        "ru": "низкий",
+        "uz-Latn": "past"
+      },
+      "example": {
+        "en": "The table is too low.",
+        "ru": "Стол слишком низкий.",
+        "uz-Latn": "Stol juda past."
+      }
+    },
+    {
+      "id": "en-a1-0325",
+      "word": "fast",
+      "pos": "adjective",
+      "ipa": "/fæst/",
+      "level": "A1",
+      "unit": 35,
+      "position": 324,
+      "translation": {
+        "ru": "быстрый",
+        "uz-Latn": "tez"
+      },
+      "example": {
+        "en": "This car is very fast.",
+        "ru": "Эта машина очень быстрая.",
+        "uz-Latn": "Bu mashina juda tez."
+      }
+    },
+    {
+      "id": "en-a1-0326",
+      "word": "slow",
+      "pos": "adjective",
+      "ipa": "/sloʊ/",
+      "level": "A1",
+      "unit": 35,
+      "position": 325,
+      "translation": {
+        "ru": "медленный",
+        "uz-Latn": "sekin"
+      },
+      "example": {
+        "en": "The internet is slow today.",
+        "ru": "Сегодня интернет медленный.",
+        "uz-Latn": "Bugun internet sekin."
+      }
+    },
+    {
+      "id": "en-a1-0327",
+      "word": "easy",
+      "pos": "adjective",
+      "ipa": "/ˈizi/",
+      "level": "A1",
+      "unit": 35,
+      "position": 326,
+      "translation": {
+        "ru": "лёгкий, простой",
+        "uz-Latn": "oson"
+      },
+      "example": {
+        "en": "This test is easy.",
+        "ru": "Этот тест лёгкий.",
+        "uz-Latn": "Bu test oson."
+      }
+    },
+    {
+      "id": "en-a1-0328",
+      "word": "difficult",
+      "pos": "adjective",
+      "ipa": "/ˈdɪfəkəlt/",
+      "level": "A1",
+      "unit": 35,
+      "position": 327,
+      "translation": {
+        "ru": "трудный",
+        "uz-Latn": "qiyin"
+      },
+      "example": {
+        "en": "English grammar is not difficult.",
+        "ru": "Английская грамматика не трудная.",
+        "uz-Latn": "Ingliz tili grammatikasi qiyin emas."
+      }
+    },
+    {
+      "id": "en-a1-0329",
+      "word": "hard",
+      "pos": "adjective",
+      "ipa": "/hɑrd/",
+      "level": "A1",
+      "unit": 35,
+      "position": 328,
+      "translation": {
+        "ru": "трудный; твёрдый",
+        "uz-Latn": "qiyin; qattiq"
+      },
+      "example": {
+        "en": "This question is hard.",
+        "ru": "Этот вопрос трудный.",
+        "uz-Latn": "Bu savol qiyin."
+      }
+    },
+    {
+      "id": "en-a1-0330",
+      "word": "better",
+      "pos": "adjective",
+      "ipa": "/ˈbɛtɚ/",
+      "level": "A1",
+      "unit": 35,
+      "position": 329,
+      "translation": {
+        "ru": "лучше",
+        "uz-Latn": "yaxshiroq"
+      },
+      "example": {
+        "en": "Your English is better now.",
+        "ru": "Твой английский теперь лучше.",
+        "uz-Latn": "Ingliz tiling endi yaxshiroq."
+      }
+    },
+    {
+      "id": "en-a1-0331",
+      "word": "neck",
+      "pos": "noun",
+      "ipa": "/nɛk/",
+      "level": "A1",
+      "unit": 36,
+      "position": 330,
+      "translation": {
+        "ru": "шея",
+        "uz-Latn": "boʻyin"
+      },
+      "example": {
+        "en": "My neck hurts.",
+        "ru": "У меня болит шея.",
+        "uz-Latn": "Boʻynim ogʻriyapti."
+      }
+    },
+    {
+      "id": "en-a1-0332",
+      "word": "shoulder",
+      "pos": "noun",
+      "ipa": "/ˈʃoʊldɚ/",
+      "level": "A1",
+      "unit": 36,
+      "position": 331,
+      "translation": {
+        "ru": "плечо",
+        "uz-Latn": "yelka"
+      },
+      "example": {
+        "en": "He has a bag on his shoulder.",
+        "ru": "У него на плече сумка.",
+        "uz-Latn": "Uning yelkasida sumka bor."
+      }
+    },
+    {
+      "id": "en-a1-0333",
+      "word": "arm",
+      "pos": "noun",
+      "ipa": "/ɑrm/",
+      "level": "A1",
+      "unit": 36,
+      "position": 332,
+      "translation": {
+        "ru": "рука (от плеча до кисти)",
+        "uz-Latn": "qoʻl"
+      },
+      "example": {
+        "en": "I broke my arm.",
+        "ru": "Я сломал руку.",
+        "uz-Latn": "Qoʻlimni sindirdim."
+      }
+    },
+    {
+      "id": "en-a1-0334",
+      "word": "hand",
+      "pos": "noun",
+      "ipa": "/hænd/",
+      "level": "A1",
+      "unit": 36,
+      "position": 333,
+      "translation": {
+        "ru": "рука (кисть)",
+        "uz-Latn": "qoʻl, kaft"
+      },
+      "example": {
+        "en": "Raise your hand.",
+        "ru": "Подними руку.",
+        "uz-Latn": "Qoʻlingni koʻtar."
+      }
+    },
+    {
+      "id": "en-a1-0335",
+      "word": "leg",
+      "pos": "noun",
+      "ipa": "/lɛɡ/",
+      "level": "A1",
+      "unit": 36,
+      "position": 334,
+      "translation": {
+        "ru": "нога",
+        "uz-Latn": "oyoq"
+      },
+      "example": {
+        "en": "My leg hurts after football.",
+        "ru": "После футбола у меня болит нога.",
+        "uz-Latn": "Futboldan keyin oyogʻim ogʻriyapti."
+      }
+    },
+    {
+      "id": "en-a1-0336",
+      "word": "knee",
+      "pos": "noun",
+      "ipa": "/ni/",
+      "level": "A1",
+      "unit": 36,
+      "position": 335,
+      "translation": {
+        "ru": "колено",
+        "uz-Latn": "tizza"
+      },
+      "example": {
+        "en": "He hurt his knee.",
+        "ru": "Он повредил колено.",
+        "uz-Latn": "U tizzasini shikastladi."
+      }
+    },
+    {
+      "id": "en-a1-0337",
+      "word": "foot",
+      "pos": "noun",
+      "ipa": "/fʊt/",
+      "level": "A1",
+      "unit": 36,
+      "position": 336,
+      "translation": {
+        "ru": "ступня; on foot — пешком",
+        "uz-Latn": "oyoq (panja); piyoda"
+      },
+      "example": {
+        "en": "I go to school on foot.",
+        "ru": "Я хожу в школу пешком.",
+        "uz-Latn": "Men maktabga piyoda boraman."
+      }
+    },
+    {
+      "id": "en-a1-0338",
+      "word": "back",
+      "pos": "noun",
+      "ipa": "/bæk/",
+      "level": "A1",
+      "unit": 36,
+      "position": 337,
+      "translation": {
+        "ru": "спина",
+        "uz-Latn": "bel, orqa"
+      },
+      "example": {
+        "en": "My back hurts.",
+        "ru": "У меня болит спина.",
+        "uz-Latn": "Belim ogʻriyapti."
+      }
+    },
+    {
+      "id": "en-a1-0339",
+      "word": "heart",
+      "pos": "noun",
+      "ipa": "/hɑrt/",
+      "level": "A1",
+      "unit": 36,
+      "position": 338,
+      "translation": {
+        "ru": "сердце",
+        "uz-Latn": "yurak"
+      },
+      "example": {
+        "en": "Sport is good for your heart.",
+        "ru": "Спорт полезен для сердца.",
+        "uz-Latn": "Sport yurak uchun foydali."
+      }
+    },
+    {
+      "id": "en-a1-0340",
+      "word": "coat",
+      "pos": "noun",
+      "ipa": "/koʊt/",
+      "level": "A1",
+      "unit": 37,
+      "position": 339,
+      "translation": {
+        "ru": "пальто",
+        "uz-Latn": "palto"
+      },
+      "example": {
+        "en": "Put on your coat, it is cold.",
+        "ru": "Надень пальто, холодно.",
+        "uz-Latn": "Paltongni kiy, havo sovuq."
+      }
+    },
+    {
+      "id": "en-a1-0341",
+      "word": "hat",
+      "pos": "noun",
+      "ipa": "/hæt/",
+      "level": "A1",
+      "unit": 37,
+      "position": 340,
+      "translation": {
+        "ru": "шляпа, шапка",
+        "uz-Latn": "shlyapa, shapka"
+      },
+      "example": {
+        "en": "It is sunny, take a hat.",
+        "ru": "Солнечно, возьми шляпу.",
+        "uz-Latn": "Havo quyoshli, shlyapa kiyib ol."
+      }
+    },
+    {
+      "id": "en-a1-0342",
+      "word": "shoe",
+      "pos": "noun",
+      "ipa": "/ʃu/",
+      "level": "A1",
+      "unit": 37,
+      "position": 341,
+      "translation": {
+        "ru": "туфля, ботинок",
+        "uz-Latn": "tufli, poyabzal"
+      },
+      "example": {
+        "en": "These shoes are new.",
+        "ru": "Эти туфли новые.",
+        "uz-Latn": "Bu tufli yangi."
+      }
+    },
+    {
+      "id": "en-a1-0343",
+      "word": "bag",
+      "pos": "noun",
+      "ipa": "/bæɡ/",
+      "level": "A1",
+      "unit": 37,
+      "position": 342,
+      "translation": {
+        "ru": "сумка",
+        "uz-Latn": "sumka"
+      },
+      "example": {
+        "en": "My bag is heavy.",
+        "ru": "Моя сумка тяжёлая.",
+        "uz-Latn": "Sumkam ogʻir."
+      }
+    },
+    {
+      "id": "en-a2-0006",
+      "word": "sock",
+      "pos": "noun",
+      "ipa": "/sɑk/",
+      "level": "A2",
+      "unit": 37,
+      "position": 343,
+      "translation": {
+        "ru": "носок",
+        "uz-Latn": "paypoq"
+      },
+      "example": {
+        "en": "I need new socks.",
+        "ru": "Мне нужны новые носки.",
+        "uz-Latn": "Menga yangi paypoq kerak."
+      }
+    },
+    {
+      "id": "en-a2-0007",
+      "word": "sweater",
+      "pos": "noun",
+      "ipa": "/ˈswɛtɚ/",
+      "level": "A2",
+      "unit": 37,
+      "position": 344,
+      "translation": {
+        "ru": "свитер",
+        "uz-Latn": "sviter"
+      },
+      "example": {
+        "en": "This sweater is warm.",
+        "ru": "Этот свитер тёплый.",
+        "uz-Latn": "Bu sviter issiq."
+      }
+    },
+    {
+      "id": "en-a2-0008",
+      "word": "scarf",
+      "pos": "noun",
+      "ipa": "/skɑrf/",
+      "level": "A2",
+      "unit": 37,
+      "position": 345,
+      "translation": {
+        "ru": "шарф; платок",
+        "uz-Latn": "sharf; roʻmol"
+      },
+      "example": {
+        "en": "She wears a red scarf.",
+        "ru": "Она носит красный шарф.",
+        "uz-Latn": "U qizil sharf taqadi."
+      }
+    },
+    {
+      "id": "en-a2-0009",
+      "word": "glove",
+      "pos": "noun",
+      "ipa": "/ɡlʌv/",
+      "level": "A2",
+      "unit": 37,
+      "position": 346,
+      "translation": {
+        "ru": "перчатка",
+        "uz-Latn": "qoʻlqop"
+      },
+      "example": {
+        "en": "Where are my gloves?",
+        "ru": "Где мои перчатки?",
+        "uz-Latn": "Qoʻlqoplarim qayerda?"
+      }
+    },
+    {
+      "id": "en-a1-0344",
+      "word": "brown",
+      "pos": "adjective",
+      "ipa": "/braʊn/",
+      "level": "A1",
+      "unit": 38,
+      "position": 347,
+      "translation": {
+        "ru": "коричневый; карий",
+        "uz-Latn": "jigarrang"
+      },
+      "example": {
+        "en": "She has brown eyes.",
+        "ru": "У неё карие глаза.",
+        "uz-Latn": "Uning koʻzlari jigarrang."
+      }
+    },
+    {
+      "id": "en-a1-0345",
+      "word": "gray",
+      "pos": "adjective",
+      "ipa": "/ɡreɪ/",
+      "level": "A1",
+      "unit": 38,
+      "position": 348,
+      "translation": {
+        "ru": "серый",
+        "uz-Latn": "kulrang"
+      },
+      "example": {
+        "en": "My cat is gray.",
+        "ru": "Моя кошка серая.",
+        "uz-Latn": "Mushugim kulrang."
+      }
+    },
+    {
+      "id": "en-a1-0346",
+      "word": "pink",
+      "pos": "adjective",
+      "ipa": "/pɪŋk/",
+      "level": "A1",
+      "unit": 38,
+      "position": 349,
+      "translation": {
+        "ru": "розовый",
+        "uz-Latn": "pushti"
+      },
+      "example": {
+        "en": "My daughter likes pink.",
+        "ru": "Моя дочь любит розовый цвет.",
+        "uz-Latn": "Qizim pushti rangni yoqtiradi."
+      }
+    },
+    {
+      "id": "en-a1-0347",
+      "word": "purple",
+      "pos": "adjective",
+      "ipa": "/ˈpɝpəl/",
+      "level": "A1",
+      "unit": 38,
+      "position": 350,
+      "translation": {
+        "ru": "фиолетовый",
+        "uz-Latn": "binafsharang"
+      },
+      "example": {
+        "en": "I have a purple bag.",
+        "ru": "У меня фиолетовая сумка.",
+        "uz-Latn": "Mening binafsharang sumkam bor."
+      }
+    },
+    {
+      "id": "en-a1-0348",
+      "word": "gold",
+      "pos": "adjective",
+      "ipa": "/ɡoʊld/",
+      "level": "A1",
+      "unit": 38,
+      "position": 351,
+      "translation": {
+        "ru": "золотой; золото",
+        "uz-Latn": "oltin"
+      },
+      "example": {
+        "en": "She has a gold ring.",
+        "ru": "У неё золотое кольцо.",
+        "uz-Latn": "Uning oltin uzugi bor."
+      }
+    },
+    {
+      "id": "en-a2-0010",
+      "word": "silver",
+      "pos": "adjective",
+      "ipa": "/ˈsɪlvɚ/",
+      "level": "A2",
+      "unit": 38,
+      "position": 352,
+      "translation": {
+        "ru": "серебряный; серебро",
+        "uz-Latn": "kumush"
+      },
+      "example": {
+        "en": "He has a silver watch.",
+        "ru": "У него серебряные часы.",
+        "uz-Latn": "Uning kumush soati bor."
+      }
+    },
+    {
+      "id": "en-a2-0011",
+      "word": "market",
+      "pos": "noun",
+      "ipa": "/ˈmɑrkət/",
+      "level": "A2",
+      "unit": 39,
+      "position": 353,
+      "translation": {
+        "ru": "рынок",
+        "uz-Latn": "bozor"
+      },
+      "example": {
+        "en": "We buy fruit at the market.",
+        "ru": "Мы покупаем фрукты на рынке.",
+        "uz-Latn": "Biz mevani bozordan olamiz."
+      }
+    },
+    {
+      "id": "en-a1-0349",
+      "word": "bank",
+      "pos": "noun",
+      "ipa": "/bæŋk/",
+      "level": "A1",
+      "unit": 39,
+      "position": 354,
+      "translation": {
+        "ru": "банк",
+        "uz-Latn": "bank"
+      },
+      "example": {
+        "en": "The bank is closed on Sunday.",
+        "ru": "В воскресенье банк закрыт.",
+        "uz-Latn": "Yakshanba kuni bank yopiq."
+      }
+    },
+    {
+      "id": "en-a1-0350",
+      "word": "hotel",
+      "pos": "noun",
+      "ipa": "/hoʊˈtɛl/",
+      "level": "A1",
+      "unit": 39,
+      "position": 355,
+      "translation": {
+        "ru": "гостиница, отель",
+        "uz-Latn": "mehmonxona"
+      },
+      "example": {
+        "en": "Our hotel is near the sea.",
+        "ru": "Наша гостиница у моря.",
+        "uz-Latn": "Mehmonxonamiz dengiz yonida."
+      }
+    },
+    {
+      "id": "en-a1-0351",
+      "word": "restaurant",
+      "pos": "noun",
+      "ipa": "/ˈrɛstərɑnt/",
+      "level": "A1",
+      "unit": 39,
+      "position": 356,
+      "translation": {
+        "ru": "ресторан",
+        "uz-Latn": "restoran"
+      },
+      "example": {
+        "en": "Let's eat at a restaurant tonight.",
+        "ru": "Давай сегодня вечером поужинаем в ресторане.",
+        "uz-Latn": "Bugun kechqurun restoranda ovqatlanaylik."
+      }
+    },
+    {
+      "id": "en-a1-0352",
+      "word": "cafe",
+      "pos": "noun",
+      "ipa": "/kəˈfeɪ/",
+      "level": "A1",
+      "unit": 39,
+      "position": 357,
+      "translation": {
+        "ru": "кафе",
+        "uz-Latn": "kafe"
+      },
+      "example": {
+        "en": "Let's meet at the cafe.",
+        "ru": "Давай встретимся в кафе.",
+        "uz-Latn": "Kafeda uchrashaylik."
+      }
+    },
+    {
+      "id": "en-a1-0353",
+      "word": "park",
+      "pos": "noun",
+      "ipa": "/pɑrk/",
+      "level": "A1",
+      "unit": 39,
+      "position": 358,
+      "translation": {
+        "ru": "парк",
+        "uz-Latn": "park, bogʻ"
+      },
+      "example": {
+        "en": "There is a big park near my house.",
+        "ru": "Рядом с моим домом большой парк.",
+        "uz-Latn": "Uyim yonida katta park bor."
+      }
+    },
+    {
+      "id": "en-a1-0354",
+      "word": "library",
+      "pos": "noun",
+      "ipa": "/ˈlaɪbrɛˌri/",
+      "level": "A1",
+      "unit": 39,
+      "position": 359,
+      "translation": {
+        "ru": "библиотека",
+        "uz-Latn": "kutubxona"
+      },
+      "example": {
+        "en": "I read books at the library.",
+        "ru": "Я читаю книги в библиотеке.",
+        "uz-Latn": "Men kutubxonada kitob oʻqiyman."
+      }
+    },
+    {
+      "id": "en-a2-0012",
+      "word": "museum",
+      "pos": "noun",
+      "ipa": "/mjuˈziəm/",
+      "level": "A2",
+      "unit": 39,
+      "position": 360,
+      "translation": {
+        "ru": "музей",
+        "uz-Latn": "muzey"
+      },
+      "example": {
+        "en": "The museum opens at ten.",
+        "ru": "Музей открывается в десять.",
+        "uz-Latn": "Muzey soat oʻnda ochiladi."
+      }
+    },
+    {
+      "id": "en-a1-0355",
+      "word": "cinema",
+      "pos": "noun",
+      "ipa": "/ˈsɪnəmə/",
+      "level": "A1",
+      "unit": 39,
+      "position": 361,
+      "translation": {
+        "ru": "кинотеатр, кино",
+        "uz-Latn": "kinoteatr, kino"
+      },
+      "example": {
+        "en": "Let's go to the cinema.",
+        "ru": "Пойдём в кино.",
+        "uz-Latn": "Kinoga boraylik."
+      }
+    },
+    {
+      "id": "en-a1-0356",
+      "word": "driver",
+      "pos": "noun",
+      "ipa": "/ˈdraɪvɚ/",
+      "level": "A1",
+      "unit": 40,
+      "position": 362,
+      "translation": {
+        "ru": "водитель",
+        "uz-Latn": "haydovchi"
+      },
+      "example": {
+        "en": "The taxi driver was very kind.",
+        "ru": "Таксист был очень добрым.",
+        "uz-Latn": "Taksi haydovchisi juda mehribon edi."
+      }
+    },
+    {
+      "id": "en-a1-0357",
+      "word": "ticket",
+      "pos": "noun",
+      "ipa": "/ˈtɪkət/",
+      "level": "A1",
+      "unit": 40,
+      "position": 363,
+      "translation": {
+        "ru": "билет",
+        "uz-Latn": "chipta"
+      },
+      "example": {
+        "en": "I bought two tickets to Samarkand.",
+        "ru": "Я купил два билета в Самарканд.",
+        "uz-Latn": "Samarqandga ikkita chipta oldim."
+      }
+    },
+    {
+      "id": "en-a1-0358",
+      "word": "seat",
+      "pos": "noun",
+      "ipa": "/sit/",
+      "level": "A1",
+      "unit": 40,
+      "position": 364,
+      "translation": {
+        "ru": "место, сиденье",
+        "uz-Latn": "oʻrindiq, joy"
+      },
+      "example": {
+        "en": "Is this seat free?",
+        "ru": "Это место свободно?",
+        "uz-Latn": "Bu joy boʻshmi?"
+      }
+    },
+    {
+      "id": "en-a1-0359",
+      "word": "trip",
+      "pos": "noun",
+      "ipa": "/trɪp/",
+      "level": "A1",
+      "unit": 40,
+      "position": 365,
+      "translation": {
+        "ru": "поездка",
+        "uz-Latn": "safar, sayohat"
+      },
+      "example": {
+        "en": "Have a nice trip!",
+        "ru": "Хорошей поездки!",
+        "uz-Latn": "Oq yoʻl!"
+      }
+    },
+    {
+      "id": "en-a1-0360",
+      "word": "travel",
+      "pos": "verb",
+      "ipa": "/ˈtrævəl/",
+      "level": "A1",
+      "unit": 40,
+      "position": 366,
+      "translation": {
+        "ru": "путешествовать",
+        "uz-Latn": "sayohat qilmoq"
+      },
+      "example": {
+        "en": "I want to travel around the world.",
+        "ru": "Я хочу путешествовать по миру.",
+        "uz-Latn": "Men dunyo boʻylab sayohat qilmoqchiman."
+      }
+    },
+    {
+      "id": "en-a1-0361",
+      "word": "vacation",
+      "pos": "noun",
+      "ipa": "/veɪˈkeɪʃən/",
+      "level": "A1",
+      "unit": 40,
+      "position": 367,
+      "translation": {
+        "ru": "отпуск, каникулы",
+        "uz-Latn": "taʼtil"
+      },
+      "example": {
+        "en": "We go on vacation in July.",
+        "ru": "В июле мы едем в отпуск.",
+        "uz-Latn": "Iyulda taʼtilga chiqamiz."
+      }
+    },
+    {
+      "id": "en-a1-0362",
+      "word": "holiday",
+      "pos": "noun",
+      "ipa": "/ˈhɑləˌdeɪ/",
+      "level": "A1",
+      "unit": 40,
+      "position": 368,
+      "translation": {
+        "ru": "праздник; отпуск",
+        "uz-Latn": "bayram; taʼtil"
+      },
+      "example": {
+        "en": "Navruz is a big holiday.",
+        "ru": "Навруз — большой праздник.",
+        "uz-Latn": "Navroʻz katta bayram."
+      }
+    },
+    {
+      "id": "en-a1-0363",
+      "word": "map",
+      "pos": "noun",
+      "ipa": "/mæp/",
+      "level": "A1",
+      "unit": 40,
+      "position": 369,
+      "translation": {
+        "ru": "карта",
+        "uz-Latn": "xarita"
+      },
+      "example": {
+        "en": "Can you show me on the map?",
+        "ru": "Можешь показать мне на карте?",
+        "uz-Latn": "Xaritada koʻrsata olasanmi?"
+      }
+    },
+    {
+      "id": "en-a2-0013",
+      "word": "passport",
+      "pos": "noun",
+      "ipa": "/ˈpæˌspɔrt/",
+      "level": "A2",
+      "unit": 40,
+      "position": 370,
+      "translation": {
+        "ru": "паспорт",
+        "uz-Latn": "pasport"
+      },
+      "example": {
+        "en": "Don't forget your passport.",
+        "ru": "Не забудь паспорт.",
+        "uz-Latn": "Pasportingni unutma."
+      }
+    },
+    {
+      "id": "en-a1-0364",
+      "word": "foreign",
+      "pos": "adjective",
+      "ipa": "/ˈfɔrən/",
+      "level": "A1",
+      "unit": 40,
+      "position": 371,
+      "translation": {
+        "ru": "иностранный",
+        "uz-Latn": "xorijiy, chet"
+      },
+      "example": {
+        "en": "I speak two foreign languages.",
+        "ru": "Я говорю на двух иностранных языках.",
+        "uz-Latn": "Men ikkita chet tilida gaplashaman."
+      }
+    },
+    {
+      "id": "en-a1-0365",
+      "word": "pen",
+      "pos": "noun",
+      "ipa": "/pɛn/",
+      "level": "A1",
+      "unit": 41,
+      "position": 372,
+      "translation": {
+        "ru": "ручка",
+        "uz-Latn": "ruchka"
+      },
+      "example": {
+        "en": "Can I borrow your pen?",
+        "ru": "Можно взять твою ручку?",
+        "uz-Latn": "Ruchkangni olib tursam boʻladimi?"
+      }
+    },
+    {
+      "id": "en-a1-0366",
+      "word": "pencil",
+      "pos": "noun",
+      "ipa": "/ˈpɛnsəl/",
+      "level": "A1",
+      "unit": 41,
+      "position": 373,
+      "translation": {
+        "ru": "карандаш",
+        "uz-Latn": "qalam"
+      },
+      "example": {
+        "en": "Write with a pencil.",
+        "ru": "Пиши карандашом.",
+        "uz-Latn": "Qalam bilan yoz."
+      }
+    },
+    {
+      "id": "en-a1-0367",
+      "word": "paper",
+      "pos": "noun",
+      "ipa": "/ˈpeɪpɚ/",
+      "level": "A1",
+      "unit": 41,
+      "position": 374,
+      "translation": {
+        "ru": "бумага",
+        "uz-Latn": "qogʻoz"
+      },
+      "example": {
+        "en": "I need a piece of paper.",
+        "ru": "Мне нужен листок бумаги.",
+        "uz-Latn": "Menga bir varaq qogʻoz kerak."
+      }
+    },
+    {
+      "id": "en-a1-0368",
+      "word": "page",
+      "pos": "noun",
+      "ipa": "/peɪdʒ/",
+      "level": "A1",
+      "unit": 41,
+      "position": 375,
+      "translation": {
+        "ru": "страница",
+        "uz-Latn": "sahifa"
+      },
+      "example": {
+        "en": "Open your books at page ten.",
+        "ru": "Откройте книги на десятой странице.",
+        "uz-Latn": "Kitoblaringizni oʻninchi sahifadan oching."
+      }
+    },
+    {
+      "id": "en-a1-0369",
+      "word": "dictionary",
+      "pos": "noun",
+      "ipa": "/ˈdɪkʃəˌnɛri/",
+      "level": "A1",
+      "unit": 41,
+      "position": 376,
+      "translation": {
+        "ru": "словарь",
+        "uz-Latn": "lugʻat"
+      },
+      "example": {
+        "en": "Look up the word in a dictionary.",
+        "ru": "Посмотри слово в словаре.",
+        "uz-Latn": "Soʻzni lugʻatdan qara."
+      }
+    },
+    {
+      "id": "en-a1-0370",
+      "word": "word",
+      "pos": "noun",
+      "ipa": "/wɝd/",
+      "level": "A1",
+      "unit": 41,
+      "position": 377,
+      "translation": {
+        "ru": "слово",
+        "uz-Latn": "soʻz"
+      },
+      "example": {
+        "en": "I learn ten new words a day.",
+        "ru": "Я учу десять новых слов в день.",
+        "uz-Latn": "Men kuniga oʻnta yangi soʻz oʻrganaman."
+      }
+    },
+    {
+      "id": "en-a1-0371",
+      "word": "sentence",
+      "pos": "noun",
+      "ipa": "/ˈsɛntəns/",
+      "level": "A1",
+      "unit": 41,
+      "position": 378,
+      "translation": {
+        "ru": "предложение",
+        "uz-Latn": "gap"
+      },
+      "example": {
+        "en": "Read the first sentence.",
+        "ru": "Прочитай первое предложение.",
+        "uz-Latn": "Birinchi gapni oʻqi."
+      }
+    },
+    {
+      "id": "en-a1-0372",
+      "word": "question",
+      "pos": "noun",
+      "ipa": "/ˈkwɛstʃən/",
+      "level": "A1",
+      "unit": 41,
+      "position": 379,
+      "translation": {
+        "ru": "вопрос",
+        "uz-Latn": "savol"
+      },
+      "example": {
+        "en": "Can I ask a question?",
+        "ru": "Можно задать вопрос?",
+        "uz-Latn": "Savol bersam boʻladimi?"
+      }
+    },
+    {
+      "id": "en-a1-0373",
+      "word": "answer",
+      "pos": "noun",
+      "ipa": "/ˈænsɚ/",
+      "level": "A1",
+      "unit": 41,
+      "position": 380,
+      "translation": {
+        "ru": "ответ",
+        "uz-Latn": "javob"
+      },
+      "example": {
+        "en": "I know the answer.",
+        "ru": "Я знаю ответ.",
+        "uz-Latn": "Men javobni bilaman."
+      }
+    },
+    {
+      "id": "en-a1-0374",
+      "word": "test",
+      "pos": "noun",
+      "ipa": "/tɛst/",
+      "level": "A1",
+      "unit": 41,
+      "position": 381,
+      "translation": {
+        "ru": "тест, контрольная",
+        "uz-Latn": "test, nazorat ishi"
+      },
+      "example": {
+        "en": "We have a test tomorrow.",
+        "ru": "Завтра у нас контрольная.",
+        "uz-Latn": "Ertaga nazorat ishimiz bor."
+      }
+    },
+    {
+      "id": "en-a1-0375",
+      "word": "farm",
+      "pos": "noun",
+      "ipa": "/fɑrm/",
+      "level": "A1",
+      "unit": 42,
+      "position": 382,
+      "translation": {
+        "ru": "ферма",
+        "uz-Latn": "ferma"
+      },
+      "example": {
+        "en": "My uncle works on a farm.",
+        "ru": "Мой дядя работает на ферме.",
+        "uz-Latn": "Amakim fermada ishlaydi."
+      }
+    },
+    {
+      "id": "en-a1-0376",
+      "word": "waiter",
+      "pos": "noun",
+      "ipa": "/ˈweɪtɚ/",
+      "level": "A1",
+      "unit": 42,
+      "position": 383,
+      "translation": {
+        "ru": "официант",
+        "uz-Latn": "ofitsiant"
+      },
+      "example": {
+        "en": "The waiter brought the menu.",
+        "ru": "Официант принёс меню.",
+        "uz-Latn": "Ofitsiant menyuni olib keldi."
+      }
+    },
+    {
+      "id": "en-a1-0377",
+      "word": "singer",
+      "pos": "noun",
+      "ipa": "/ˈsɪŋɚ/",
+      "level": "A1",
+      "unit": 42,
+      "position": 384,
+      "translation": {
+        "ru": "певец, певица",
+        "uz-Latn": "xonanda"
+      },
+      "example": {
+        "en": "She is a famous singer.",
+        "ru": "Она известная певица.",
+        "uz-Latn": "U mashhur xonanda."
+      }
+    },
+    {
+      "id": "en-a1-0378",
+      "word": "writer",
+      "pos": "noun",
+      "ipa": "/ˈraɪtɚ/",
+      "level": "A1",
+      "unit": 42,
+      "position": 385,
+      "translation": {
+        "ru": "писатель",
+        "uz-Latn": "yozuvchi"
+      },
+      "example": {
+        "en": "Abdulla Qodiriy was a famous writer.",
+        "ru": "Абдулла Кадыри был известным писателем.",
+        "uz-Latn": "Abdulla Qodiriy mashhur yozuvchi edi."
+      }
+    },
+    {
+      "id": "en-a1-0379",
+      "word": "musician",
+      "pos": "noun",
+      "ipa": "/mjuˈzɪʃən/",
+      "level": "A1",
+      "unit": 42,
+      "position": 386,
+      "translation": {
+        "ru": "музыкант",
+        "uz-Latn": "musiqachi, sozanda"
+      },
+      "example": {
+        "en": "My father is a musician.",
+        "ru": "Мой папа — музыкант.",
+        "uz-Latn": "Dadam musiqachi."
+      }
+    },
+    {
+      "id": "en-a1-0380",
+      "word": "scientist",
+      "pos": "noun",
+      "ipa": "/ˈsaɪəntɪst/",
+      "level": "A1",
+      "unit": 42,
+      "position": 387,
+      "translation": {
+        "ru": "учёный",
+        "uz-Latn": "olim"
+      },
+      "example": {
+        "en": "Ulugh Beg was a great scientist.",
+        "ru": "Улугбек был великим учёным.",
+        "uz-Latn": "Ulugʻbek buyuk olim edi."
+      }
+    },
+    {
+      "id": "en-a2-0014",
+      "word": "police",
+      "pos": "noun",
+      "ipa": "/pəˈlis/",
+      "level": "A2",
+      "unit": 42,
+      "position": 388,
+      "translation": {
+        "ru": "полиция",
+        "uz-Latn": "politsiya"
+      },
+      "example": {
+        "en": "Call the police!",
+        "ru": "Вызови полицию!",
+        "uz-Latn": "Politsiyani chaqir!"
+      }
+    },
+    {
+      "id": "en-a2-0015",
+      "word": "police officer",
+      "pos": "noun",
+      "ipa": "/pəˈlis ˈɔfəsɚ/",
+      "level": "A2",
+      "unit": 42,
+      "position": 389,
+      "translation": {
+        "ru": "полицейский",
+        "uz-Latn": "politsiyachi"
+      },
+      "example": {
+        "en": "The police officer helped us.",
+        "ru": "Полицейский нам помог.",
+        "uz-Latn": "Politsiyachi bizga yordam berdi."
+      }
+    },
+    {
+      "id": "en-a1-0381",
+      "word": "actor",
+      "pos": "noun",
+      "ipa": "/ˈæktɚ/",
+      "level": "A1",
+      "unit": 42,
+      "position": 390,
+      "translation": {
+        "ru": "актёр",
+        "uz-Latn": "aktyor"
+      },
+      "example": {
+        "en": "He wants to be an actor.",
+        "ru": "Он хочет быть актёром.",
+        "uz-Latn": "U aktyor boʻlishni xohlaydi."
+      }
+    },
+    {
+      "id": "en-a1-0382",
+      "word": "leader",
+      "pos": "noun",
+      "ipa": "/ˈlidɚ/",
+      "level": "A1",
+      "unit": 42,
+      "position": 391,
+      "translation": {
+        "ru": "лидер, руководитель",
+        "uz-Latn": "rahbar, yetakchi"
+      },
+      "example": {
+        "en": "She is the leader of our team.",
+        "ru": "Она лидер нашей команды.",
+        "uz-Latn": "U jamoamizning yetakchisi."
+      }
+    },
+    {
+      "id": "en-a1-0383",
+      "word": "credit card",
+      "pos": "noun",
+      "ipa": "/ˈkrɛdət kɑrd/",
+      "level": "A1",
+      "unit": 43,
+      "position": 392,
+      "translation": {
+        "ru": "кредитная карта",
+        "uz-Latn": "kredit karta"
+      },
+      "example": {
+        "en": "I lost my credit card.",
+        "ru": "Я потерял кредитную карту.",
+        "uz-Latn": "Kredit kartamni yoʻqotib qoʻydim."
+      }
+    },
+    {
+      "id": "en-a2-0016",
+      "word": "cash",
+      "pos": "noun",
+      "ipa": "/kæʃ/",
+      "level": "A2",
+      "unit": 43,
+      "position": 393,
+      "translation": {
+        "ru": "наличные",
+        "uz-Latn": "naqd pul"
+      },
+      "example": {
+        "en": "I don't have any cash.",
+        "ru": "У меня нет наличных.",
+        "uz-Latn": "Menda naqd pul yoʻq."
+      }
+    },
+    {
+      "id": "en-a2-0017",
+      "word": "coin",
+      "pos": "noun",
+      "ipa": "/kɔɪn/",
+      "level": "A2",
+      "unit": 43,
+      "position": 394,
+      "translation": {
+        "ru": "монета",
+        "uz-Latn": "tanga"
+      },
+      "example": {
+        "en": "He collects old coins.",
+        "ru": "Он собирает старые монеты.",
+        "uz-Latn": "U eski tangalarni yigʻadi."
+      }
+    },
+    {
+      "id": "en-a2-0018",
+      "word": "bill",
+      "pos": "noun",
+      "ipa": "/bɪl/",
+      "level": "A2",
+      "unit": 43,
+      "position": 395,
+      "translation": {
+        "ru": "счёт",
+        "uz-Latn": "hisob"
+      },
+      "example": {
+        "en": "Can we have the bill, please?",
+        "ru": "Счёт, пожалуйста.",
+        "uz-Latn": "Hisobni keltiring, iltimos."
+      }
+    },
+    {
+      "id": "en-a2-0019",
+      "word": "cost",
+      "pos": "verb",
+      "ipa": "/kɑst/",
+      "level": "A2",
+      "unit": 43,
+      "position": 396,
+      "translation": {
+        "ru": "стоить",
+        "uz-Latn": "turmoq (narxi)"
+      },
+      "example": {
+        "en": "How much does it cost?",
+        "ru": "Сколько это стоит?",
+        "uz-Latn": "Bu qancha turadi?"
+      }
+    },
+    {
+      "id": "en-a2-0020",
+      "word": "wallet",
+      "pos": "noun",
+      "ipa": "/ˈwɔlət/",
+      "level": "A2",
+      "unit": 43,
+      "position": 397,
+      "translation": {
+        "ru": "бумажник, кошелёк",
+        "uz-Latn": "hamyon"
+      },
+      "example": {
+        "en": "My wallet is in my bag.",
+        "ru": "Мой кошелёк в сумке.",
+        "uz-Latn": "Hamyonim sumkamda."
+      }
+    },
+    {
+      "id": "en-a2-0021",
+      "word": "rent",
+      "pos": "verb",
+      "ipa": "/rɛnt/",
+      "level": "A2",
+      "unit": 43,
+      "position": 398,
+      "translation": {
+        "ru": "арендовать, снимать",
+        "uz-Latn": "ijaraga olmoq"
+      },
+      "example": {
+        "en": "We rent a flat in Tashkent.",
+        "ru": "Мы снимаем квартиру в Ташкенте.",
+        "uz-Latn": "Biz Toshkentda kvartira ijaraga olganmiz."
+      }
+    },
+    {
+      "id": "en-a1-0384",
+      "word": "spend",
+      "pos": "verb",
+      "ipa": "/spɛnd/",
+      "level": "A1",
+      "unit": 43,
+      "position": 399,
+      "translation": {
+        "ru": "тратить; проводить (время)",
+        "uz-Latn": "sarflamoq; oʻtkazmoq"
+      },
+      "example": {
+        "en": "I spend a lot of money on books.",
+        "ru": "Я трачу много денег на книги.",
+        "uz-Latn": "Men kitoblarga koʻp pul sarflayman."
+      }
+    },
+    {
+      "id": "en-a1-0385",
+      "word": "volleyball",
+      "pos": "noun",
+      "ipa": "/ˈvɑliˌbɔl/",
+      "level": "A1",
+      "unit": 44,
+      "position": 400,
+      "translation": {
+        "ru": "волейбол",
+        "uz-Latn": "voleybol"
+      },
+      "example": {
+        "en": "We play volleyball on the beach.",
+        "ru": "Мы играем в волейбол на пляже.",
+        "uz-Latn": "Biz plyajda voleybol oʻynaymiz."
+      }
+    },
+    {
+      "id": "en-a1-0386",
+      "word": "swim",
+      "pos": "verb",
+      "ipa": "/swɪm/",
+      "level": "A1",
+      "unit": 44,
+      "position": 401,
+      "translation": {
+        "ru": "плавать",
+        "uz-Latn": "suzmoq"
+      },
+      "example": {
+        "en": "Can you swim?",
+        "ru": "Ты умеешь плавать?",
+        "uz-Latn": "Suza olasanmi?"
+      }
+    },
+    {
+      "id": "en-a1-0387",
+      "word": "swimming",
+      "pos": "noun",
+      "ipa": "/ˈswɪmɪŋ/",
+      "level": "A1",
+      "unit": 44,
+      "position": 402,
+      "translation": {
+        "ru": "плавание",
+        "uz-Latn": "suzish"
+      },
+      "example": {
+        "en": "Swimming is good for your health.",
+        "ru": "Плавание полезно для здоровья.",
+        "uz-Latn": "Suzish sogʻliq uchun foydali."
+      }
+    },
+    {
+      "id": "en-a1-0388",
+      "word": "run",
+      "pos": "verb",
+      "ipa": "/rʌn/",
+      "level": "A1",
+      "unit": 44,
+      "position": 403,
+      "translation": {
+        "ru": "бегать",
+        "uz-Latn": "yugurmoq"
+      },
+      "example": {
+        "en": "Don't run in the classroom!",
+        "ru": "Не бегай в классе!",
+        "uz-Latn": "Sinfda yugurma!"
+      }
+    },
+    {
+      "id": "en-a1-0389",
+      "word": "dance",
+      "pos": "verb",
+      "ipa": "/dæns/",
+      "level": "A1",
+      "unit": 44,
+      "position": 404,
+      "translation": {
+        "ru": "танцевать",
+        "uz-Latn": "raqsga tushmoq"
+      },
+      "example": {
+        "en": "She dances very well.",
+        "ru": "Она очень хорошо танцует.",
+        "uz-Latn": "U juda yaxshi raqsga tushadi."
+      }
+    },
+    {
+      "id": "en-a1-0390",
+      "word": "sing",
+      "pos": "verb",
+      "ipa": "/sɪŋ/",
+      "level": "A1",
+      "unit": 44,
+      "position": 405,
+      "translation": {
+        "ru": "петь",
+        "uz-Latn": "qoʻshiq aytmoq"
+      },
+      "example": {
+        "en": "My sister sings beautifully.",
+        "ru": "Моя сестра красиво поёт.",
+        "uz-Latn": "Singlim chiroyli qoʻshiq aytadi."
+      }
+    },
+    {
+      "id": "en-a1-0391",
+      "word": "song",
+      "pos": "noun",
+      "ipa": "/sɔŋ/",
+      "level": "A1",
+      "unit": 44,
+      "position": 406,
+      "translation": {
+        "ru": "песня",
+        "uz-Latn": "qoʻshiq"
+      },
+      "example": {
+        "en": "This is my favorite song.",
+        "ru": "Это моя любимая песня.",
+        "uz-Latn": "Bu mening sevimli qoʻshigʻim."
+      }
+    },
+    {
+      "id": "en-a1-0392",
+      "word": "guitar",
+      "pos": "noun",
+      "ipa": "/ɡɪˈtɑr/",
+      "level": "A1",
+      "unit": 44,
+      "position": 407,
+      "translation": {
+        "ru": "гитара",
+        "uz-Latn": "gitara"
+      },
+      "example": {
+        "en": "He plays the guitar.",
+        "ru": "Он играет на гитаре.",
+        "uz-Latn": "U gitara chaladi."
+      }
+    },
+    {
+      "id": "en-a1-0393",
+      "word": "piano",
+      "pos": "noun",
+      "ipa": "/piˈænoʊ/",
+      "level": "A1",
+      "unit": 44,
+      "position": 408,
+      "translation": {
+        "ru": "пианино",
+        "uz-Latn": "pianino"
+      },
+      "example": {
+        "en": "My daughter is learning the piano.",
+        "ru": "Моя дочь учится играть на пианино.",
+        "uz-Latn": "Qizim pianino chalishni oʻrganyapti."
+      }
+    },
+    {
+      "id": "en-a1-0394",
+      "word": "concert",
+      "pos": "noun",
+      "ipa": "/ˈkɑnsɚt/",
+      "level": "A1",
+      "unit": 44,
+      "position": 409,
+      "translation": {
+        "ru": "концерт",
+        "uz-Latn": "konsert"
+      },
+      "example": {
+        "en": "We went to a concert last night.",
+        "ru": "Вчера вечером мы ходили на концерт.",
+        "uz-Latn": "Kecha kechqurun konsertga bordik."
+      }
+    },
+    {
+      "id": "en-a1-0395",
+      "word": "cloudy",
+      "pos": "adjective",
+      "ipa": "/ˈklaʊdi/",
+      "level": "A1",
+      "unit": 45,
+      "position": 410,
+      "translation": {
+        "ru": "облачный, пасмурный",
+        "uz-Latn": "bulutli"
+      },
+      "example": {
+        "en": "It is cloudy today.",
+        "ru": "Сегодня пасмурно.",
+        "uz-Latn": "Bugun havo bulutli."
+      }
+    },
+    {
+      "id": "en-a2-0022",
+      "word": "windy",
+      "pos": "adjective",
+      "ipa": "/ˈwɪndi/",
+      "level": "A2",
+      "unit": 45,
+      "position": 411,
+      "translation": {
+        "ru": "ветреный",
+        "uz-Latn": "shamolli"
+      },
+      "example": {
+        "en": "It is very windy outside.",
+        "ru": "На улице очень ветрено.",
+        "uz-Latn": "Tashqarida juda shamolli."
+      }
+    },
+    {
+      "id": "en-a1-0396",
+      "word": "sea",
+      "pos": "noun",
+      "ipa": "/si/",
+      "level": "A1",
+      "unit": 45,
+      "position": 412,
+      "translation": {
+        "ru": "море",
+        "uz-Latn": "dengiz"
+      },
+      "example": {
+        "en": "I want to swim in the sea.",
+        "ru": "Я хочу поплавать в море.",
+        "uz-Latn": "Men dengizda suzmoqchiman."
+      }
+    },
+    {
+      "id": "en-a1-0397",
+      "word": "beach",
+      "pos": "noun",
+      "ipa": "/bitʃ/",
+      "level": "A1",
+      "unit": 45,
+      "position": 413,
+      "translation": {
+        "ru": "пляж",
+        "uz-Latn": "plyaj, sohil"
+      },
+      "example": {
+        "en": "We spent the day on the beach.",
+        "ru": "Мы провели день на пляже.",
+        "uz-Latn": "Kunni plyajda oʻtkazdik."
+      }
+    },
+    {
+      "id": "en-a1-0398",
+      "word": "mountain",
+      "pos": "noun",
+      "ipa": "/ˈmaʊntən/",
+      "level": "A1",
+      "unit": 45,
+      "position": 414,
+      "translation": {
+        "ru": "гора",
+        "uz-Latn": "togʻ"
+      },
+      "example": {
+        "en": "We go to the mountains in summer.",
+        "ru": "Летом мы ездим в горы.",
+        "uz-Latn": "Yozda togʻlarga boramiz."
+      }
+    },
+    {
+      "id": "en-a1-0399",
+      "word": "hill",
+      "pos": "noun",
+      "ipa": "/hɪl/",
+      "level": "A1",
+      "unit": 45,
+      "position": 415,
+      "translation": {
+        "ru": "холм",
+        "uz-Latn": "tepalik"
+      },
+      "example": {
+        "en": "Our house is on a hill.",
+        "ru": "Наш дом на холме.",
+        "uz-Latn": "Uyimiz tepalikda."
+      }
+    },
+    {
+      "id": "en-a1-0400",
+      "word": "river",
+      "pos": "noun",
+      "ipa": "/ˈrɪvɚ/",
+      "level": "A1",
+      "unit": 45,
+      "position": 416,
+      "translation": {
+        "ru": "река",
+        "uz-Latn": "daryo"
+      },
+      "example": {
+        "en": "The Amu Darya is a long river.",
+        "ru": "Амударья — длинная река.",
+        "uz-Latn": "Amudaryo uzun daryo."
+      }
+    },
+    {
+      "id": "en-a2-0023",
+      "word": "lake",
+      "pos": "noun",
+      "ipa": "/leɪk/",
+      "level": "A2",
+      "unit": 45,
+      "position": 417,
+      "translation": {
+        "ru": "озеро",
+        "uz-Latn": "koʻl"
+      },
+      "example": {
+        "en": "There is a beautiful lake in the mountains.",
+        "ru": "В горах есть красивое озеро.",
+        "uz-Latn": "Togʻlarda chiroyli koʻl bor."
+      }
+    },
+    {
+      "id": "en-a1-0401",
+      "word": "island",
+      "pos": "noun",
+      "ipa": "/ˈaɪlənd/",
+      "level": "A1",
+      "unit": 45,
+      "position": 418,
+      "translation": {
+        "ru": "остров",
+        "uz-Latn": "orol"
+      },
+      "example": {
+        "en": "They live on a small island.",
+        "ru": "Они живут на маленьком острове.",
+        "uz-Latn": "Ular kichik orolda yashashadi."
+      }
+    },
+    {
+      "id": "en-a1-0402",
+      "word": "mouse",
+      "pos": "noun",
+      "ipa": "/maʊs/",
+      "level": "A1",
+      "unit": 46,
+      "position": 419,
+      "translation": {
+        "ru": "мышь",
+        "uz-Latn": "sichqon"
+      },
+      "example": {
+        "en": "The cat caught a mouse.",
+        "ru": "Кошка поймала мышь.",
+        "uz-Latn": "Mushuk sichqon tutdi."
+      }
+    },
+    {
+      "id": "en-a1-0403",
+      "word": "rabbit",
+      "pos": "noun",
+      "ipa": "/ˈræbət/",
+      "level": "A1",
+      "unit": 46,
+      "position": 420,
+      "translation": {
+        "ru": "кролик",
+        "uz-Latn": "quyon"
+      },
+      "example": {
+        "en": "The rabbit eats carrots.",
+        "ru": "Кролик ест морковь.",
+        "uz-Latn": "Quyon sabzi yeydi."
+      }
+    },
+    {
+      "id": "en-a1-0404",
+      "word": "snake",
+      "pos": "noun",
+      "ipa": "/sneɪk/",
+      "level": "A1",
+      "unit": 46,
+      "position": 421,
+      "translation": {
+        "ru": "змея",
+        "uz-Latn": "ilon"
+      },
+      "example": {
+        "en": "I am afraid of snakes.",
+        "ru": "Я боюсь змей.",
+        "uz-Latn": "Men ilondan qoʻrqaman."
+      }
+    },
+    {
+      "id": "en-a1-0405",
+      "word": "bear",
+      "pos": "noun",
+      "ipa": "/bɛr/",
+      "level": "A1",
+      "unit": 46,
+      "position": 422,
+      "translation": {
+        "ru": "медведь",
+        "uz-Latn": "ayiq"
+      },
+      "example": {
+        "en": "Bears live in the forest.",
+        "ru": "Медведи живут в лесу.",
+        "uz-Latn": "Ayiqlar oʻrmonda yashaydi."
+      }
+    },
+    {
+      "id": "en-a1-0406",
+      "word": "pet",
+      "pos": "noun",
+      "ipa": "/pɛt/",
+      "level": "A1",
+      "unit": 46,
+      "position": 423,
+      "translation": {
+        "ru": "домашнее животное, питомец",
+        "uz-Latn": "uy hayvoni"
+      },
+      "example": {
+        "en": "Do you have a pet?",
+        "ru": "У тебя есть домашнее животное?",
+        "uz-Latn": "Uy hayvoning bormi?"
+      }
+    },
+    {
+      "id": "en-a2-0024",
+      "word": "elephant",
+      "pos": "noun",
+      "ipa": "/ˈɛləfənt/",
+      "level": "A2",
+      "unit": 46,
+      "position": 424,
+      "translation": {
+        "ru": "слон",
+        "uz-Latn": "fil"
+      },
+      "example": {
+        "en": "The elephant is very big.",
+        "ru": "Слон очень большой.",
+        "uz-Latn": "Fil juda katta."
+      }
+    },
+    {
+      "id": "en-a2-0025",
+      "word": "insect",
+      "pos": "noun",
+      "ipa": "/ˈɪnˌsɛkt/",
+      "level": "A2",
+      "unit": 46,
+      "position": 425,
+      "translation": {
+        "ru": "насекомое",
+        "uz-Latn": "hasharot"
+      },
+      "example": {
+        "en": "A fly is an insect.",
+        "ru": "Муха — насекомое.",
+        "uz-Latn": "Pashsha hasharot."
+      }
+    },
+    {
+      "id": "en-a2-0026",
+      "word": "duck",
+      "pos": "noun",
+      "ipa": "/dʌk/",
+      "level": "A2",
+      "unit": 46,
+      "position": 426,
+      "translation": {
+        "ru": "утка",
+        "uz-Latn": "oʻrdak"
+      },
+      "example": {
+        "en": "There are ducks on the lake.",
+        "ru": "На озере утки.",
+        "uz-Latn": "Koʻlda oʻrdaklar bor."
+      }
+    },
+    {
+      "id": "en-a1-0407",
+      "word": "butterfly",
+      "pos": "noun",
+      "ipa": "/ˈbʌtɚˌflaɪ/",
+      "level": "A1",
+      "unit": 46,
+      "position": 427,
+      "translation": {
+        "ru": "бабочка",
+        "uz-Latn": "kapalak"
+      },
+      "example": {
+        "en": "Look at that beautiful butterfly!",
+        "ru": "Посмотри на ту красивую бабочку!",
+        "uz-Latn": "Anavi chiroyli kapalakka qara!"
+      }
+    },
+    {
+      "id": "en-a1-0408",
+      "word": "glad",
+      "pos": "adjective",
+      "ipa": "/ɡlæd/",
+      "level": "A1",
+      "unit": 47,
+      "position": 428,
+      "translation": {
+        "ru": "довольный, рад",
+        "uz-Latn": "xursand"
+      },
+      "example": {
+        "en": "I am glad you are here.",
+        "ru": "Я рад, что ты здесь.",
+        "uz-Latn": "Shu yerdaligingdan xursandman."
+      }
+    },
+    {
+      "id": "en-a1-0409",
+      "word": "lucky",
+      "pos": "adjective",
+      "ipa": "/ˈlʌki/",
+      "level": "A1",
+      "unit": 47,
+      "position": 429,
+      "translation": {
+        "ru": "везучий, удачливый",
+        "uz-Latn": "omadli"
+      },
+      "example": {
+        "en": "You are lucky!",
+        "ru": "Тебе повезло!",
+        "uz-Latn": "Sen omadlisan!"
+      }
+    },
+    {
+      "id": "en-a1-0410",
+      "word": "luck",
+      "pos": "noun",
+      "ipa": "/lʌk/",
+      "level": "A1",
+      "unit": 47,
+      "position": 430,
+      "translation": {
+        "ru": "удача",
+        "uz-Latn": "omad"
+      },
+      "example": {
+        "en": "Good luck with your exam!",
+        "ru": "Удачи на экзамене!",
+        "uz-Latn": "Imtihoningda omad!"
+      }
+    },
+    {
+      "id": "en-a1-0411",
+      "word": "favorite",
+      "pos": "adjective",
+      "ipa": "/ˈfeɪvɚɪt/",
+      "level": "A1",
+      "unit": 47,
+      "position": 431,
+      "translation": {
+        "ru": "любимый",
+        "uz-Latn": "sevimli"
+      },
+      "example": {
+        "en": "What is your favorite food?",
+        "ru": "Какая твоя любимая еда?",
+        "uz-Latn": "Sevimli taoming nima?"
+      }
+    },
+    {
+      "id": "en-a1-0412",
+      "word": "careful",
+      "pos": "adjective",
+      "ipa": "/ˈkɛrfəl/",
+      "level": "A1",
+      "unit": 47,
+      "position": 432,
+      "translation": {
+        "ru": "осторожный",
+        "uz-Latn": "ehtiyotkor"
+      },
+      "example": {
+        "en": "Be careful, the road is wet.",
+        "ru": "Будь осторожен, дорога мокрая.",
+        "uz-Latn": "Ehtiyot boʻl, yoʻl hoʻl."
+      }
+    },
+    {
+      "id": "en-a1-0413",
+      "word": "clever",
+      "pos": "adjective",
+      "ipa": "/ˈklɛvɚ/",
+      "level": "A1",
+      "unit": 47,
+      "position": 433,
+      "translation": {
+        "ru": "умный, сообразительный",
+        "uz-Latn": "aqlli, ziyrak"
+      },
+      "example": {
+        "en": "She is a clever girl.",
+        "ru": "Она умная девочка.",
+        "uz-Latn": "U aqlli qiz."
+      }
+    },
+    {
+      "id": "en-a1-0414",
+      "word": "smart",
+      "pos": "adjective",
+      "ipa": "/smɑrt/",
+      "level": "A1",
+      "unit": 47,
+      "position": 434,
+      "translation": {
+        "ru": "умный",
+        "uz-Latn": "aqlli"
+      },
+      "example": {
+        "en": "Your son is very smart.",
+        "ru": "Твой сын очень умный.",
+        "uz-Latn": "Oʻgʻling juda aqlli."
+      }
+    },
+    {
+      "id": "en-a1-0415",
+      "word": "kind",
+      "pos": "adjective",
+      "ipa": "/kaɪnd/",
+      "level": "A1",
+      "unit": 47,
+      "position": 435,
+      "translation": {
+        "ru": "добрый",
+        "uz-Latn": "mehribon"
+      },
+      "example": {
+        "en": "My grandmother is very kind.",
+        "ru": "Моя бабушка очень добрая.",
+        "uz-Latn": "Buvim juda mehribon."
+      }
+    },
+    {
+      "id": "en-a1-0416",
+      "word": "lazy",
+      "pos": "adjective",
+      "ipa": "/ˈleɪzi/",
+      "level": "A1",
+      "unit": 47,
+      "position": 436,
+      "translation": {
+        "ru": "ленивый",
+        "uz-Latn": "dangasa"
+      },
+      "example": {
+        "en": "Don't be lazy, do your homework.",
+        "ru": "Не ленись, сделай домашнее задание.",
+        "uz-Latn": "Dangasa boʻlma, uy vazifangni qil."
+      }
+    },
+    {
+      "id": "en-a1-0417",
+      "word": "ask",
+      "pos": "verb",
+      "ipa": "/æsk/",
+      "level": "A1",
+      "unit": 48,
+      "position": 437,
+      "translation": {
+        "ru": "спрашивать; просить",
+        "uz-Latn": "soʻramoq"
+      },
+      "example": {
+        "en": "Can I ask you something?",
+        "ru": "Можно тебя кое о чём спросить?",
+        "uz-Latn": "Sendan bir narsa soʻrasam boʻladimi?"
+      }
+    },
+    {
+      "id": "en-a1-0418",
+      "word": "listen",
+      "pos": "verb",
+      "ipa": "/ˈlɪsən/",
+      "level": "A1",
+      "unit": 48,
+      "position": 438,
+      "translation": {
+        "ru": "слушать",
+        "uz-Latn": "tinglamoq"
+      },
+      "example": {
+        "en": "Listen to me, please.",
+        "ru": "Послушай меня, пожалуйста.",
+        "uz-Latn": "Iltimos, meni tingla."
+      }
+    },
+    {
+      "id": "en-a1-0419",
+      "word": "hear",
+      "pos": "verb",
+      "ipa": "/hir/",
+      "level": "A1",
+      "unit": 48,
+      "position": 439,
+      "translation": {
+        "ru": "слышать",
+        "uz-Latn": "eshitmoq"
+      },
+      "example": {
+        "en": "Can you hear me?",
+        "ru": "Ты меня слышишь?",
+        "uz-Latn": "Meni eshityapsanmi?"
+      }
+    },
+    {
+      "id": "en-a1-0420",
+      "word": "news",
+      "pos": "noun",
+      "ipa": "/nuz/",
+      "level": "A1",
+      "unit": 48,
+      "position": 440,
+      "translation": {
+        "ru": "новости",
+        "uz-Latn": "yangilik"
+      },
+      "example": {
+        "en": "Did you hear the news?",
+        "ru": "Ты слышал новости?",
+        "uz-Latn": "Yangilikni eshitdingmi?"
+      }
+    },
+    {
+      "id": "en-a1-0421",
+      "word": "newspaper",
+      "pos": "noun",
+      "ipa": "/ˈnuzˌpeɪpɚ/",
+      "level": "A1",
+      "unit": 48,
+      "position": 441,
+      "translation": {
+        "ru": "газета",
+        "uz-Latn": "gazeta"
+      },
+      "example": {
+        "en": "My grandfather reads the newspaper every morning.",
+        "ru": "Дедушка каждое утро читает газету.",
+        "uz-Latn": "Bobom har kuni ertalab gazeta oʻqiydi."
+      }
+    },
+    {
+      "id": "en-a1-0422",
+      "word": "TV",
+      "pos": "noun",
+      "ipa": "/ˌtiˈvi/",
+      "level": "A1",
+      "unit": 48,
+      "position": 442,
+      "translation": {
+        "ru": "телевизор; телевидение",
+        "uz-Latn": "televizor"
+      },
+      "example": {
+        "en": "What's on TV tonight?",
+        "ru": "Что сегодня по телевизору?",
+        "uz-Latn": "Bugun kechqurun televizorda nima bor?"
+      }
+    },
+    {
+      "id": "en-a1-0423",
+      "word": "radio",
+      "pos": "noun",
+      "ipa": "/ˈreɪdiˌoʊ/",
+      "level": "A1",
+      "unit": 48,
+      "position": 443,
+      "translation": {
+        "ru": "радио",
+        "uz-Latn": "radio"
+      },
+      "example": {
+        "en": "I listen to the radio in the car.",
+        "ru": "Я слушаю радио в машине.",
+        "uz-Latn": "Men mashinada radio tinglayman."
+      }
+    },
+    {
+      "id": "en-a1-0424",
+      "word": "video",
+      "pos": "noun",
+      "ipa": "/ˈvɪdioʊ/",
+      "level": "A1",
+      "unit": 48,
+      "position": 444,
+      "translation": {
+        "ru": "видео",
+        "uz-Latn": "video"
+      },
+      "example": {
+        "en": "Watch this funny video.",
+        "ru": "Посмотри это смешное видео.",
+        "uz-Latn": "Bu kulgili videoni koʻr."
+      }
+    },
+    {
+      "id": "en-a1-0425",
+      "word": "conversation",
+      "pos": "noun",
+      "ipa": "/ˌkɑnvɚˈseɪʃən/",
+      "level": "A1",
+      "unit": 48,
+      "position": 445,
+      "translation": {
+        "ru": "разговор",
+        "uz-Latn": "suhbat"
+      },
+      "example": {
+        "en": "We had a long conversation.",
+        "ru": "У нас был долгий разговор.",
+        "uz-Latn": "Bizda uzoq suhbat boʻldi."
+      }
+    },
+    {
+      "id": "en-a1-0426",
+      "word": "information",
+      "pos": "noun",
+      "ipa": "/ˌɪnfɚˈmeɪʃən/",
+      "level": "A1",
+      "unit": 48,
+      "position": 446,
+      "translation": {
+        "ru": "информация",
+        "uz-Latn": "maʼlumot"
+      },
+      "example": {
+        "en": "I need more information.",
+        "ru": "Мне нужно больше информации.",
+        "uz-Latn": "Menga koʻproq maʼlumot kerak."
+      }
+    },
+    {
+      "id": "en-a1-0427",
+      "word": "watch",
+      "pos": "verb",
+      "ipa": "/wɑtʃ/",
+      "level": "A1",
+      "unit": 49,
+      "position": 447,
+      "translation": {
+        "ru": "смотреть",
+        "uz-Latn": "tomosha qilmoq, koʻrmoq"
+      },
+      "example": {
+        "en": "We watch a movie every Friday.",
+        "ru": "Каждую пятницу мы смотрим фильм.",
+        "uz-Latn": "Biz har juma kuni film koʻramiz."
+      }
+    },
+    {
+      "id": "en-a1-0428",
+      "word": "carry",
+      "pos": "verb",
+      "ipa": "/ˈkæri/",
+      "level": "A1",
+      "unit": 49,
+      "position": 448,
+      "translation": {
+        "ru": "нести",
+        "uz-Latn": "koʻtarmoq, olib yurmoq"
+      },
+      "example": {
+        "en": "Can you carry this bag?",
+        "ru": "Можешь понести эту сумку?",
+        "uz-Latn": "Bu sumkani koʻtarib bora olasanmi?"
+      }
+    },
+    {
+      "id": "en-a1-0429",
+      "word": "bring",
+      "pos": "verb",
+      "ipa": "/brɪŋ/",
+      "level": "A1",
+      "unit": 49,
+      "position": 449,
+      "translation": {
+        "ru": "приносить",
+        "uz-Latn": "olib kelmoq"
+      },
+      "example": {
+        "en": "Bring me some water, please.",
+        "ru": "Принеси мне воды, пожалуйста.",
+        "uz-Latn": "Iltimos, menga suv olib kel."
+      }
+    },
+    {
+      "id": "en-a1-0430",
+      "word": "catch",
+      "pos": "verb",
+      "ipa": "/kætʃ/",
+      "level": "A1",
+      "unit": 49,
+      "position": 450,
+      "translation": {
+        "ru": "ловить, поймать",
+        "uz-Latn": "ushlamoq, tutmoq"
+      },
+      "example": {
+        "en": "Catch the ball!",
+        "ru": "Лови мяч!",
+        "uz-Latn": "Toʻpni ushla!"
+      }
+    },
+    {
+      "id": "en-a1-0431",
+      "word": "throw",
+      "pos": "verb",
+      "ipa": "/θroʊ/",
+      "level": "A1",
+      "unit": 49,
+      "position": 451,
+      "translation": {
+        "ru": "бросать",
+        "uz-Latn": "otmoq, tashlamoq"
+      },
+      "example": {
+        "en": "Don't throw paper on the floor.",
+        "ru": "Не бросай бумагу на пол.",
+        "uz-Latn": "Qogʻozni polga tashlama."
+      }
+    },
+    {
+      "id": "en-a1-0432",
+      "word": "push",
+      "pos": "verb",
+      "ipa": "/pʊʃ/",
+      "level": "A1",
+      "unit": 49,
+      "position": 452,
+      "translation": {
+        "ru": "толкать",
+        "uz-Latn": "itarmoq"
+      },
+      "example": {
+        "en": "Push the door.",
+        "ru": "Толкни дверь.",
+        "uz-Latn": "Eshikni itar."
+      }
+    },
+    {
+      "id": "en-a2-0027",
+      "word": "pull",
+      "pos": "verb",
+      "ipa": "/pʊl/",
+      "level": "A2",
+      "unit": 49,
+      "position": 453,
+      "translation": {
+        "ru": "тянуть",
+        "uz-Latn": "tortmoq"
+      },
+      "example": {
+        "en": "Pull the door to open it.",
+        "ru": "Потяни дверь, чтобы открыть.",
+        "uz-Latn": "Ochish uchun eshikni torting."
+      }
+    },
+    {
+      "id": "en-a1-0433",
+      "word": "hold",
+      "pos": "verb",
+      "ipa": "/hoʊld/",
+      "level": "A1",
+      "unit": 49,
+      "position": 454,
+      "translation": {
+        "ru": "держать",
+        "uz-Latn": "ushlab turmoq"
+      },
+      "example": {
+        "en": "Hold my hand.",
+        "ru": "Держи меня за руку.",
+        "uz-Latn": "Qoʻlimdan ushla."
+      }
+    },
+    {
+      "id": "en-a1-0434",
+      "word": "touch",
+      "pos": "verb",
+      "ipa": "/tʌtʃ/",
+      "level": "A1",
+      "unit": 49,
+      "position": 455,
+      "translation": {
+        "ru": "трогать",
+        "uz-Latn": "tegmoq, ushlamoq"
+      },
+      "example": {
+        "en": "Don't touch the oven, it is hot.",
+        "ru": "Не трогай духовку, она горячая.",
+        "uz-Latn": "Pechga tegma, u issiq."
+      }
+    },
+    {
+      "id": "en-a1-0435",
+      "word": "near",
+      "pos": "preposition",
+      "ipa": "/nɪr/",
+      "level": "A1",
+      "unit": 50,
+      "position": 456,
+      "translation": {
+        "ru": "около, рядом",
+        "uz-Latn": "yaqinida"
+      },
+      "example": {
+        "en": "I live near the station.",
+        "ru": "Я живу недалеко от вокзала.",
+        "uz-Latn": "Men vokzal yaqinida yashayman."
+      }
+    },
+    {
+      "id": "en-a2-0028",
+      "word": "next to",
+      "pos": "preposition",
+      "ipa": "/nɛkst tu/",
+      "level": "A2",
+      "unit": 50,
+      "position": 457,
+      "translation": {
+        "ru": "рядом с",
+        "uz-Latn": "yonida"
+      },
+      "example": {
+        "en": "Sit next to me.",
+        "ru": "Садись рядом со мной.",
+        "uz-Latn": "Yonimga oʻtir."
+      }
+    },
+    {
+      "id": "en-a1-0436",
+      "word": "inside",
+      "pos": "preposition",
+      "ipa": "/ˌɪnˈsaɪd/",
+      "level": "A1",
+      "unit": 50,
+      "position": 458,
+      "translation": {
+        "ru": "внутри",
+        "uz-Latn": "ichida"
+      },
+      "example": {
+        "en": "There is a cat inside the box.",
+        "ru": "В коробке кошка.",
+        "uz-Latn": "Quti ichida mushuk bor."
+      }
+    },
+    {
+      "id": "en-a1-0437",
+      "word": "outside",
+      "pos": "adverb",
+      "ipa": "/ˌaʊtˈsaɪd/",
+      "level": "A1",
+      "unit": 50,
+      "position": 459,
+      "translation": {
+        "ru": "снаружи, на улице",
+        "uz-Latn": "tashqarida"
+      },
+      "example": {
+        "en": "The children are playing outside.",
+        "ru": "Дети играют на улице.",
+        "uz-Latn": "Bolalar tashqarida oʻynashyapti."
+      }
+    },
+    {
+      "id": "en-a1-0438",
+      "word": "into",
+      "pos": "preposition",
+      "ipa": "/ˈɪntu/",
+      "level": "A1",
+      "unit": 50,
+      "position": 460,
+      "translation": {
+        "ru": "в (внутрь)",
+        "uz-Latn": "ichiga"
+      },
+      "example": {
+        "en": "Put the milk into the fridge.",
+        "ru": "Положи молоко в холодильник.",
+        "uz-Latn": "Sutni muzlatgichga qoʻy."
+      }
+    },
+    {
+      "id": "en-a1-0439",
+      "word": "from",
+      "pos": "preposition",
+      "ipa": "/frʌm/",
+      "level": "A1",
+      "unit": 50,
+      "position": 461,
+      "translation": {
+        "ru": "из, от",
+        "uz-Latn": "-dan"
+      },
+      "example": {
+        "en": "I am from Uzbekistan.",
+        "ru": "Я из Узбекистана.",
+        "uz-Latn": "Men Oʻzbekistondanman."
+      }
+    },
+    {
+      "id": "en-a1-0440",
+      "word": "to",
+      "pos": "preposition",
+      "ipa": "/tu/",
+      "level": "A1",
+      "unit": 50,
+      "position": 462,
+      "translation": {
+        "ru": "к, в, до",
+        "uz-Latn": "-ga"
+      },
+      "example": {
+        "en": "Let's go to the park.",
+        "ru": "Пойдём в парк.",
+        "uz-Latn": "Parkka boraylik."
+      }
+    },
+    {
+      "id": "en-a1-0441",
+      "word": "with",
+      "pos": "preposition",
+      "ipa": "/wɪð/",
+      "level": "A1",
+      "unit": 50,
+      "position": 463,
+      "translation": {
+        "ru": "с",
+        "uz-Latn": "bilan"
+      },
+      "example": {
+        "en": "I live with my parents.",
+        "ru": "Я живу с родителями.",
+        "uz-Latn": "Men ota-onam bilan yashayman."
+      }
+    },
+    {
+      "id": "en-a2-0029",
+      "word": "without",
+      "pos": "preposition",
+      "ipa": "/wɪˈθaʊt/",
+      "level": "A2",
+      "unit": 50,
+      "position": 464,
+      "translation": {
+        "ru": "без",
+        "uz-Latn": "-siz"
+      },
+      "example": {
+        "en": "I drink tea without sugar.",
+        "ru": "Я пью чай без сахара.",
+        "uz-Latn": "Men choyni shakarsiz ichaman."
+      }
+    },
+    {
+      "id": "en-a1-0442",
+      "word": "too",
+      "pos": "adverb",
+      "ipa": "/tu/",
+      "level": "A1",
+      "unit": 51,
+      "position": 465,
+      "translation": {
+        "ru": "слишком; тоже",
+        "uz-Latn": "juda; ham"
+      },
+      "example": {
+        "en": "This bag is too expensive.",
+        "ru": "Эта сумка слишком дорогая.",
+        "uz-Latn": "Bu sumka juda qimmat."
+      }
+    },
+    {
+      "id": "en-a1-0443",
+      "word": "very",
+      "pos": "adverb",
+      "ipa": "/ˈvɛri/",
+      "level": "A1",
+      "unit": 51,
+      "position": 466,
+      "translation": {
+        "ru": "очень",
+        "uz-Latn": "juda"
+      },
+      "example": {
+        "en": "It is very cold today.",
+        "ru": "Сегодня очень холодно.",
+        "uz-Latn": "Bugun havo juda sovuq."
+      }
+    },
+    {
+      "id": "en-a1-0444",
+      "word": "really",
+      "pos": "adverb",
+      "ipa": "/ˈrɪli/",
+      "level": "A1",
+      "unit": 51,
+      "position": 467,
+      "translation": {
+        "ru": "действительно, правда",
+        "uz-Latn": "haqiqatan"
+      },
+      "example": {
+        "en": "I really like this song.",
+        "ru": "Мне правда нравится эта песня.",
+        "uz-Latn": "Bu qoʻshiq menga haqiqatan yoqadi."
+      }
+    },
+    {
+      "id": "en-a1-0445",
+      "word": "again",
+      "pos": "adverb",
+      "ipa": "/əˈɡɛn/",
+      "level": "A1",
+      "unit": 51,
+      "position": 468,
+      "translation": {
+        "ru": "снова, ещё раз",
+        "uz-Latn": "yana, qayta"
+      },
+      "example": {
+        "en": "Say it again, please.",
+        "ru": "Скажи ещё раз, пожалуйста.",
+        "uz-Latn": "Iltimos, yana bir marta ayt."
+      }
+    },
+    {
+      "id": "en-a1-0446",
+      "word": "already",
+      "pos": "adverb",
+      "ipa": "/ɔlˈrɛdi/",
+      "level": "A1",
+      "unit": 51,
+      "position": 469,
+      "translation": {
+        "ru": "уже",
+        "uz-Latn": "allaqachon"
+      },
+      "example": {
+        "en": "I have already eaten.",
+        "ru": "Я уже поел.",
+        "uz-Latn": "Men allaqachon ovqatlandim."
+      }
+    },
+    {
+      "id": "en-a1-0447",
+      "word": "always",
+      "pos": "adverb",
+      "ipa": "/ˈɔlˌweɪz/",
+      "level": "A1",
+      "unit": 51,
+      "position": 470,
+      "translation": {
+        "ru": "всегда",
+        "uz-Latn": "doim, har doim"
+      },
+      "example": {
+        "en": "She is always late.",
+        "ru": "Она всегда опаздывает.",
+        "uz-Latn": "U doim kechikadi."
+      }
+    },
+    {
+      "id": "en-a1-0448",
+      "word": "never",
+      "pos": "adverb",
+      "ipa": "/ˈnɛvɚ/",
+      "level": "A1",
+      "unit": 51,
+      "position": 471,
+      "translation": {
+        "ru": "никогда",
+        "uz-Latn": "hech qachon"
+      },
+      "example": {
+        "en": "I never drink coffee at night.",
+        "ru": "Я никогда не пью кофе вечером.",
+        "uz-Latn": "Men hech qachon kechasi qahva ichmayman."
+      }
+    },
+    {
+      "id": "en-a1-0449",
+      "word": "often",
+      "pos": "adverb",
+      "ipa": "/ˈɔfən/",
+      "level": "A1",
+      "unit": 51,
+      "position": 472,
+      "translation": {
+        "ru": "часто",
+        "uz-Latn": "tez-tez"
+      },
+      "example": {
+        "en": "We often visit our grandmother.",
+        "ru": "Мы часто навещаем бабушку.",
+        "uz-Latn": "Biz buvimnikiga tez-tez boramiz."
+      }
+    },
+    {
+      "id": "en-a1-0450",
+      "word": "usually",
+      "pos": "adverb",
+      "ipa": "/ˈjuʒuəli/",
+      "level": "A1",
+      "unit": 51,
+      "position": 473,
+      "translation": {
+        "ru": "обычно",
+        "uz-Latn": "odatda"
+      },
+      "example": {
+        "en": "I usually get up at seven.",
+        "ru": "Я обычно встаю в семь.",
+        "uz-Latn": "Men odatda soat yettida turaman."
+      }
+    },
+    {
+      "id": "en-a1-0451",
+      "word": "sometimes",
+      "pos": "adverb",
+      "ipa": "/ˈsʌmˌtaɪmz/",
+      "level": "A1",
+      "unit": 51,
+      "position": 474,
+      "translation": {
+        "ru": "иногда",
+        "uz-Latn": "baʼzan"
+      },
+      "example": {
+        "en": "Sometimes I walk to work.",
+        "ru": "Иногда я хожу на работу пешком.",
+        "uz-Latn": "Baʼzan ishga piyoda boraman."
+      }
+    },
+    {
+      "id": "en-a1-0452",
+      "word": "both",
+      "pos": "determiner",
+      "ipa": "/boʊθ/",
+      "level": "A1",
+      "unit": 52,
+      "position": 475,
+      "translation": {
+        "ru": "оба",
+        "uz-Latn": "ikkalasi"
+      },
+      "example": {
+        "en": "Both my brothers are doctors.",
+        "ru": "Оба моих брата — врачи.",
+        "uz-Latn": "Ikkala akam ham shifokor."
+      }
+    },
+    {
+      "id": "en-a1-0453",
+      "word": "other",
+      "pos": "determiner",
+      "ipa": "/ˈʌðɚ/",
+      "level": "A1",
+      "unit": 52,
+      "position": 476,
+      "translation": {
+        "ru": "другой",
+        "uz-Latn": "boshqa"
+      },
+      "example": {
+        "en": "Where are the other students?",
+        "ru": "Где остальные студенты?",
+        "uz-Latn": "Boshqa talabalar qayerda?"
+      }
+    },
+    {
+      "id": "en-a1-0454",
+      "word": "another",
+      "pos": "determiner",
+      "ipa": "/əˈnʌðɚ/",
+      "level": "A1",
+      "unit": 52,
+      "position": 477,
+      "translation": {
+        "ru": "ещё один, другой",
+        "uz-Latn": "yana bir, boshqa"
+      },
+      "example": {
+        "en": "Can I have another cup of tea?",
+        "ru": "Можно ещё чашку чая?",
+        "uz-Latn": "Yana bir piyola choy olsam boʻladimi?"
+      }
+    },
+    {
+      "id": "en-a1-0455",
+      "word": "a lot",
+      "pos": "pronoun",
+      "ipa": "/ə ˈlɑt/",
+      "level": "A1",
+      "unit": 52,
+      "position": 478,
+      "translation": {
+        "ru": "много",
+        "uz-Latn": "koʻp"
+      },
+      "example": {
+        "en": "I have a lot of friends.",
+        "ru": "У меня много друзей.",
+        "uz-Latn": "Doʻstlarim koʻp."
+      }
+    },
+    {
+      "id": "en-a1-0456",
+      "word": "piece",
+      "pos": "noun",
+      "ipa": "/pis/",
+      "level": "A1",
+      "unit": 52,
+      "position": 479,
+      "translation": {
+        "ru": "кусок, штука",
+        "uz-Latn": "boʻlak, dona"
+      },
+      "example": {
+        "en": "Can I have a piece of cake?",
+        "ru": "Можно мне кусочек торта?",
+        "uz-Latn": "Bir boʻlak tort olsam boʻladimi?"
+      }
+    },
+    {
+      "id": "en-a2-0030",
+      "word": "few",
+      "pos": "determiner",
+      "ipa": "/fju/",
+      "level": "A2",
+      "unit": 52,
+      "position": 480,
+      "translation": {
+        "ru": "немного, мало; a few — несколько",
+        "uz-Latn": "oz; bir nechta"
+      },
+      "example": {
+        "en": "I have a few questions.",
+        "ru": "У меня несколько вопросов.",
+        "uz-Latn": "Bir nechta savolim bor."
+      }
+    },
+    {
+      "id": "en-a2-0031",
+      "word": "enough",
+      "pos": "determiner",
+      "ipa": "/ɪˈnʌf/",
+      "level": "A2",
+      "unit": 52,
+      "position": 481,
+      "translation": {
+        "ru": "достаточно",
+        "uz-Latn": "yetarli"
+      },
+      "example": {
+        "en": "We have enough time.",
+        "ru": "У нас достаточно времени.",
+        "uz-Latn": "Vaqtimiz yetarli."
+      }
+    },
+    {
+      "id": "en-a2-0032",
+      "word": "several",
+      "pos": "determiner",
+      "ipa": "/ˈsɛvrəl/",
+      "level": "A2",
+      "unit": 52,
+      "position": 482,
+      "translation": {
+        "ru": "несколько",
+        "uz-Latn": "bir nechta"
+      },
+      "example": {
+        "en": "I have been to Bukhara several times.",
+        "ru": "Я был в Бухаре несколько раз.",
+        "uz-Latn": "Men Buxoroda bir necha marta boʻlganman."
+      }
+    },
+    {
+      "id": "en-a2-0033",
+      "word": "less",
+      "pos": "determiner",
+      "ipa": "/lɛs/",
+      "level": "A2",
+      "unit": 52,
+      "position": 483,
+      "translation": {
+        "ru": "меньше",
+        "uz-Latn": "kamroq"
+      },
+      "example": {
+        "en": "Eat less sugar.",
+        "ru": "Ешь меньше сахара.",
+        "uz-Latn": "Shakarni kamroq ye."
       }
     },
     {
