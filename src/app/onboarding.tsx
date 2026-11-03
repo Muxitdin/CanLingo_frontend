@@ -7,6 +7,7 @@ import { PACE_OPTIONS } from "../domain/config";
 import { goalForecast } from "../hooks/study";
 import { useProfile } from "../hooks/useProfile";
 import { LANGUAGE_NAMES, useStrings, type UiLang } from "../i18n";
+import { now } from "../services/clock";
 import { OptionList } from "../ui/OptionList";
 import { PrimaryButton } from "../ui/PrimaryButton";
 import { useColors } from "../ui/theme";
@@ -23,14 +24,14 @@ export default function Onboarding() {
   const [pace, setPace] = useState(profile.newPerDay);
   const [game, setGame] = useState(profile.gameEnabled);
   const [forecasts] = useState(() => {
-    const now = new Date();
-    return new Map(PACE_OPTIONS.map((p) => [p, goalForecast(db, now, p)]));
+    const today = now();
+    return new Map(PACE_OPTIONS.map((p) => [p, goalForecast(db, today, p)]));
   });
-  const year = new Date().getFullYear();
+  const year = now().getFullYear();
   const current = STEPS[step];
 
   function finish() {
-    update({ newPerDay: pace, gameEnabled: game, onboardedAt: Date.now() });
+    update({ newPerDay: pace, gameEnabled: game, onboardedAt: now().getTime() });
   }
 
   return (

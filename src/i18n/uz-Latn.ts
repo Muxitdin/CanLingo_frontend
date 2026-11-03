@@ -67,5 +67,15 @@ export const uzLatn: Strings = {
     paceNote: "Yangi tezlik ertadan boshlab amal qiladi.",
     game: "Oʻyin rejimi",
     gameNote: "Darajalar, XP va ketma-ket kunlar. Rejim oʻchiq boʻlsa ham natijalar hisoblanadi.",
+    dev: {
+      title: "Ishlab chiquvchi uchun",
+      clock: (date, days) => (days > 0 ? `Ilovadagi sana: ${date} (+${days} kun)` : `Ilovadagi sana: ${date}`),
+      nextDay: "Keyingi kun",
+      reset: "Natijalarni oʻchirish",
+      resetTitle: "Natijalar oʻchirilsinmi?",
+      resetText: "Barcha javoblar, kunlar va sozlamalar oʻchiriladi, ilova birinchi marta ishga tushirilgandek boshlanadi. Soʻzlar toʻplami qoladi.",
+      cancel: "Bekor qilish",
+      note: "Faqat ishlab chiqish rejimida koʻrinadi. «Keyingi kun» ilova soatini bir kun oldinga suradi, shunda takrorlashlarni kutmasdan tekshirish mumkin.",
+    },
   },
 };

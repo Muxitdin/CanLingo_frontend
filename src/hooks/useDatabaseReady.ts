@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 
 import deck from "../../assets/decks/en-a1a2.json";
 import { db, runMigrations } from "../db/client";
+import { getClockOffset } from "../db/devTools";
 import { getProfile } from "../db/profile";
 import { prepareDatabase } from "../db/setup";
+import { now, setClockOffsetDays } from "../services/clock";
 import { useAppDispatch } from "../store";
 import { profileLoaded } from "../store/profileSlice";
 
@@ -20,7 +22,11 @@ export function useDatabaseReady(): DatabaseStatus {
   useEffect(() => {
     let active = true;
     runMigrations()
-      .then(() => prepareDatabase(db, deck, new Date()))
+      .then(() => {
+        // A clock moved ahead in Settings → For development survives reloads; release builds ignore it.
+        if (__DEV__) setClockOffsetDays(getClockOffset(db));
+        prepareDatabase(db, deck, now());
+      })
       .then(
         () => {
           if (!active) return;

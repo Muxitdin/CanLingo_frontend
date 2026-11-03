@@ -4,6 +4,7 @@ import { db } from "../db/client";
 import { getProfile } from "../db/profile";
 import { isNormComplete } from "../domain/dailyPlan";
 import type { Grade } from "../domain/fsrs";
+import { now as clockNow } from "../services/clock";
 import { answerCard, buildSession, cardView, ensureDayPlan, type CardView, type SessionItem } from "./study";
 
 interface SessionState {
@@ -29,7 +30,7 @@ function load(queue: SessionItem[], now: Date): SessionState {
  */
 export function useReviewSession() {
   const [state, setState] = useState(() => {
-    const now = new Date();
+    const now = clockNow();
     return load(buildSession(db, now), now);
   });
   // Guards against a double tap answering the same item twice before the next render.
@@ -44,7 +45,7 @@ export function useReviewSession() {
     if (!item || lastAnswered.current === item) return;
     lastAnswered.current = item;
 
-    const now = new Date();
+    const now = clockNow();
     const { repeat } = answerCard(db, item, rating, now);
     const rest = state.queue.slice(1);
     if (repeat) rest.push({ cardId: item.cardId, kind: "repeat" });
