@@ -1,6 +1,8 @@
 import { beforeEach, describe, expect, it, jest } from "@jest/globals";
 import { fireEvent, renderRouter, screen, testRouter } from "expo-router/testing-library";
 
+import bundledDeck from "../../assets/decks/en-a1a2.json";
+import { parseDeck } from "../db/deck";
 import { ensureProfile, getProfile, updateProfile } from "../db/profile";
 import { reviewLog } from "../db/schema";
 import { createTestDb } from "../db/testing/testDb";
@@ -20,6 +22,9 @@ beforeEach(async () => {
   mockDb.current = await createTestDb();
 });
 
+// The first two words on the bundled path, so the test follows the deck as batches are added.
+const [first, second] = [...parseDeck(bundledDeck).cards].sort((a, b) => a.position - b.position);
+
 describe("app flow", () => {
   it("goes from onboarding in Uzbek to the first rated card", async () => {
     await renderRouter("src/app", { initialUrl: "/" });
@@ -38,13 +43,13 @@ describe("app flow", () => {
     await fireEvent.press(screen.getByText("Boshlash"));
 
     // Review: first word of the deck, answer in Uzbek, rate it.
-    expect(await screen.findByText("hello")).toBeTruthy();
+    expect(await screen.findByText(first.word)).toBeTruthy();
     await fireEvent.press(screen.getByText("Javobni koʻrsatish"));
-    expect(screen.getByText("salom")).toBeTruthy();
+    expect(screen.getByText(first.translation["uz-Latn"])).toBeTruthy();
     await fireEvent.press(screen.getByText("Yaxshi"));
 
     expect(mockDb.current!.select().from(reviewLog).all()).toHaveLength(1);
-    expect(await screen.findByText("name")).toBeTruthy();
+    expect(await screen.findByText(second.word)).toBeTruthy();
   });
 
   it("hides the game layer from settings without losing progress", async () => {
